@@ -33,28 +33,40 @@ app.get('/api/health', (req, res) => {
 });
 
 // Create a new enquiry (called by the Contact page on form submit).
-app.post('/api/enquiries', (req, res) => {
+app.post('/api/enquiries', async (req, res) => {
   const { valid, errors, cleaned } = validateEnquiry(req.body || {});
 
   if (!valid) {
     return res.status(400).json({ error: 'Validation failed', details: errors });
   }
 
-  const record = addEnquiry(cleaned);
-  // Return the full saved record so the frontend can show it back to the user.
-  res.status(201).json(record);
+  try {
+    const record = await addEnquiry(cleaned);
+    // Return the full saved record so the frontend can show it back to the user.
+    res.status(201).json(record);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Could not save enquiry. Please try again shortly.' });
+  }
 });
 
 // List all enquiries — for internal/admin use.
 // Protected by ADMIN_KEY if one is configured in .env.
-app.get('/api/enquiries', (req, res) => {
+app.get('/api/enquiries', async (req, res) => {
   if (ADMIN_KEY) {
     const providedKey = req.header('x-admin-key');
     if (providedKey !== ADMIN_KEY) {
       return res.status(401).json({ error: 'Unauthorized' });
     }
   }
-  res.json(listEnquiries());
+
+  try {
+    const enquiries = await listEnquiries();
+    res.json(enquiries);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Could not load enquiries.' });
+  }
 });
 
 app.use((req, res) => {
