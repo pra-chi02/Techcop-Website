@@ -1,0 +1,118 @@
+<ng-container *ngIf="product as p">
+  <!-- Page header -->
+  <section class="bg-[#0B132B] text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      <nav class="text-xs text-slate-400 mb-4 flex items-center gap-2">
+        <a routerLink="/products" class="hover:text-amber-400 transition">Products</a>
+        <span>/</span>
+        <span class="text-slate-200">{{ p.name }}</span>
+      </nav>
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-7 space-y-4">
+          <span class="px-3.5 py-1 rounded-md bg-blue-500/10 text-blue-400 font-semibold text-xs tracking-wider uppercase border border-blue-500/30">{{ p.tagline }}</span>
+          <h1 class="text-3xl sm:text-5xl font-extrabold font-heading tracking-tight">{{ p.name }}</h1>
+          <p class="text-slate-300 text-sm sm:text-base max-w-2xl leading-relaxed">{{ p.description }}</p>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span *ngFor="let w of p.wattageOptions" class="px-3 py-1.5 rounded-lg bg-[#0A2540] border border-amber-500/40 text-amber-300 text-xs font-bold">{{ w }}</span>
+          </div>
+          <div class="pt-4">
+            <a routerLink="/contact" class="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-7 py-3.5 rounded-xl shadow-xl transition">
+              <span>Request a Quote</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="m9 18 6-6-6-6"></path></svg>
+            </a>
+          </div>
+        </div>
+        <div class="lg:col-span-5">
+          <div class="rounded-2xl overflow-hidden border-2 border-slate-700/60 bg-[#111d3a] h-64 sm:h-72">
+            <img [src]="p.heroImage" [alt]="p.name" class="w-full h-full object-cover">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      <h2 class="text-2xl sm:text-3xl font-extrabold font-heading text-slate-900 mb-8">Key Features</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div *ngFor="let f of p.features" class="p-6 rounded-2xl bg-slate-50 border border-slate-100">
+          <div class="w-10 h-10 rounded-lg bg-amber-500/10 text-amber-600 flex items-center justify-center mb-4 font-bold">✓</div>
+          <h4 class="font-bold text-slate-900 text-sm sm:text-base mb-2">{{ f.title }}</h4>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">{{ f.description }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solar water pump types (only for the pumping systems page) -->
+  <section *ngIf="p.slug === 'solar-water-pumping-systems'" class="py-16 bg-slate-100 border-y border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      <h2 class="text-2xl sm:text-3xl font-extrabold font-heading text-slate-900 mb-8">Types of Solar Water Pumping Systems</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div *ngFor="let type of solarPumpTypes" class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
+          <h4 class="font-bold text-slate-900 mb-3">{{ type.title }}</h4>
+          <ul class="space-y-2">
+            <li *ngFor="let point of type.points" class="text-sm text-slate-600 flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-amber-500 flex-shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg>
+              <span>{{ point }}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key specifications -->
+  <section class="py-16 bg-slate-100 border-y border-slate-200" [class.bg-white]="p.slug === 'solar-water-pumping-systems'" [class.border-y-0]="p.slug === 'solar-water-pumping-systems'">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      <h2 class="text-2xl sm:text-3xl font-extrabold font-heading text-slate-900 mb-8">Key Specifications</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-5 bg-white rounded-2xl border border-slate-200 p-8 shadow-sm">
+        <div *ngFor="let spec of p.keySpecs" class="flex items-start gap-3">
+          <div class="w-9 h-9 rounded-lg bg-[#0A2540] text-amber-400 flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M20 6 9 17l-5-5"></path></svg>
+          </div>
+          <div>
+            <div class="text-xs font-bold text-slate-500 uppercase tracking-wide">{{ spec.label }}</div>
+            <div class="text-sm font-semibold text-slate-900 mt-0.5">{{ spec.value }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Applications -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      <h2 class="text-2xl sm:text-3xl font-extrabold font-heading text-slate-900 mb-8">Applications</h2>
+      <div class="flex flex-wrap gap-3">
+        <span *ngFor="let app of p.applications" class="px-4 py-2.5 rounded-xl bg-slate-100 border border-slate-200 text-slate-700 text-sm font-semibold">{{ app }}</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related products -->
+  <section class="py-16 bg-slate-100 border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      <h2 class="text-xl sm:text-2xl font-extrabold font-heading text-slate-900 mb-8">Explore More Products</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <a *ngFor="let rp of relatedProducts" [routerLink]="['/products', rp.slug]" class="bg-white rounded-2xl p-6 border border-slate-200 hover:shadow-md transition group">
+          <h4 class="font-bold text-slate-900 text-sm group-hover:text-blue-600 transition mb-1">{{ rp.name }}</h4>
+          <p class="text-xs text-slate-500">{{ rp.tagline }}</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-gradient-to-r from-amber-500 to-amber-400">
+    <div class="max-w-5xl mx-auto px-4 sm:px-8 text-center space-y-5">
+      <h2 class="text-2xl sm:text-3xl font-extrabold font-heading text-slate-950">Interested in {{ p.name }}?</h2>
+      <p class="text-slate-900/80 text-sm sm:text-base">Get in touch with our technical team for pricing, customization, and bulk order enquiries.</p>
+      <a routerLink="/contact" class="inline-flex items-center gap-2 bg-[#0A2540] hover:bg-[#0D3259] text-white font-bold px-8 py-4 rounded-xl shadow-xl transition">
+        <span>Contact {{ company.name }}</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-amber-400"><path d="m9 18 6-6-6-6"></path></svg>
+      </a>
+    </div>
+  </section>
+</ng-container>

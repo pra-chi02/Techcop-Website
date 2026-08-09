@@ -1,0 +1,43 @@
+<footer class="bg-[#050B18] text-slate-400 py-12 border-t border-slate-800 text-xs sm:text-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 pb-12 border-b border-slate-800/80">
+    <div class="space-y-4">
+      <div class="text-lg font-extrabold text-white font-heading flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-amber-400"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg>
+        TECHNOCOP ENERGY CO.
+      </div>
+      <p class="text-slate-400 leading-relaxed">Manufacturer &amp; supplier of <strong class="text-white">{{ company.brand }}</strong> — solar street lights, high mast lights, flood lights and solar water pumping systems.</p>
+    </div>
+
+    <div>
+      <h4 class="font-bold text-white mb-4 uppercase tracking-wider text-xs">Quick Links</h4>
+      <ul class="space-y-2">
+        <li *ngFor="let link of navLinks"><a [routerLink]="link.path" class="hover:text-amber-400 transition">{{ link.name }}</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="font-bold text-white mb-4 uppercase tracking-wider text-xs">Our Products</h4>
+      <ul class="space-y-2">
+        <li *ngFor="let cat of productCategories"><a [routerLink]="['/products', cat.slug]" class="hover:text-amber-400 transition">{{ cat.shortName }}</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="font-bold text-white mb-4 uppercase tracking-wider text-xs">Get In Touch</h4>
+      <p class="text-slate-300 leading-relaxed mb-4">
+        <strong>{{ company.name }}</strong><br>{{ company.addressLine1 }}<br>{{ company.addressLine2 }}<br>{{ company.addressLine3 }}
+      </p>
+      <div class="text-amber-400 font-medium">{{ company.phones[0] }}</div>
+      <div class="text-amber-400 font-medium">{{ company.emails[0] }}</div>
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-8 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+    <div>© {{ currentYear }} {{ company.name }}. All rights reserved.</div>
+    <div class="flex gap-4">
+      <span>{{ company.website }}</span>
+      <span>•</span>
+      <span>Made in India</span>
+    </div>
+  </div>
+</footer>
