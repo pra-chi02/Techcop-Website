@@ -2,5 +2,4 @@
 // Point this at your deployed backend's public URL.
 export const environment = {
   production: true,
-  apiUrl: 'https://api.technocopenergyco.in/api',
-};
+apiUrl: 'https://techcop-website.onrender.com/api',};
