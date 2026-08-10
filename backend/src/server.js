@@ -3,7 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 
-const { addEnquiry, listEnquiries } = require('./enquiryStore');
+const { addEnquiry, listEnquiries, updateEnquiryStatus } = require('./enquiryStore');
 const { validateEnquiry } = require('./validate');
 
 const app = express();
@@ -22,7 +22,6 @@ app.use(
 );
 app.use(express.json());
 
-// Basic request log — helpful when running `npm start` locally.
 app.use((req, res, next) => {
   console.log(`${new Date().toISOString()} ${req.method} ${req.path}`);
   next();
@@ -32,7 +31,6 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', time: new Date().toISOString() });
 });
 
-// Create a new enquiry (called by the Contact page on form submit).
 app.post('/api/enquiries', async (req, res) => {
   const { valid, errors, cleaned } = validateEnquiry(req.body || {});
 
@@ -42,7 +40,6 @@ app.post('/api/enquiries', async (req, res) => {
 
   try {
     const record = await addEnquiry(cleaned);
-    // Return the full saved record so the frontend can show it back to the user.
     res.status(201).json(record);
   } catch (err) {
     console.error(err);
@@ -50,8 +47,6 @@ app.post('/api/enquiries', async (req, res) => {
   }
 });
 
-// List all enquiries — for internal/admin use.
-// Protected by ADMIN_KEY if one is configured in .env.
 app.get('/api/enquiries', async (req, res) => {
   if (ADMIN_KEY) {
     const providedKey = req.header('x-admin-key');
@@ -69,11 +64,40 @@ app.get('/api/enquiries', async (req, res) => {
   }
 });
 
+app.patch('/api/enquiries/:id', async (req, res) => {
+  if (ADMIN_KEY) {
+    const providedKey = req.header('x-admin-key');
+    if (providedKey !== ADMIN_KEY) {
+      return res.status(401).json({ error: 'Unauthorized' });
+    }
+  }
+
+  const id = Number(req.params.id);
+  const { status } = req.body || {};
+
+  if (!Number.isInteger(id)) {
+    return res.status(400).json({ error: 'Invalid enquiry id' });
+  }
+
+  try {
+    const updated = await updateEnquiryStatus(id, status);
+    res.json(updated);
+  } catch (err) {
+    if (err.code === 'INVALID_STATUS') {
+      return res.status(400).json({ error: 'Status must be one of: New, Contacted, Closed' });
+    }
+    if (err.code === 'NOT_FOUND') {
+      return res.status(404).json({ error: 'Enquiry not found' });
+    }
+    console.error(err);
+    res.status(500).json({ error: 'Could not update enquiry.' });
+  }
+});
+
 app.use((req, res) => {
   res.status(404).json({ error: 'Not found' });
 });
 
-// eslint-disable-next-line no-unused-vars
 app.use((err, req, res, next) => {
   console.error(err);
   res.status(500).json({ error: 'Internal server error' });

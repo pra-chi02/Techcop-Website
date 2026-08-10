@@ -1,6 +1,7 @@
 const { supabase } = require('./supabaseClient');
 
 const TABLE = 'enquiries';
+const VALID_STATUSES = ['New', 'Contacted', 'Closed'];
 
 async function addEnquiry(payload) {
   const { data, error } = await supabase
@@ -35,8 +36,28 @@ async function listEnquiries() {
   return data.map(toApiShape);
 }
 
-// Supabase/Postgres columns are snake_case (product_interest, submitted_at);
-// the frontend expects camelCase (productInterest, submittedAt).
+async function updateEnquiryStatus(id, status) {
+  if (!VALID_STATUSES.includes(status)) {
+    throw Object.assign(new Error('Invalid status'), { code: 'INVALID_STATUS' });
+  }
+
+  const { data, error } = await supabase
+    .from(TABLE)
+    .update({ status })
+    .eq('id', id)
+    .select()
+    .single();
+
+  if (error) {
+    throw new Error(`Failed to update enquiry: ${error.message}`);
+  }
+  if (!data) {
+    throw Object.assign(new Error('Enquiry not found'), { code: 'NOT_FOUND' });
+  }
+
+  return toApiShape(data);
+}
+
 function toApiShape(row) {
   return {
     id: row.id,
@@ -45,8 +66,9 @@ function toApiShape(row) {
     email: row.email,
     productInterest: row.product_interest,
     message: row.message,
+    status: row.status,
     submittedAt: row.submitted_at,
   };
 }
 
-module.exports = { addEnquiry, listEnquiries };
+module.exports = { addEnquiry, listEnquiries, updateEnquiryStatus, VALID_STATUSES };
