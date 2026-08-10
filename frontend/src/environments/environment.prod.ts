@@ -1,5 +1,4 @@
-// Production config — used by `ng build`.
-// Point this at your deployed backend's public URL.
 export const environment = {
   production: true,
-apiUrl: 'https://techcop-website.onrender.com/api',};
+  apiUrl: 'https://techcop-website.onrender.com/api'
+};
