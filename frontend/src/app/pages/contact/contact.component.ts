@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { company, faqs, productCategories, ProductCategory } from '../../data';
 import { FaqAccordionComponent } from '../../components/faq-accordion/faq-accordion.component';
@@ -22,7 +23,7 @@ interface SavedEnquiry extends ContactForm {
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, FormsModule, FaqAccordionComponent],
+  imports: [CommonModule, FormsModule, RouterLink, FaqAccordionComponent],
   templateUrl: './contact.component.html',
 })
 export class ContactComponent {
