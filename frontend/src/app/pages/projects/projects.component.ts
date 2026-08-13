@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { clients, projects, ProjectEntry, stats, StatItem, commitmentItems } from '../../data';
+import { clients, projects, ProjectEntry, stats, StatItem, commitmentItems, company } from '../../data';
 
 @Component({
   selector: 'app-projects',
@@ -14,4 +14,5 @@ export class ProjectsComponent {
   readonly projects: ProjectEntry[] = projects;
   readonly stats: StatItem[] = stats;
   readonly commitmentItems = commitmentItems;
+  readonly company = company;
 }
