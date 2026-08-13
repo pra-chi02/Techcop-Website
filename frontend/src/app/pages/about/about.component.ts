@@ -11,6 +11,8 @@ import {
   whyChooseUs,
   WhyChooseUsItem,
   company,
+  stats,
+  StatItem,
 } from '../../data';
 
 @Component({
@@ -28,4 +30,5 @@ export class AboutComponent {
   readonly coreValues = coreValues;
   readonly whyChooseUs: WhyChooseUsItem[] = whyChooseUs;
   readonly company = company;
+  readonly stats: StatItem[] = stats;
 }
