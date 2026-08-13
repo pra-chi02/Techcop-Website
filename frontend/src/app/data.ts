@@ -449,6 +449,24 @@ export const commitmentItems: string[] = [
 ];
 
 // ---------------------------------------------------------------------------
+// Process — general workflow for how enquiries turn into installed projects
+// ---------------------------------------------------------------------------
+
+export interface ProcessStep {
+  title: string;
+  description: string;
+}
+
+export const processSteps: ProcessStep[] = [
+  { title: 'Requirement', description: 'Share your site details, wattage needs, and project scale with our team.' },
+  { title: 'Consultation', description: 'Our technical team recommends the right product and configuration for your site.' },
+  { title: 'Customization', description: 'Wattage, mounting height, battery capacity, and pole design tailored to your project.' },
+  { title: 'Manufacturing', description: 'Products built with premium components for maximum efficiency and durability.' },
+  { title: 'Installation', description: 'Professional installation support at your site, anywhere across India.' },
+  { title: 'After-Sales Support', description: 'Ongoing technical support and warranty service for long-term reliability.' },
+];
+
+// ---------------------------------------------------------------------------
 // FAQs — drawn from the spec sheets (backup time, IP rating, warranty, etc.)
 // ---------------------------------------------------------------------------
 

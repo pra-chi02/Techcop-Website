@@ -15,6 +15,8 @@ import {
   StatItem,
   faqs,
   company,
+  processSteps,
+  ProcessStep,
 } from '../../data';
 
 @Component({
@@ -31,4 +33,5 @@ export class HomeComponent {
   readonly stats: StatItem[] = stats;
   readonly faqs = faqs;
   readonly company = company;
+  readonly processSteps: ProcessStep[] = processSteps;
 }
