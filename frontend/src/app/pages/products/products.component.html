@@ -48,7 +48,7 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center mb-12">
       <div class="lg:col-span-5 rounded-2xl overflow-hidden shadow-lg border border-slate-200 order-2 lg:order-1">
-        <img src="https://images.unsplash.com/photo-1680355065203-43ad84bb6e69?auto=format&fit=crop&w=900&q=80" alt="Solar panel array" class="w-full h-64 object-cover">
+        <img src="assets/products/solar-pv-modules.png" alt="Solar photovoltaic modules" class="w-full h-64 object-cover">
       </div>
       <div class="lg:col-span-7 text-center lg:text-left space-y-4 order-1 lg:order-2">
         <span class="px-3.5 py-1 rounded-md bg-blue-100 text-blue-800 font-semibold text-xs tracking-wider uppercase">Sustainable Solutions. For Every Need.</span>
@@ -59,6 +59,7 @@
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       <div *ngFor="let p of otherProducts; let i = index" class="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition overflow-hidden">
+        <img *ngIf="p.image" [src]="p.image" [alt]="p.name" class="w-full h-36 object-cover">
         <button (click)="toggleOtherProduct(i)" class="w-full text-left p-6 flex items-start justify-between gap-3">
           <div>
             <span class="inline-block px-2 py-0.5 rounded-md bg-orange-50 text-orange-700 text-[10px] font-bold uppercase tracking-wide border border-orange-200 mb-2">{{ p.type }}</span>

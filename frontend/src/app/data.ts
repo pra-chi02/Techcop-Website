@@ -45,6 +45,7 @@ export interface ProductCategory {
 export interface OtherProduct {
   name: string;
   type: string;
+  image?: string;
   points: string[];
 }
 
@@ -165,7 +166,7 @@ export const productCategories: ProductCategory[] = [
     tagline: 'Smart Lighting for a Sustainable World',
     description:
       'Our Solar Street Lights are designed to deliver high performance, energy efficiency and unmatched reliability for all outdoor lighting applications.',
-    heroImage: 'https://images.unsplash.com/photo-1740805276608-ef60e2e468ba?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'assets/products/solar-street-light.png',
     features: [
       { title: 'Solar Powered', description: 'Harnesses solar energy to reduce electricity cost and carbon footprint.' },
       { title: 'High Brightness', description: 'High efficiency LEDs for superior illumination and wider coverage.' },
@@ -275,7 +276,7 @@ export const productCategories: ProductCategory[] = [
     tagline: 'Powerful Lighting for Large Areas',
     description:
       'Our High Mast Lights are designed to deliver high intensity, uniform and glare-free illumination for large outdoor areas. Built with robust materials and advanced LED technology, they ensure excellent performance, low maintenance and long service life.',
-    heroImage: 'https://images.unsplash.com/photo-1693164586646-f3f877aec626?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'assets/products/solar-high-mast.png',
     features: [
       { title: 'High Intensity Illumination', description: 'Powerful LEDs deliver high lumen output for wide and uniform light distribution.' },
       { title: 'Durable & Robust Design', description: 'Heavy duty pole and corrosion resistant body ensure long lasting performance.' },
@@ -315,7 +316,7 @@ export const productCategories: ProductCategory[] = [
     tagline: 'Powerful Illumination. Zero Electricity Cost.',
     description:
       'Our Solar Flood Lights are high performance outdoor lighting solutions designed to deliver powerful, uniform and reliable illumination for large areas. Powered by solar energy, these lights are easy to install, cost effective and environment friendly.',
-    heroImage: 'https://images.unsplash.com/photo-1722962416153-ed769a7471dd?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'assets/products/solar-wall-washer-light.png',
     features: [
       { title: 'High Brightness', description: 'High efficiency LED chips provide superior brightness with wide beam angle.' },
       { title: 'Long Backup', description: 'High capacity LiFePO4 battery ensures long backup and enhanced performance.' },
@@ -414,40 +415,48 @@ export const otherProducts: OtherProduct[] = [
   {
     name: 'All-in-One Solar Street Lights',
     type: 'Outdoor Lighting',
+    image: 'assets/products/solar-street-light.png',
     points: ['Integrated design with inbuilt solar panel & battery', 'Easy installation & maintenance', 'Smart light control & motion sensor', 'Ideal for streets, roads & pathways'],
   },
   {
     name: 'Solar Lanterns & Garden Lights',
     type: 'Outdoor Lighting',
+    image: 'assets/products/solar-garden-light.png',
     points: ['Elegant & durable design', 'Perfect for gardens, parks & landscapes', 'Auto on/off with dusk to dawn operation'],
   },
   {
     name: 'Solar Flood Lights',
     type: 'Outdoor Lighting',
+    image: 'assets/products/solar-wall-washer-light.png',
     points: ['High brightness & wide coverage', 'IP66 weatherproof body', 'Ideal for compounds, signage, buildings & security lighting'],
   },
   {
     name: 'Solar Home Lighting Systems',
     type: 'Home & Off-Grid Power',
+    image: 'assets/products/solar-home-light.png',
     points: ['Complete home lighting solution', 'Powers lights, fans & mobile charging', 'Safe, reliable & cost effective', 'Ideal for rural & off-grid areas'],
   },
   {
     name: 'Solar Inverters & Power Systems',
+      image: 'assets/products/solar inverter and power system.png',
     type: 'Power Electronics',
     points: ['Pure sine wave output', 'High efficiency & overload protection', 'Compatible with various battery types', 'For homes, offices & industries'],
   },
   {
     name: 'Solar Charge Controllers',
     type: 'Power Electronics',
+    image: 'assets/products/solar-charge-controller-led-bulb.png',
     points: ['MPPT & PWM technology', 'Protects battery from overcharge & deep discharge', 'Enhances system efficiency & battery life'],
   },
   {
     name: 'Solar Batteries (LiFePO4 / SMF / GEL)',
     type: 'Energy Storage',
+    image: 'assets/products/solar-lithium-battery.png',
     points: ['Long cycle life & maintenance free', 'High capacity & fast charging', 'Safe, stable & efficient performance'],
   },
   {
     name: 'Solar Water Heaters',
+    image:'assets/products/solar water heaters.png',
     type: 'Thermal Systems',
     points: ['Energy efficient & eco friendly', 'Hot water for homes, hotels & industries', 'Reduces electricity cost'],
   },
