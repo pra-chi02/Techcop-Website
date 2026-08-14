@@ -43,6 +43,7 @@ export interface ProductCategory {
 
 export interface OtherProduct {
   name: string;
+  type: string;
   points: string[];
 }
 
@@ -369,34 +370,42 @@ export const solarPumpTypes = [
 export const otherProducts: OtherProduct[] = [
   {
     name: 'All-in-One Solar Street Lights',
+    type: 'Outdoor Lighting',
     points: ['Integrated design with inbuilt solar panel & battery', 'Easy installation & maintenance', 'Smart light control & motion sensor', 'Ideal for streets, roads & pathways'],
   },
   {
     name: 'Solar Lanterns & Garden Lights',
+    type: 'Outdoor Lighting',
     points: ['Elegant & durable design', 'Perfect for gardens, parks & landscapes', 'Auto on/off with dusk to dawn operation'],
   },
   {
     name: 'Solar Flood Lights',
+    type: 'Outdoor Lighting',
     points: ['High brightness & wide coverage', 'IP66 weatherproof body', 'Ideal for compounds, signage, buildings & security lighting'],
   },
   {
     name: 'Solar Home Lighting Systems',
+    type: 'Home & Off-Grid Power',
     points: ['Complete home lighting solution', 'Powers lights, fans & mobile charging', 'Safe, reliable & cost effective', 'Ideal for rural & off-grid areas'],
   },
   {
     name: 'Solar Inverters & Power Systems',
+    type: 'Power Electronics',
     points: ['Pure sine wave output', 'High efficiency & overload protection', 'Compatible with various battery types', 'For homes, offices & industries'],
   },
   {
     name: 'Solar Charge Controllers',
+    type: 'Power Electronics',
     points: ['MPPT & PWM technology', 'Protects battery from overcharge & deep discharge', 'Enhances system efficiency & battery life'],
   },
   {
     name: 'Solar Batteries (LiFePO4 / SMF / GEL)',
+    type: 'Energy Storage',
     points: ['Long cycle life & maintenance free', 'High capacity & fast charging', 'Safe, stable & efficient performance'],
   },
   {
     name: 'Solar Water Heaters',
+    type: 'Thermal Systems',
     points: ['Energy efficient & eco friendly', 'Hot water for homes, hotels & industries', 'Reduces electricity cost'],
   },
 ];

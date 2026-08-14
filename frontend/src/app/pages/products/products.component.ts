@@ -14,4 +14,10 @@ export class ProductsComponent {
   readonly otherProducts: OtherProduct[] = otherProducts;
   readonly solarProductBenefits = solarProductBenefits;
   readonly company = company;
+
+  expandedOtherProduct: number | null = null;
+
+  toggleOtherProduct(index: number): void {
+    this.expandedOtherProduct = this.expandedOtherProduct === index ? null : index;
+  }
 }
