@@ -12,7 +12,7 @@
 <section class="bg-[#0A2540] py-8 border-b border-slate-800">
   <div class="max-w-7xl mx-auto px-4 sm:px-8 grid grid-cols-2 sm:grid-cols-5 gap-6 text-center">
     <div *ngFor="let s of stats">
-      <div class="text-2xl sm:text-3xl font-extrabold text-amber-400 font-heading">{{ s.value }}</div>
+      <div class="text-2xl sm:text-3xl font-extrabold text-orange-400 font-heading">{{ s.value }}</div>
       <div class="text-[11px] sm:text-xs text-slate-300 mt-1">{{ s.label }}</div>
     </div>
   </div>
@@ -39,11 +39,11 @@
 <section class="py-20 bg-slate-50 border-y border-slate-200">
   <div class="max-w-7xl mx-auto px-4 sm:px-8 grid grid-cols-1 lg:grid-cols-2 gap-10">
     <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm space-y-5">
-      <span class="px-3.5 py-1 rounded-md bg-amber-50 text-amber-700 font-semibold text-xs tracking-wider uppercase border border-amber-200">Our Mission</span>
+      <span class="px-3.5 py-1 rounded-md bg-orange-50 text-orange-700 font-semibold text-xs tracking-wider uppercase border border-orange-200">Our Mission</span>
       <p class="text-slate-700 text-sm sm:text-base leading-relaxed">{{ mission }}</p>
       <div class="grid grid-cols-2 gap-4 pt-2">
         <div *ngFor="let pillar of missionPillars" class="flex items-start gap-3">
-          <div class="w-8 h-8 rounded-lg bg-[#0A2540] text-amber-400 flex items-center justify-center flex-shrink-0 font-bold text-xs">✓</div>
+          <div class="w-8 h-8 rounded-lg bg-[#0A2540] text-orange-400 flex items-center justify-center flex-shrink-0 font-bold text-xs">✓</div>
           <div>
             <div class="font-bold text-slate-900 text-xs sm:text-sm">{{ pillar.title }}</div>
             <p class="text-xs text-slate-500 mt-0.5">{{ pillar.description }}</p>
@@ -71,7 +71,7 @@
     </div>
     <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
       <div *ngFor="let value of coreValues" class="p-5 rounded-2xl bg-slate-50 border border-slate-100 text-center hover:shadow-md transition">
-        <div class="w-10 h-10 mx-auto rounded-full bg-[#0A2540] text-amber-400 flex items-center justify-center mb-3 font-bold">★</div>
+        <div class="w-10 h-10 mx-auto rounded-full bg-[#0A2540] text-orange-400 flex items-center justify-center mb-3 font-bold">★</div>
         <div class="text-xs sm:text-sm font-bold text-slate-800">{{ value }}</div>
       </div>
     </div>
@@ -82,13 +82,13 @@
 <section class="py-20 bg-slate-100 border-y border-slate-200">
   <div class="max-w-7xl mx-auto px-4 sm:px-8">
     <div class="text-center max-w-3xl mx-auto space-y-4 mb-12">
-      <span class="px-3.5 py-1 rounded-md bg-amber-50 text-amber-700 font-semibold text-xs tracking-wider uppercase border border-amber-200">Why Choose Us</span>
+      <span class="px-3.5 py-1 rounded-md bg-orange-50 text-orange-700 font-semibold text-xs tracking-wider uppercase border border-orange-200">Why Choose Us</span>
       <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-slate-900">Why Choose {{ company.name }}?</h2>
       <p class="text-slate-600 text-sm sm:text-base">Your Trust, Our Commitment.</p>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       <div *ngFor="let item of whyChooseUs" class="p-6 rounded-2xl bg-white border border-slate-200 hover:shadow-md transition">
-        <div class="w-10 h-10 rounded-lg bg-amber-500/10 text-amber-600 flex items-center justify-center mb-4 font-bold font-heading">✓</div>
+        <div class="w-10 h-10 rounded-lg bg-orange-500/10 text-orange-600 flex items-center justify-center mb-4 font-bold font-heading">✓</div>
         <h4 class="font-bold text-slate-900 text-sm sm:text-base mb-2">{{ item.title }}</h4>
         <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">{{ item.description }}</p>
       </div>
@@ -104,10 +104,10 @@
   </div>
   <div class="max-w-5xl mx-auto px-4 sm:px-8 grid grid-cols-1 sm:grid-cols-3 gap-5">
     <a [href]="'tel:' + company.phones[0]" class="bg-white/5 hover:bg-white/10 border border-white/10 rounded-2xl p-6 text-center transition group">
-      <div class="w-11 h-11 mx-auto rounded-xl bg-amber-500/15 text-amber-400 flex items-center justify-center mb-4">
+      <div class="w-11 h-11 mx-auto rounded-xl bg-orange-500/15 text-orange-400 flex items-center justify-center mb-4">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
       </div>
-      <h4 class="font-bold text-sm mb-1 group-hover:text-amber-400 transition">Contact Sales</h4>
+      <h4 class="font-bold text-sm mb-1 group-hover:text-orange-400 transition">Contact Sales</h4>
       <p class="text-xs text-slate-400">{{ company.phones[0] }}</p>
     </a>
     <a [href]="'mailto:' + company.emails[0]" class="bg-white/5 hover:bg-white/10 border border-white/10 rounded-2xl p-6 text-center transition group">
@@ -131,7 +131,7 @@
 <section class="py-16 bg-[#050B18]">
   <div class="max-w-5xl mx-auto px-4 sm:px-8 text-center space-y-5 text-white">
     <h2 class="text-2xl sm:text-3xl font-extrabold font-heading">Let's Build a Sustainable Tomorrow Together</h2>
-    <a routerLink="/contact" class="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-8 py-4 rounded-xl shadow-xl transition">
+    <a routerLink="/contact" class="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-400 text-slate-950 font-bold px-8 py-4 rounded-xl shadow-xl transition">
       <span>Get in Touch</span>
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="m9 18 6-6-6-6"></path></svg>
     </a>

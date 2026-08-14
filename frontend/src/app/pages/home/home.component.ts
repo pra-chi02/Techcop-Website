@@ -17,6 +17,8 @@ import {
   company,
   processSteps,
   ProcessStep,
+  projects,
+  ProjectEntry,
 } from '../../data';
 
 @Component({
@@ -34,4 +36,5 @@ export class HomeComponent {
   readonly faqs = faqs;
   readonly company = company;
   readonly processSteps: ProcessStep[] = processSteps;
+  readonly recentProjects: ProjectEntry[] = projects.slice(0, 3);
 }

@@ -3,9 +3,9 @@
   <section class="bg-[#0B132B] text-white py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-8">
       <nav class="text-xs text-slate-400 mb-4 flex items-center gap-2">
-        <a routerLink="/" class="hover:text-amber-400 transition">Home</a>
+        <a routerLink="/" class="hover:text-orange-400 transition">Home</a>
         <span>/</span>
-        <a routerLink="/products" class="hover:text-amber-400 transition">Products</a>
+        <a routerLink="/products" class="hover:text-orange-400 transition">Products</a>
         <span>/</span>
         <span class="text-slate-200">{{ p.name }}</span>
       </nav>
@@ -15,10 +15,10 @@
           <h1 class="text-3xl sm:text-5xl font-extrabold font-heading tracking-tight">{{ p.name }}</h1>
           <p class="text-slate-300 text-sm sm:text-base max-w-2xl leading-relaxed">{{ p.description }}</p>
           <div class="flex flex-wrap gap-2 pt-2">
-            <span *ngFor="let w of p.wattageOptions" class="px-3 py-1.5 rounded-lg bg-[#0A2540] border border-amber-500/40 text-amber-300 text-xs font-bold">{{ w }}</span>
+            <span *ngFor="let w of p.wattageOptions" class="px-3 py-1.5 rounded-lg bg-[#0A2540] border border-orange-500/40 text-orange-300 text-xs font-bold">{{ w }}</span>
           </div>
           <div class="pt-4">
-            <a routerLink="/contact" class="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-7 py-3.5 rounded-xl shadow-xl transition">
+            <a routerLink="/contact" class="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-400 text-slate-950 font-bold px-7 py-3.5 rounded-xl shadow-xl transition">
               <span>Request a Quote</span>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="m9 18 6-6-6-6"></path></svg>
             </a>
@@ -39,7 +39,7 @@
       <h2 class="text-2xl sm:text-3xl font-extrabold font-heading text-slate-900 mb-8">Key Features</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <div *ngFor="let f of p.features" class="p-6 rounded-2xl bg-slate-50 border border-slate-100">
-          <div class="w-10 h-10 rounded-lg bg-amber-500/10 text-amber-600 flex items-center justify-center mb-4 font-bold">✓</div>
+          <div class="w-10 h-10 rounded-lg bg-orange-500/10 text-orange-600 flex items-center justify-center mb-4 font-bold">✓</div>
           <h4 class="font-bold text-slate-900 text-sm sm:text-base mb-2">{{ f.title }}</h4>
           <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">{{ f.description }}</p>
         </div>
@@ -56,7 +56,7 @@
           <h4 class="font-bold text-slate-900 mb-3">{{ type.title }}</h4>
           <ul class="space-y-2">
             <li *ngFor="let point of type.points" class="text-sm text-slate-600 flex items-start gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-amber-500 flex-shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg>
               <span>{{ point }}</span>
             </li>
           </ul>
@@ -71,7 +71,7 @@
       <h2 class="text-2xl sm:text-3xl font-extrabold font-heading text-slate-900 mb-8">Key Specifications</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-5 bg-white rounded-2xl border border-slate-200 p-8 shadow-sm">
         <div *ngFor="let spec of p.keySpecs" class="flex items-start gap-3">
-          <div class="w-9 h-9 rounded-lg bg-[#0A2540] text-amber-400 flex items-center justify-center flex-shrink-0">
+          <div class="w-9 h-9 rounded-lg bg-[#0A2540] text-orange-400 flex items-center justify-center flex-shrink-0">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M20 6 9 17l-5-5"></path></svg>
           </div>
           <div>
@@ -114,10 +114,10 @@
     </div>
     <div class="max-w-5xl mx-auto px-4 sm:px-8 grid grid-cols-1 sm:grid-cols-3 gap-5">
       <a [href]="'tel:' + company.phones[0]" class="bg-white/5 hover:bg-white/10 border border-white/10 rounded-2xl p-6 text-center transition group">
-        <div class="w-11 h-11 mx-auto rounded-xl bg-amber-500/15 text-amber-400 flex items-center justify-center mb-4">
+        <div class="w-11 h-11 mx-auto rounded-xl bg-orange-500/15 text-orange-400 flex items-center justify-center mb-4">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
         </div>
-        <h4 class="font-bold text-sm mb-1 group-hover:text-amber-400 transition">Contact Sales</h4>
+        <h4 class="font-bold text-sm mb-1 group-hover:text-orange-400 transition">Contact Sales</h4>
         <p class="text-xs text-slate-400">{{ company.phones[0] }}</p>
       </a>
       <a [href]="'mailto:' + company.emails[0]" class="bg-white/5 hover:bg-white/10 border border-white/10 rounded-2xl p-6 text-center transition group">
@@ -138,13 +138,13 @@
   </section>
 
   <!-- CTA -->
-  <section class="py-16 bg-gradient-to-r from-amber-500 to-amber-400">
+  <section class="py-16 bg-gradient-to-r from-orange-500 to-orange-400">
     <div class="max-w-5xl mx-auto px-4 sm:px-8 text-center space-y-5">
       <h2 class="text-2xl sm:text-3xl font-extrabold font-heading text-slate-950">Interested in {{ p.name }}?</h2>
       <p class="text-slate-900/80 text-sm sm:text-base">Get in touch with our technical team for pricing, customization, and bulk order enquiries.</p>
       <a routerLink="/contact" class="inline-flex items-center gap-2 bg-[#0A2540] hover:bg-[#0D3259] text-white font-bold px-8 py-4 rounded-xl shadow-xl transition">
         <span>Contact {{ company.name }}</span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-amber-400"><path d="m9 18 6-6-6-6"></path></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-orange-400"><path d="m9 18 6-6-6-6"></path></svg>
       </a>
     </div>
   </section>
