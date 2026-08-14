@@ -39,7 +39,7 @@ export const routes: Routes = [
       import('./pages/contact/contact.component').then((m) => m.ContactComponent),
     title: 'Contact Us | TechnoCop Energy Co.',
   },
-{
+  {
     path: 'admin',
     loadComponent: () =>
       import('./pages/admin/admin.component').then((m) => m.AdminComponent),
