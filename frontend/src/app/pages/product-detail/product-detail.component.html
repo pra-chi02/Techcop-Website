@@ -93,8 +93,23 @@
     </div>
   </section>
 
+  <!-- Installation method -->
+  <section class="py-16 bg-slate-100 border-y border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      <h2 class="text-2xl sm:text-3xl font-extrabold font-heading text-slate-900 mb-2">Installation Method</h2>
+      <p class="text-sm text-slate-500 mb-8">A general overview of the installation process. Our technical team supervises the actual on-site installation for every project.</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div *ngFor="let step of p.installationSteps; let i = index" class="relative">
+          <div class="w-10 h-10 rounded-full bg-[#0A2540] text-orange-400 flex items-center justify-center font-bold font-heading mb-4">{{ i + 1 }}</div>
+          <h4 class="font-bold text-slate-900 text-sm mb-1.5">{{ step.title }}</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">{{ step.description }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Related products -->
-  <section class="py-16 bg-slate-100 border-t border-slate-200">
+  <section class="py-16 bg-white border-t border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-8">
       <h2 class="text-xl sm:text-2xl font-extrabold font-heading text-slate-900 mb-8">Explore More Products</h2>
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">

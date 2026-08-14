@@ -39,6 +39,7 @@ export interface ProductCategory {
   wattageOptions: string[];
   keySpecs: SpecItem[];
   applications: string[];
+  installationSteps: { title: string; description: string }[];
 }
 
 export interface OtherProduct {
@@ -185,6 +186,13 @@ export const productCategories: ProductCategory[] = [
       { label: 'Mounting Height', value: '6 Meter to 12 Meter (Customizable)' },
     ],
     applications: ['Highways', 'Residential Areas', 'Parks & Gardens', 'Industrial Areas', 'Campus & Institutions', 'Rural & Remote Areas'],
+    installationSteps: [
+      { title: 'Site Survey & Planning', description: 'Assess the installation location, sunlight exposure, and pole spacing to plan the layout.' },
+      { title: 'Foundation & Pole Erection', description: 'Prepare the base foundation and erect the pole securely at the marked position.' },
+      { title: 'Panel & Fixture Mounting', description: 'Mount the solar panel at the correct tilt angle and attach the LED light fixture to the pole.' },
+      { title: 'Wiring & Battery Connection', description: 'Connect the panel, battery and LED fixture through the smart controller as per polarity.' },
+      { title: 'Testing & Commissioning', description: 'Run a full day-night cycle test to confirm charging, dusk-to-dawn operation, and handover.' },
+    ],
   },
   {
     slug: 'semi-integrated-solar-street-lights',
@@ -215,6 +223,13 @@ export const productCategories: ProductCategory[] = [
       { label: 'Mounting Height', value: '6 Meter to 12 Meter (Customizable)' },
     ],
     applications: ['Roads & Highways', 'Residential Areas', 'Parks & Gardens', 'Industrial Areas', 'Schools & Colleges', 'Rural Areas'],
+    installationSteps: [
+      { title: 'Site Survey & Planning', description: 'Check pole spacing, shading, and orientation requirements at the installation site.' },
+      { title: 'Foundation & Pole Erection', description: 'Cast the base foundation and erect the pole at the marked position.' },
+      { title: 'Panel Bracket & Fixture Mounting', description: 'Fix the solar panel bracket at the top facing optimal sun direction, and mount the light fixture below.' },
+      { title: 'Battery Unit Wiring', description: 'Connect the inbuilt battery unit to the panel and LED fixture through the controller.' },
+      { title: 'Testing & Commissioning', description: 'Verify auto on/off operation and backup performance before final handover.' },
+    ],
   },
   {
     slug: 'integrated-solar-street-lights',
@@ -245,6 +260,13 @@ export const productCategories: ProductCategory[] = [
       { label: 'Mounting Height', value: '6 Meter to 12 Meter (Customizable)' },
     ],
     applications: ['Roads & Highways', 'Residential Areas', 'Parks & Gardens', 'Industrial Areas', 'Schools & Colleges', 'Rural & Remote Areas'],
+    installationSteps: [
+      { title: 'Site Survey & Planning', description: 'Assess site layout and pole spacing since the all-in-one unit has no separate wiring needs.' },
+      { title: 'Foundation & Pole Erection', description: 'Prepare the base foundation and erect the pole at the marked location.' },
+      { title: 'Unit Mounting', description: 'Mount the integrated unit (panel, battery, LED and controller in one body) to the pole bracket.' },
+      { title: 'Angle Adjustment', description: 'Adjust the panel tilt angle for optimal sun exposure at the site latitude.' },
+      { title: 'Testing & Commissioning', description: 'Confirm dusk-to-dawn auto operation and backup performance before handover.' },
+    ],
   },
   {
     slug: 'high-mast-lights',
@@ -278,6 +300,13 @@ export const productCategories: ProductCategory[] = [
       { label: 'Surge Protection', value: '4KV / 6KV / 10KV' },
     ],
     applications: ['Ports & Terminals', 'Airports', 'Stadiums & Sports Complex', 'Industrial Areas', 'Highways & Toll Plazas', 'Railway Yards', 'Large Parking Areas', 'Public Places & Commercial Areas'],
+    installationSteps: [
+      { title: 'Site Survey & Planning', description: 'Evaluate the area size to determine mast height, spacing, and lighting coverage needed.' },
+      { title: 'Foundation Preparation', description: 'Cast a heavy-duty concrete foundation suited to the mast height and wind load.' },
+      { title: 'Mast Erection', description: 'Erect the high tensile pole using appropriate lifting equipment and secure it to the foundation.' },
+      { title: 'Luminaire & Wiring Installation', description: 'Install the LED luminaires on the mounting ring and complete electrical wiring as per input voltage.' },
+      { title: 'Testing & Commissioning', description: 'Test illumination levels and electrical safety before handing over the installation.' },
+    ],
   },
   {
     slug: 'solar-flood-lights',
@@ -310,6 +339,13 @@ export const productCategories: ProductCategory[] = [
       { label: 'Remote Control', value: 'On / Off, Timer, Brightness Mode' },
     ],
     applications: ['Buildings & Facades', 'Parks & Gardens', 'Billboards & Sign Boards', 'Stadiums & Playgrounds', 'Warehouses & Factories', 'Construction Sites', 'Parking Areas', 'Farm Houses & Open Areas'],
+    installationSteps: [
+      { title: 'Site Survey & Planning', description: 'Identify the mounting surface and beam angle needed to cover the target area.' },
+      { title: 'Bracket Mounting', description: 'Fix the adjustable mounting bracket securely to the wall, pole, or structure.' },
+      { title: 'Panel Positioning', description: 'Position the separate solar panel facing optimal sun direction, away from shading.' },
+      { title: 'Wiring & Remote Pairing', description: 'Connect the panel to the flood light body and pair the wireless remote control.' },
+      { title: 'Testing & Commissioning', description: 'Test brightness modes, timer settings, and auto on/off before handover.' },
+    ],
   },
   {
     slug: 'solar-water-pumping-systems',
@@ -339,6 +375,13 @@ export const productCategories: ProductCategory[] = [
       { label: 'How It Works', value: 'Solar Panels → Pump Controller (MPPT/AC/DC) → Water Pumping → Clean Water for Use' },
     ],
     applications: ['Agriculture & Irrigation', 'Dairy Farms', 'Drinking Water Supply', 'Rural & Remote Areas', 'Industrial Use', 'Parks & Gardens', 'Community Projects'],
+    installationSteps: [
+      { title: 'Site & Water Source Assessment', description: 'Evaluate the water source, required flow rate, and total dynamic head for pump sizing.' },
+      { title: 'Solar Array Installation', description: 'Mount the solar panels on a suitable structure facing optimal sun direction, clear of shading.' },
+      { title: 'Pump & Controller Setup', description: 'Install the submersible or surface pump and connect it to the MPPT/AC-DC pump controller.' },
+      { title: 'Piping & Electrical Connections', description: 'Connect delivery pipes and complete electrical wiring as per the controller manual.' },
+      { title: 'Commissioning & Trial Run', description: 'Run a trial cycle to verify flow rate and system performance before handover.' },
+    ],
   },
 ];
 
