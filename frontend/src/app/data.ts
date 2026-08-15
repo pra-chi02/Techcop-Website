@@ -438,7 +438,6 @@ export const otherProducts: OtherProduct[] = [
   },
   {
     name: 'Solar Inverters & Power Systems',
-      image: 'assets/products/solar inverter and power system.png',
     type: 'Power Electronics',
     points: ['Pure sine wave output', 'High efficiency & overload protection', 'Compatible with various battery types', 'For homes, offices & industries'],
   },
@@ -456,7 +455,6 @@ export const otherProducts: OtherProduct[] = [
   },
   {
     name: 'Solar Water Heaters',
-    image:'assets/products/solar water heaters.png',
     type: 'Thermal Systems',
     points: ['Energy efficient & eco friendly', 'Hot water for homes, hotels & industries', 'Reduces electricity cost'],
   },
@@ -545,11 +543,31 @@ export const faqs: Faq[] = [
     answer: 'Integrated lights combine the solar panel, battery, LED and controller into a single compact unit that is completely wire-free. Semi-Integrated lights use a separate solar panel connected to an inbuilt battery unit, offering more flexibility in panel positioning.',
   },
   {
+    question: 'What wattage options are available?',
+    answer: 'Our lighting range spans 12W to 200W depending on the product — Solar Street Lights, Semi-Integrated and Integrated Lights all offer multiple wattage bands, while High Mast Lights are configured by number of luminaires (8 to 20 lights) to suit the area you need to cover.',
+  },
+  {
+    question: 'Can the mounting height and color temperature be customized?',
+    answer: 'Yes. Street lights and flood lights mount from 6 to 12 meters, and high mast poles from 12 to 30 meters, all customizable to your site. Color temperature is available in 3000K, 4000K, 5700K or 6500K depending on the ambience you need.',
+  },
+  {
+    question: 'Do you offer both AC and DC solar water pumping systems?',
+    answer: 'Yes — our Solar AC Water Pumping Systems suit large-scale agriculture and industrial use, while our Solar DC systems are ideal for small-scale irrigation and domestic use, both with MPPT-based smart control.',
+  },
+  {
+    question: 'What does the installation process involve?',
+    answer: 'Installation generally follows five stages: site survey and planning, foundation and pole erection, panel and fixture mounting, wiring and battery connection, and final testing and commissioning. Our technical team supervises every on-site installation.',
+  },
+  {
     question: 'What warranty do you offer?',
     answer: 'Warranty coverage varies by product — for example, our Solar Flood Lights carry a 2 to 5 year warranty. Our team can confirm the exact warranty terms for the specific product and wattage you need.',
   },
   {
     question: 'Do you offer customized solutions for large projects?',
     answer: 'Yes, we provide customized project solutions across wattages, mounting heights and pole configurations for highways, industrial areas, campuses, and government and PSU projects nationwide.',
+  },
+  {
+    question: 'Which areas do you serve, and is after-sales support available?',
+    answer: 'We have delivered 5000+ projects across 20+ states in India, backed by nationwide service support and dependable after-sales assistance for every installation.',
   },
 ];
