@@ -37,4 +37,8 @@ export class HomeComponent {
   readonly company = company;
   readonly processSteps: ProcessStep[] = processSteps;
   readonly recentProjects: ProjectEntry[] = projects.slice(0, 3);
+
+  mapsUrl(location: string): string {
+    return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`;
+  }
 }
