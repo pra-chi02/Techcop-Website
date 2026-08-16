@@ -8,12 +8,32 @@
   </div>
 </section>
 
-<!-- Stat strip -->
-<section class="bg-[#0A2540] py-8 border-b border-slate-800">
-  <div class="max-w-7xl mx-auto px-4 sm:px-8 grid grid-cols-2 sm:grid-cols-5 gap-6 text-center">
-    <div *ngFor="let s of stats">
-      <div class="text-2xl sm:text-3xl font-extrabold text-orange-400 font-heading">{{ s.value }}</div>
-      <div class="text-[11px] sm:text-xs text-slate-300 mt-1">{{ s.label }}</div>
+<!-- Animated promo banner -->
+<section class="relative bg-[#0A2540] py-16 overflow-hidden">
+  <div class="absolute top-1/2 left-1/4 -translate-y-1/2 w-72 h-72 rounded-full bg-orange-500/20 blur-3xl promo-glow"></div>
+  <div class="absolute top-1/2 right-1/4 -translate-y-1/2 w-72 h-72 rounded-full bg-blue-500/20 blur-3xl promo-glow" style="animation-delay: 1.2s"></div>
+
+  <div class="max-w-5xl mx-auto px-4 sm:px-8 relative z-10 text-center">
+    <div class="promo-float inline-block mb-6">
+      <div class="relative w-20 h-20 mx-auto flex items-center justify-center">
+        <div class="absolute inset-0 rounded-full bg-orange-500/25 blur-xl promo-glow"></div>
+        <svg class="promo-spin-slow absolute w-24 h-24 text-orange-400/30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><circle cx="12" cy="12" r="10" stroke-dasharray="2 4"></circle></svg>
+        <img src="assets/logo.png" alt="TechnoPlus LED Solar Light" class="relative h-16 w-auto object-contain">
+      </div>
+    </div>
+
+    <h2 class="promo-fade-up text-2xl sm:text-4xl font-extrabold font-heading text-white mb-3" style="animation-delay: 0.1s">
+      {{ company.tagline }}
+    </h2>
+    <p class="promo-fade-up text-sm sm:text-base text-slate-300 max-w-xl mx-auto mb-10" style="animation-delay: 0.25s">
+      {{ company.name }} — manufacturer of {{ company.brand }}, delivering solar lighting solutions across India.
+    </p>
+
+    <div class="grid grid-cols-2 sm:grid-cols-5 gap-6">
+      <div *ngFor="let s of stats; let i = index" class="promo-stat" [style.animation-delay.s]="0.3 + i * 0.12">
+        <div class="text-2xl sm:text-3xl font-extrabold text-orange-400 font-heading">{{ s.value }}</div>
+        <div class="text-[11px] sm:text-xs text-slate-300 mt-1">{{ s.label }}</div>
+      </div>
     </div>
   </div>
 </section>

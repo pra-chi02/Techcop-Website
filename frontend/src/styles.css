@@ -22,3 +22,41 @@ body {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+/* Promo banner animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.35; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.08); }
+}
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes countUpFade {
+  from { opacity: 0; transform: scale(0.85); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.promo-fade-up {
+  animation: fadeInUp 0.8s ease-out both;
+}
+.promo-float {
+  animation: floatY 4s ease-in-out infinite;
+}
+.promo-glow {
+  animation: glowPulse 3.5s ease-in-out infinite;
+}
+.promo-spin-slow {
+  animation: spinSlow 14s linear infinite;
+}
+.promo-stat {
+  animation: countUpFade 0.6s ease-out both;
+}
