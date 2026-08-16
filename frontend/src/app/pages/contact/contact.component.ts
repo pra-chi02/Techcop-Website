@@ -13,10 +13,16 @@ interface ContactForm {
   email: string;
   productInterest: string;
   message: string;
+  website: string; // honeypot field — must stay empty; bots tend to fill every field
 }
 
-interface SavedEnquiry extends ContactForm {
+interface SavedEnquiry {
   id: number;
+  name: string;
+  phone: string;
+  email: string;
+  productInterest: string;
+  message: string;
   submittedAt: string;
 }
 
@@ -36,16 +42,19 @@ export class ContactComponent {
   submittedEnquiry: SavedEnquiry | null = null;
 
   contactForm: ContactForm = this.emptyForm();
+  private formRenderedAt = Date.now();
 
   constructor(private http: HttpClient) {}
 
   private emptyForm(): ContactForm {
+    this.formRenderedAt = Date.now();
     return {
       name: '',
       phone: '',
       email: '',
       productInterest: this.productCategories[0]?.name ?? '',
       message: '',
+      website: '',
     };
   }
 
@@ -54,7 +63,9 @@ export class ContactComponent {
     this.submitError = null;
     this.submitting = true;
 
-    this.http.post<SavedEnquiry>(`${environment.apiUrl}/enquiries`, this.contactForm).subscribe({
+    const payload = { ...this.contactForm, formRenderedAt: this.formRenderedAt };
+
+    this.http.post<SavedEnquiry>(`${environment.apiUrl}/enquiries`, payload).subscribe({
       next: (saved) => {
         this.submitting = false;
         this.submittedEnquiry = saved;
