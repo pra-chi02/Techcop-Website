@@ -33,9 +33,9 @@
             </div>
             <div>
               <div class="font-bold text-white text-sm">Address</div>
-              <p class="text-slate-300 text-xs sm:text-sm mt-1 leading-relaxed">
-                <strong>{{ company.name }}</strong><br>{{ company.addressLine1 }}<br>{{ company.addressLine2 }}<br>{{ company.addressLine3 }}
-              </p>
+              <a [href]="companyMapsUrl" target="_blank" rel="noopener" class="block text-slate-300 text-xs sm:text-sm mt-1 leading-relaxed hover:text-orange-400 transition">
+                <strong class="text-white">{{ company.name }}</strong><br>{{ company.addressLine1 }}<br>{{ company.addressLine2 }}<br>{{ company.addressLine3 }}
+              </a>
             </div>
           </div>
 

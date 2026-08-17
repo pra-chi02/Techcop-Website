@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { company, faqs, productCategories, ProductCategory } from '../../data';
+import { company, faqs, productCategories, ProductCategory, companyMapsUrl } from '../../data';
 import { FaqAccordionComponent } from '../../components/faq-accordion/faq-accordion.component';
 import { environment } from '../../../environments/environment';
 
@@ -34,6 +34,7 @@ interface SavedEnquiry {
 })
 export class ContactComponent {
   readonly company = company;
+  readonly companyMapsUrl = companyMapsUrl;
   readonly faqs = faqs;
   readonly productCategories: ProductCategory[] = productCategories;
 

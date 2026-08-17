@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { NavLink, navLinks, company, productCategories, ProductCategory } from '../../data';
+import { NavLink, navLinks, company, productCategories, ProductCategory, companyMapsUrl } from '../../data';
 
 @Component({
   selector: 'app-header',
@@ -12,6 +12,7 @@ import { NavLink, navLinks, company, productCategories, ProductCategory } from '
 export class HeaderComponent {
   readonly navLinks: NavLink[] = navLinks;
   readonly company = company;
+  readonly companyMapsUrl = companyMapsUrl;
   readonly productCategories: ProductCategory[] = productCategories;
   mobileMenuOpen = false;
   mobileProductsOpen = false;

@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { NavLink, navLinks, company, productCategories, ProductCategory } from '../../data';
+import { NavLink, navLinks, company, productCategories, ProductCategory, companyMapsUrl } from '../../data';
 
 @Component({
   selector: 'app-footer',
@@ -12,6 +12,7 @@ import { NavLink, navLinks, company, productCategories, ProductCategory } from '
 export class FooterComponent {
   readonly navLinks: NavLink[] = navLinks;
   readonly company = company;
+  readonly companyMapsUrl = companyMapsUrl;
   readonly productCategories: ProductCategory[] = productCategories;
   readonly currentYear = new Date().getFullYear();
 }

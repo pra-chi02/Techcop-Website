@@ -87,6 +87,12 @@ export const company: CompanyInfo = {
   workingDays: 'Monday – Saturday',
 };
 
+// Google Maps search link for the company's full address — used anywhere the
+// address is shown so a tap/click opens the location directly.
+export const companyMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+  `${company.addressLine1}, ${company.addressLine2}, ${company.addressLine3}`
+)}`;
+
 // ---------------------------------------------------------------------------
 // Navigation
 // ---------------------------------------------------------------------------

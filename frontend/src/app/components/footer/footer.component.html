@@ -38,7 +38,8 @@
     <div>
       <h4 class="font-bold text-white mb-4 uppercase tracking-wider text-xs">Get In Touch</h4>
       <p class="text-slate-300 leading-relaxed mb-4">
-        <strong>{{ company.name }}</strong><br>{{ company.addressLine1 }}<br>{{ company.addressLine2 }}<br>{{ company.addressLine3 }}
+        <strong>{{ company.name }}</strong><br>
+        <a [href]="companyMapsUrl" target="_blank" rel="noopener" class="hover:text-orange-400 transition">{{ company.addressLine1 }}<br>{{ company.addressLine2 }}<br>{{ company.addressLine3 }}</a>
       </p>
       <div class="text-orange-400 font-medium">{{ company.phones[0] }}</div>
       <div class="text-orange-400 font-medium">{{ company.emails[0] }}</div>
