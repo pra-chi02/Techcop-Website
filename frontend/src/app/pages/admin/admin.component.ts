@@ -100,6 +100,39 @@ export class AdminComponent implements OnInit {
     this.fetchEnquiries(false);
   }
 
+  exportCsv(): void {
+    const rows = this.filteredEnquiries;
+    if (rows.length === 0) return;
+
+    const headers = ['ID', 'Name', 'Phone', 'Email', 'Product', 'Message', 'Status', 'Submitted'];
+    const escape = (val: string) => `"${(val ?? '').replace(/"/g, '""')}"`;
+
+    const csvLines = [
+      headers.join(','),
+      ...rows.map((e) =>
+        [
+          e.id,
+          escape(e.name),
+          escape(e.phone),
+          escape(e.email || ''),
+          escape(e.productInterest || ''),
+          escape(e.message || ''),
+          escape(e.status),
+          escape(e.submittedAt),
+        ].join(',')
+      ),
+    ];
+
+    const blob = new Blob([csvLines.join('\n')], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    const dateStamp = new Date().toISOString().slice(0, 10);
+    link.href = url;
+    link.download = `technocop-enquiries-${dateStamp}.csv`;
+    link.click();
+    URL.revokeObjectURL(url);
+  }
+
   logout(): void {
     this.authenticated = false;
     this.adminKey = '';
@@ -133,6 +166,8 @@ export class AdminComponent implements OnInit {
         },
       });
   }
+
+  // ---- Dashboard stats ----
 
   get totalCount(): number {
     return this.enquiries.length;

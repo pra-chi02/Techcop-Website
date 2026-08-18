@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { company } from '../../data';
+import { TranslationService } from '../../services/translation.service';
 
 interface SlideImage {
   src: string;
@@ -16,6 +17,8 @@ interface SlideImage {
 })
 export class HeroComponent implements OnInit, OnDestroy {
   readonly company = company;
+
+  constructor(public translate: TranslationService) {}
 
   readonly slides: SlideImage[] = [
     { src: 'assets/products/solar-street-light.png', alt: 'Solar Street Light' },

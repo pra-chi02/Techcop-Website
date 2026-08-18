@@ -22,21 +22,21 @@
     </div>
 
     <div>
-      <h4 class="font-bold text-white mb-4 uppercase tracking-wider text-xs">Quick Links</h4>
+      <h4 class="font-bold text-white mb-4 uppercase tracking-wider text-xs">{{ translate.t('Quick Links') }}</h4>
       <ul class="space-y-2">
         <li *ngFor="let link of navLinks"><a [routerLink]="link.path" class="hover:text-orange-400 transition">{{ link.name }}</a></li>
       </ul>
     </div>
 
     <div>
-      <h4 class="font-bold text-white mb-4 uppercase tracking-wider text-xs">Our Products</h4>
+      <h4 class="font-bold text-white mb-4 uppercase tracking-wider text-xs">{{ translate.t('Our Products') }}</h4>
       <ul class="space-y-2">
         <li *ngFor="let cat of productCategories"><a [routerLink]="['/products', cat.slug]" class="hover:text-orange-400 transition">{{ cat.shortName }}</a></li>
       </ul>
     </div>
 
     <div>
-      <h4 class="font-bold text-white mb-4 uppercase tracking-wider text-xs">Get In Touch</h4>
+      <h4 class="font-bold text-white mb-4 uppercase tracking-wider text-xs">{{ translate.t('Get In Touch') }}</h4>
       <p class="text-slate-300 leading-relaxed mb-4">
         <strong>{{ company.name }}</strong><br>
         <a [href]="companyMapsUrl" target="_blank" rel="noopener" class="hover:text-orange-400 transition">{{ company.addressLine1 }}<br>{{ company.addressLine2 }}<br>{{ company.addressLine3 }}</a>

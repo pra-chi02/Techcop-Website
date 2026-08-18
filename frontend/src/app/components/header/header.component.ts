@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { NavLink, navLinks, company, productCategories, ProductCategory, companyMapsUrl } from '../../data';
+import { TranslationService } from '../../services/translation.service';
 
 @Component({
   selector: 'app-header',
@@ -17,6 +18,8 @@ export class HeaderComponent {
   mobileMenuOpen = false;
   mobileProductsOpen = false;
   productsDropdownOpen = false;
+
+  constructor(public translate: TranslationService) {}
 
   toggleMobileMenu(): void {
     this.mobileMenuOpen = !this.mobileMenuOpen;

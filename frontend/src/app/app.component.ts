@@ -6,11 +6,12 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { WhatsappButtonComponent } from './components/whatsapp-button/whatsapp-button.component';
 import { BackToTopComponent } from './components/back-to-top/back-to-top.component';
+import { MobileCtaBarComponent } from './components/mobile-cta-bar/mobile-cta-bar.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, FooterComponent, WhatsappButtonComponent, BackToTopComponent],
+  imports: [RouterOutlet, HeaderComponent, FooterComponent, WhatsappButtonComponent, BackToTopComponent, MobileCtaBarComponent],
   templateUrl: './app.component.html',
 })
 export class AppComponent implements OnInit {

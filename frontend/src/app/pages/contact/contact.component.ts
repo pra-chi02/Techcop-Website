@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RouterLink } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { company, faqs, productCategories, ProductCategory, companyMapsUrl } from '../../data';
 import { FaqAccordionComponent } from '../../components/faq-accordion/faq-accordion.component';
@@ -32,7 +32,7 @@ interface SavedEnquiry {
   imports: [CommonModule, FormsModule, RouterLink, FaqAccordionComponent],
   templateUrl: './contact.component.html',
 })
-export class ContactComponent {
+export class ContactComponent implements OnInit {
   readonly company = company;
   readonly companyMapsUrl = companyMapsUrl;
   readonly faqs = faqs;
@@ -45,7 +45,17 @@ export class ContactComponent {
   contactForm: ContactForm = this.emptyForm();
   private formRenderedAt = Date.now();
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private route: ActivatedRoute) {}
+
+  ngOnInit(): void {
+    // Pre-select the product if the user arrived via a product page's "Request a Quote" link.
+    this.route.queryParamMap.subscribe((params) => {
+      const product = params.get('product');
+      if (product) {
+        this.contactForm.productInterest = product;
+      }
+    });
+  }
 
   private emptyForm(): ContactForm {
     this.formRenderedAt = Date.now();

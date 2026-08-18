@@ -17,7 +17,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
         {{ company.workingDays }}: {{ company.workingHours }}
       </span>
-      <a routerLink="/contact" class="bg-orange-500 hover:bg-orange-600 text-slate-950 font-bold px-3 py-1 rounded text-xs transition">Get a Quote</a>
+      <a routerLink="/contact" class="bg-orange-500 hover:bg-orange-600 text-slate-950 font-bold px-3 py-1 rounded text-xs transition">{{ translate.t('Get a Quote') }}</a>
     </div>
   </div>
 </div>
@@ -30,29 +30,32 @@
     </a>
 
     <nav class="hidden lg:flex items-center gap-7">
-      <a routerLink="/" routerLinkActive="text-orange-400" [routerLinkActiveOptions]="{exact: true}" class="text-sm font-medium text-slate-200 hover:text-orange-400 transition tracking-wide">Home</a>
-      <a routerLink="/about" routerLinkActive="text-orange-400" class="text-sm font-medium text-slate-200 hover:text-orange-400 transition tracking-wide">About Us</a>
+      <a routerLink="/" routerLinkActive="text-orange-400" [routerLinkActiveOptions]="{exact: true}" class="text-sm font-medium text-slate-200 hover:text-orange-400 transition tracking-wide">{{ translate.t('Home') }}</a>
+      <a routerLink="/about" routerLinkActive="text-orange-400" class="text-sm font-medium text-slate-200 hover:text-orange-400 transition tracking-wide">{{ translate.t('About Us') }}</a>
 
       <div class="relative" (mouseenter)="productsDropdownOpen = true" (mouseleave)="productsDropdownOpen = false">
         <a routerLink="/products" routerLinkActive="text-orange-400" class="text-sm font-medium text-slate-200 hover:text-orange-400 transition tracking-wide flex items-center gap-1">
-          Products
+          {{ translate.t('Products') }}
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="m6 9 6 6 6-6"></path></svg>
         </a>
         <div *ngIf="productsDropdownOpen" class="absolute top-full left-1/2 -translate-x-1/2 pt-3 w-72 z-50">
           <div class="bg-white rounded-xl shadow-2xl border border-slate-200 overflow-hidden py-2">
             <a *ngFor="let cat of productCategories" [routerLink]="['/products', cat.slug]" class="block px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 hover:text-blue-600 transition font-medium">{{ cat.name }}</a>
-            <a routerLink="/products" class="block px-4 py-2.5 text-sm text-blue-600 hover:bg-slate-50 transition font-bold border-t border-slate-100 mt-1">View All Products →</a>
+            <a routerLink="/products" class="block px-4 py-2.5 text-sm text-blue-600 hover:bg-slate-50 transition font-bold border-t border-slate-100 mt-1">{{ translate.t('View All Products') }} →</a>
           </div>
         </div>
       </div>
 
-      <a routerLink="/projects" routerLinkActive="text-orange-400" class="text-sm font-medium text-slate-200 hover:text-orange-400 transition tracking-wide">Projects &amp; Clients</a>
-      <a routerLink="/contact" routerLinkActive="text-orange-400" class="text-sm font-medium text-slate-200 hover:text-orange-400 transition tracking-wide">Contact</a>
+      <a routerLink="/projects" routerLinkActive="text-orange-400" class="text-sm font-medium text-slate-200 hover:text-orange-400 transition tracking-wide">{{ translate.t('Projects & Clients') }}</a>
+      <a routerLink="/contact" routerLinkActive="text-orange-400" class="text-sm font-medium text-slate-200 hover:text-orange-400 transition tracking-wide">{{ translate.t('Contact') }}</a>
     </nav>
 
     <div class="hidden lg:flex items-center gap-4">
+      <button (click)="translate.toggle()" class="text-xs font-bold text-slate-300 hover:text-orange-400 border border-slate-700 hover:border-orange-400 rounded-lg px-3 py-2 transition">
+        {{ translate.lang === 'en' ? 'हिं' : 'EN' }}
+      </button>
       <a routerLink="/contact" class="bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white font-semibold px-5 py-2.5 rounded-xl shadow-lg shadow-blue-600/30 flex items-center gap-2 transition transform hover:-translate-y-0.5">
-        <span>Get a Quote</span>
+        <span>{{ translate.t('Get a Quote') }}</span>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
       </a>
     </div>
@@ -64,19 +67,22 @@
   </div>
 
   <div *ngIf="mobileMenuOpen" class="lg:hidden bg-[#0B132B] border-t border-slate-800 px-4 py-4 space-y-1">
-    <a routerLink="/" (click)="closeMobileMenu()" class="block text-sm font-medium text-slate-200 hover:text-orange-400 transition py-2">Home</a>
-    <a routerLink="/about" (click)="closeMobileMenu()" class="block text-sm font-medium text-slate-200 hover:text-orange-400 transition py-2">About Us</a>
+    <button (click)="translate.toggle()" class="w-full text-left text-xs font-bold text-slate-300 hover:text-orange-400 border border-slate-700 rounded-lg px-3 py-2 mb-2">
+      {{ translate.lang === 'en' ? 'हिंदी में देखें' : 'View in English' }}
+    </button>
+    <a routerLink="/" (click)="closeMobileMenu()" class="block text-sm font-medium text-slate-200 hover:text-orange-400 transition py-2">{{ translate.t('Home') }}</a>
+    <a routerLink="/about" (click)="closeMobileMenu()" class="block text-sm font-medium text-slate-200 hover:text-orange-400 transition py-2">{{ translate.t('About Us') }}</a>
 
     <button (click)="toggleMobileProducts()" class="w-full flex items-center justify-between text-sm font-medium text-slate-200 hover:text-orange-400 transition py-2">
-      <span>Products</span>
+      <span>{{ translate.t('Products') }}</span>
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4" [class.rotate-180]="mobileProductsOpen"><path d="m6 9 6 6 6-6"></path></svg>
     </button>
     <div *ngIf="mobileProductsOpen" class="pl-4 space-y-1 border-l border-slate-700 ml-1">
       <a *ngFor="let cat of productCategories" [routerLink]="['/products', cat.slug]" (click)="closeMobileMenu()" class="block text-xs text-slate-300 hover:text-orange-400 transition py-1.5">{{ cat.name }}</a>
     </div>
 
-    <a routerLink="/projects" (click)="closeMobileMenu()" class="block text-sm font-medium text-slate-200 hover:text-orange-400 transition py-2">Projects &amp; Clients</a>
-    <a routerLink="/contact" (click)="closeMobileMenu()" class="block text-sm font-medium text-slate-200 hover:text-orange-400 transition py-2">Contact</a>
-    <a routerLink="/contact" (click)="closeMobileMenu()" class="block text-center bg-orange-500 text-slate-950 font-bold px-5 py-2.5 rounded-xl mt-3">Get a Quote</a>
+    <a routerLink="/projects" (click)="closeMobileMenu()" class="block text-sm font-medium text-slate-200 hover:text-orange-400 transition py-2">{{ translate.t('Projects & Clients') }}</a>
+    <a routerLink="/contact" (click)="closeMobileMenu()" class="block text-sm font-medium text-slate-200 hover:text-orange-400 transition py-2">{{ translate.t('Contact') }}</a>
+    <a routerLink="/contact" (click)="closeMobileMenu()" class="block text-center bg-orange-500 text-slate-950 font-bold px-5 py-2.5 rounded-xl mt-3">{{ translate.t('Get a Quote') }}</a>
   </div>
 </header>
