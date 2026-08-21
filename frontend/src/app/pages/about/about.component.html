@@ -98,6 +98,32 @@
   </div>
 </section>
 
+<!-- Our team -->
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-8">
+    <div class="text-center max-w-3xl mx-auto space-y-4 mb-12">
+      <span class="px-3.5 py-1 rounded-md bg-blue-100 text-blue-800 font-semibold text-xs tracking-wider uppercase">Our Team</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-slate-900">The People Behind Every Project</h2>
+      <p class="text-slate-600 text-sm sm:text-base">From first enquiry to after-sales support, our team works together to deliver every installation reliably.</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div *ngFor="let dept of teamDepartments" class="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-md transition">
+        <div class="w-11 h-11 rounded-xl bg-[#0A2540] text-orange-400 flex items-center justify-center mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+        </div>
+        <h4 class="font-bold text-slate-900 text-sm mb-2">{{ dept.title }}</h4>
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">{{ dept.description }}</p>
+      </div>
+    </div>
+    <div class="text-center mt-10">
+      <a routerLink="/team" class="inline-flex items-center gap-2 bg-[#0A2540] hover:bg-[#0D3259] text-white font-bold px-7 py-3.5 rounded-xl shadow transition">
+        <span>View Full Team</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-orange-400"><path d="m9 18 6-6-6-6"></path></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- Why choose us -->
 <section class="py-20 bg-slate-100 border-y border-slate-200">
   <div class="max-w-7xl mx-auto px-4 sm:px-8">

@@ -16,6 +16,13 @@ export const routes: Routes = [
     data: { description: 'Learn about TechnoCop Energy Co. — our mission, vision, core values, and 8+ years of experience delivering solar lighting solutions across 20+ Indian states.' },
   },
   {
+    path: 'team',
+    loadComponent: () =>
+      import('./pages/team/team.component').then((m) => m.TeamComponent),
+    title: 'Our Team | TechnoCop Energy Co.',
+    data: { description: 'Meet the teams behind TechnoCop Energy Co. — technical engineering, sales support, installation and after-sales service, working together on every solar lighting project.' },
+  },
+  {
     path: 'products',
     loadComponent: () =>
       import('./pages/products/products.component').then((m) => m.ProductsComponent),

@@ -13,6 +13,8 @@ import {
   company,
   stats,
   StatItem,
+  teamDepartments,
+  TeamDept,
 } from '../../data';
 
 @Component({
@@ -31,4 +33,5 @@ export class AboutComponent {
   readonly whyChooseUs: WhyChooseUsItem[] = whyChooseUs;
   readonly company = company;
   readonly stats: StatItem[] = stats;
+  readonly teamDepartments: TeamDept[] = teamDepartments;
 }
