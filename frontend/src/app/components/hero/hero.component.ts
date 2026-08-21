@@ -1,3 +1,4 @@
+
 import { CommonModule } from '@angular/common';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
@@ -21,17 +22,42 @@ export class HeroComponent implements OnInit, OnDestroy {
   constructor(public translate: TranslationService) {}
 
   readonly slides: SlideImage[] = [
-    { src: 'assets/products/solar-street-light.png', alt: 'Solar Street Light' },
-    { src: 'assets/products/solar-high-mast.png', alt: 'Solar High Mast Light' },
-    { src: 'assets/products/solar-wall-washer-light.png', alt: 'Solar Flood / Wall Washer Light' },
-    { src: 'assets/products/solar-home-light.png', alt: 'Solar Home Lighting System' },
-    { src: 'assets/products/solar-garden-light.png', alt: 'Solar Garden Light' },
-    { src: 'assets/products/solar-lithium-battery.png', alt: 'Solar Lithium Battery' },
-    { src: 'assets/products/solar-charge-controller-led-bulb.png', alt: 'Solar Charge Controller & LED Bulb' },
-    { src: 'assets/products/solar-pv-modules.png', alt: 'Solar Photovoltaic Modules' },
+    {
+      src: 'assets/products/solar-street-light.png',
+      alt: 'Solar Street Light',
+    },
+    {
+      src: 'assets/products/solar-high-mast.png',
+      alt: 'Solar High Mast Light',
+    },
+    {
+      src: 'assets/products/real/flood-light-real.jpg',
+      alt: 'Solar Flood / Wall Washer Light',
+    },
+    {
+      src: 'assets/products/solar-home-light.png',
+      alt: 'Solar Home Lighting System',
+    },
+    {
+      src: 'assets/products/solar-garden-light.png',
+      alt: 'Solar Garden Light',
+    },
+    {
+      src: 'assets/products/solar-lithium-battery.png',
+      alt: 'Solar Lithium Battery',
+    },
+    {
+      src: 'assets/products/solar-charge-controller-led-bulb.png',
+      alt: 'Solar Charge Controller & LED Bulb',
+    },
+    {
+      src: 'assets/products/solar-pv-modules.png',
+      alt: 'Solar Photovoltaic Modules',
+    },
   ];
 
   currentSlide = 0;
+
   private intervalId?: ReturnType<typeof setInterval>;
 
   ngOnInit(): void {
@@ -43,24 +69,43 @@ export class HeroComponent implements OnInit, OnDestroy {
   }
 
   private startAutoplay(): void {
-    this.intervalId = setInterval(() => this.next(), 3500);
+    this.stopAutoplay();
+
+    this.intervalId = setInterval(() => {
+      this.next(false);
+    }, 3500);
   }
 
   private stopAutoplay(): void {
-    if (this.intervalId) clearInterval(this.intervalId);
+    if (this.intervalId) {
+      clearInterval(this.intervalId);
+      this.intervalId = undefined;
+    }
   }
 
-  next(): void {
-    this.currentSlide = (this.currentSlide + 1) % this.slides.length;
+  next(restartTimer = true): void {
+    this.currentSlide =
+      (this.currentSlide + 1) % this.slides.length;
+
+    if (restartTimer) {
+      this.restartAutoplay();
+    }
   }
 
   prev(): void {
-    this.currentSlide = (this.currentSlide - 1 + this.slides.length) % this.slides.length;
+    this.currentSlide =
+      (this.currentSlide - 1 + this.slides.length) %
+      this.slides.length;
+
+    this.restartAutoplay();
   }
 
   goTo(index: number): void {
     this.currentSlide = index;
-    // Restart the timer so manual navigation doesn't fight the autoplay.
+    this.restartAutoplay();
+  }
+
+  private restartAutoplay(): void {
     this.stopAutoplay();
     this.startAutoplay();
   }
