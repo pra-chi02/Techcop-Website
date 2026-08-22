@@ -122,10 +122,15 @@ export const trustFeatures: { title: string; icon: string }[] = [
 // ---------------------------------------------------------------------------
 
 export const aboutParagraphs: string[] = [
-  'TechnoCop Energy Co. is a trusted manufacturer and supplier of innovative LED Solar Lighting and Renewable Energy Solutions in India. We are committed to delivering energy-efficient, eco-friendly, and high-performance lighting systems that meet the growing needs of residential, commercial, industrial, and government sectors.',
-  'With extensive experience in solar technology, we offer a comprehensive range of products including Solar Street Lights, Integrated Solar Street Lights, Semi-Integrated Solar Street Lights, High Mast Lights, Solar Flood Lights, Solar Water Pumping Systems, and customized energy solutions.',
-  'Our products are manufactured using premium-quality components and advanced technology to ensure maximum efficiency, long service life, and reliable performance in all weather conditions. Every solution is designed to reduce electricity costs while supporting a cleaner and greener future.',
-  'At TechnoCop Energy Co., customer satisfaction is our highest priority. We focus on delivering superior quality, timely project execution, technical excellence, and dependable after-sales support to build long-term partnerships with our clients.',
+
+  'Founded on 19 April 2018, TechnoCop Energy Co. is a trusted manufacturer and supplier of innovative LED Solar Lighting and Renewable Energy Solutions in India. Since our establishment, we have been committed to delivering energy-efficient, eco-friendly, and high-performance lighting systems that meet the growing needs of residential, commercial, industrial, and government sectors.',
+
+  'With extensive experience in solar technology, we offer a comprehensive range of products and solutions, including Solar Street Lights, Integrated Solar Street Lights, Semi-Integrated Solar Street Lights, High Mast Lights, Solar Flood Lights, Solar Water Pumping Systems, and customized renewable energy solutions.',
+
+  'Our products are manufactured using premium-quality components and advanced technology to ensure maximum efficiency, long service life, and reliable performance in diverse weather conditions. Every solution is designed to help reduce electricity costs while contributing to a cleaner, greener, and more sustainable future.',
+
+  'At TechnoCop Energy Co., customer satisfaction is our highest priority. We focus on delivering superior quality, timely project execution, technical excellence, and dependable after-sales support. Our goal is to build long-term partnerships with our clients by providing reliable, innovative, and sustainable energy solutions.'
+
 ];
 
 export const mission =

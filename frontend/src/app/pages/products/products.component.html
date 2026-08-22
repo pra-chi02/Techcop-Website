@@ -1,136 +1,1662 @@
-<!-- Page header -->
-<section class="relative bg-[#0B132B] text-white py-24 overflow-hidden">
-  <img src="https://images.unsplash.com/photo-1740805276608-ef60e2e468ba?auto=format&fit=crop&w=1600&q=80" alt="Solar street light" class="absolute inset-0 w-full h-full object-cover opacity-25">
-  <div class="absolute inset-0 bg-gradient-to-b from-[#0B132B]/70 via-[#0B132B]/85 to-[#0B132B]"></div>
-  <div class="max-w-7xl mx-auto px-4 sm:px-8 text-center space-y-4 relative z-10">
-    <span class="px-3.5 py-1 rounded-md bg-blue-500/10 text-blue-400 font-semibold text-xs tracking-wider uppercase border border-blue-500/30">Our Products</span>
-    <h1 class="text-3xl sm:text-5xl font-extrabold font-heading tracking-tight">Products &amp; Solutions</h1>
-    <p class="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto">Innovative Solar &amp; LED Lighting Solutions engineered for maximum efficiency, durability and performance.</p>
-    <a href="assets/technocop-brochure.pdf" download class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold px-5 py-2.5 rounded-xl text-sm transition mt-2">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-      <span>Download Brochure</span>
-    </a>
+<!-- =========================================================
+     PRODUCTS PAGE
+========================================================= -->
+
+<!-- ===================== HERO ===================== -->
+<section class="relative min-h-[560px] flex items-center overflow-hidden bg-[#071426] text-white">
+
+  <!-- Background Image -->
+  <img
+    src="https://images.unsplash.com/photo-1740805276608-ef60e2e468ba?auto=format&fit=crop&w=2000&q=85"
+    alt="Solar street lighting"
+    class="absolute inset-0 w-full h-full object-cover"
+  />
+
+  <!-- Overlays -->
+  <div class="absolute inset-0 bg-[#071426]/65"></div>
+
+  <div
+    class="absolute inset-0 bg-gradient-to-r
+           from-[#071426]
+           via-[#071426]/90
+           to-[#071426]/45">
+  </div>
+
+  <div
+    class="absolute inset-0 bg-gradient-to-t
+           from-[#071426]
+           via-transparent
+           to-[#071426]/30">
+  </div>
+
+  <!-- Decorative Glow -->
+  <div
+    class="absolute -top-40 -right-40
+           w-[550px] h-[550px]
+           rounded-full
+           bg-orange-500/10
+           blur-3xl">
+  </div>
+
+  <div
+    class="absolute bottom-0 left-1/3
+           w-[400px] h-[250px]
+           rounded-full
+           bg-blue-500/10
+           blur-3xl">
+  </div>
+
+  <!-- Content -->
+  <div
+    class="relative z-10
+           max-w-7xl mx-auto w-full
+           px-4 sm:px-8
+           py-24 lg:py-28"
+  >
+
+    <div class="max-w-3xl">
+
+      <!-- Badge -->
+      <div
+        class="inline-flex items-center gap-2
+               px-4 py-2
+               rounded-full
+               bg-white/10
+               border border-white/15
+               backdrop-blur-md
+               text-orange-300
+               text-xs font-bold
+               uppercase tracking-[0.16em]"
+      >
+        <span
+          class="w-2 h-2
+                 rounded-full
+                 bg-orange-400
+                 shadow-[0_0_12px_rgba(251,146,60,0.8)]">
+        </span>
+
+        Our Products
+      </div>
+
+      <!-- Heading -->
+      <h1
+        class="mt-6
+               text-4xl sm:text-5xl lg:text-6xl
+               font-extrabold
+               font-heading
+               tracking-tight
+               leading-[1.05]"
+      >
+        Solar &amp; LED
+
+        <span class="block text-orange-400">
+          Lighting Solutions
+        </span>
+      </h1>
+
+      <!-- Description -->
+      <p
+        class="mt-6
+               max-w-2xl
+               text-sm sm:text-base lg:text-lg
+               text-slate-300
+               leading-relaxed"
+      >
+        Explore our range of high-performance solar lighting and renewable
+        energy solutions engineered for efficiency, reliability and
+        long-term outdoor performance.
+      </p>
+
+      <!-- Buttons -->
+      <div class="flex flex-wrap gap-3 mt-8">
+
+        <a
+          routerLink="/contact"
+          class="inline-flex items-center justify-center gap-2
+                 bg-orange-500
+                 hover:bg-orange-400
+                 text-slate-950
+                 font-bold
+                 px-7 py-3.5
+                 rounded-xl
+                 shadow-xl shadow-orange-900/20
+                 hover:-translate-y-0.5
+                 transition-all duration-300"
+        >
+          Request a Quote
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="w-4 h-4"
+          >
+            <path d="m9 18 6-6-6-6"></path>
+          </svg>
+        </a>
+
+        <a
+          href="assets/technocop-brochure.pdf"
+          download
+          class="inline-flex items-center justify-center gap-2
+                 bg-white/10
+                 hover:bg-white/15
+                 backdrop-blur-md
+                 border border-white/20
+                 text-white
+                 font-semibold
+                 px-7 py-3.5
+                 rounded-xl
+                 transition-all duration-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="w-4 h-4"
+          >
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+
+          Download Brochure
+        </a>
+
+      </div>
+
+      <!-- Trust Points -->
+      <div
+        class="flex flex-wrap
+               gap-x-7 gap-y-3
+               mt-9
+               text-xs sm:text-sm
+               text-slate-300"
+      >
+
+        <div class="flex items-center gap-2">
+          <span
+            class="w-5 h-5 rounded-full
+                   bg-emerald-500/15
+                   text-emerald-400
+                   flex items-center justify-center
+                   text-xs font-bold"
+          >
+            ✓
+          </span>
+          Energy Efficient
+        </div>
+
+        <div class="flex items-center gap-2">
+          <span
+            class="w-5 h-5 rounded-full
+                   bg-emerald-500/15
+                   text-emerald-400
+                   flex items-center justify-center
+                   text-xs font-bold"
+          >
+            ✓
+          </span>
+          Durable Design
+        </div>
+
+        <div class="flex items-center gap-2">
+          <span
+            class="w-5 h-5 rounded-full
+                   bg-emerald-500/15
+                   text-emerald-400
+                   flex items-center justify-center
+                   text-xs font-bold"
+          >
+            ✓
+          </span>
+          Technical Support
+        </div>
+
+      </div>
+
+    </div>
+
   </div>
 </section>
 
-<!-- Breadcrumb -->
-<section class="bg-slate-50 border-b border-slate-200 py-3">
-  <div class="max-w-7xl mx-auto px-4 sm:px-8 text-xs text-slate-500 flex items-center gap-2">
-    <a routerLink="/" class="hover:text-blue-600 transition">Home</a>
-    <span>/</span>
-    <span class="text-slate-700 font-medium">Products</span>
-  </div>
-</section>
 
-<!-- Main product categories -->
-<section class="py-20 bg-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-8">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <a *ngFor="let cat of productCategories" [routerLink]="['/products', cat.slug]" class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition border border-slate-200 flex flex-col group">
-        <div class="h-44 overflow-hidden relative">
-          <img [src]="cat.heroImage" [alt]="cat.name" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-          <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-white/95 text-slate-800 text-[11px] font-bold shadow">{{ cat.wattageOptions.length }} option{{ cat.wattageOptions.length === 1 ? '' : 's' }}</span>
-        </div>
-        <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
-          <div>
-            <div class="text-xs font-semibold text-blue-600 mb-1">{{ cat.wattageOptions[0] }}<span *ngIf="cat.wattageOptions.length > 1"> &ndash; {{ cat.wattageOptions[cat.wattageOptions.length - 1] }}</span></div>
-            <h3 class="text-lg font-bold font-heading text-slate-900 group-hover:text-blue-600 transition">{{ cat.name }}</h3>
-            <p class="text-xs sm:text-sm text-slate-600 mt-2 line-clamp-2">{{ cat.description }}</p>
-          </div>
-          <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
-            <span class="text-xs font-medium text-orange-600">Full Specifications</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-orange-600 group-hover:translate-x-1 transition"><path d="m9 18 6-6-6-6"></path></svg>
-          </div>
-        </div>
+<!-- ===================== BREADCRUMB ===================== -->
+<section class="bg-white border-b border-slate-200">
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-8 py-4">
+
+    <div class="flex items-center gap-2 text-xs">
+
+      <a
+        routerLink="/"
+        class="text-slate-500
+               hover:text-orange-500
+               transition"
+      >
+        Home
       </a>
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        class="w-3.5 h-3.5 text-slate-400"
+      >
+        <path d="m9 18 6-6-6-6"></path>
+      </svg>
+
+      <span class="font-semibold text-slate-800">
+        Products
+      </span>
+
     </div>
+
   </div>
 </section>
 
-<!-- Other solar products -->
-<section class="py-20 bg-slate-100 border-y border-slate-200">
+
+<!-- ===================== PRODUCT CATEGORIES ===================== -->
+<section class="py-20 lg:py-24 bg-slate-50">
+
   <div class="max-w-7xl mx-auto px-4 sm:px-8">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center mb-12">
-      <div class="lg:col-span-5 rounded-2xl overflow-hidden shadow-lg border border-slate-200 order-2 lg:order-1">
-        <img src="assets/products/solar pv module.png" alt="Solar photovoltaic modules" class="w-full h-72 object-cover">
+
+    <!-- Heading -->
+    <div class="max-w-3xl mb-12">
+
+      <div
+        class="flex items-center gap-3
+               text-orange-600
+               text-xs font-bold
+               uppercase tracking-[0.16em]"
+      >
+        <span class="w-9 h-px bg-orange-500"></span>
+        Our Solutions
       </div>
-      <div class="lg:col-span-7 text-center lg:text-left space-y-4 order-1 lg:order-2">
-        <span class="px-3.5 py-1 rounded-md bg-blue-100 text-blue-800 font-semibold text-xs tracking-wider uppercase">Sustainable Solutions. For Every Need.</span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-slate-900">Other Solar Products</h2>
-        <p class="text-slate-600 text-sm sm:text-base">Along with our wide range of solar lighting solutions, we offer high quality and reliable solar products designed to deliver maximum performance, energy savings and long lasting value.</p>
-      </div>
+
+      <h2
+        class="mt-4
+               text-3xl sm:text-4xl
+               font-extrabold
+               font-heading
+               text-slate-900
+               tracking-tight"
+      >
+        Explore Our Product Range
+      </h2>
+
+      <p
+        class="mt-4
+               text-sm sm:text-base
+               text-slate-600
+               leading-relaxed"
+      >
+        Discover reliable solar lighting systems designed for roads,
+        industries, campuses, public spaces and customized projects.
+      </p>
+
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      <div *ngFor="let p of otherProducts; let i = index" class="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition overflow-hidden">
-        <img *ngIf="p.image" [src]="p.image" [alt]="p.name" class="w-full h-36 object-cover">
-        <button (click)="toggleOtherProduct(i)" class="w-full text-left p-6 flex items-start justify-between gap-3">
-          <div>
-            <span class="inline-block px-2 py-0.5 rounded-md bg-orange-50 text-orange-700 text-[10px] font-bold uppercase tracking-wide border border-orange-200 mb-2">{{ p.type }}</span>
-            <h4 class="font-bold text-slate-900 text-sm">{{ p.name }}</h4>
+
+    <!-- Product Cards -->
+    <div
+      class="grid grid-cols-1
+             md:grid-cols-2
+             xl:grid-cols-3
+             gap-7"
+    >
+
+      <a
+        *ngFor="let cat of productCategories"
+        [routerLink]="['/products', cat.slug]"
+        class="group
+               bg-white
+               rounded-3xl
+               overflow-hidden
+               border border-slate-200
+               shadow-sm
+               hover:shadow-2xl
+               hover:-translate-y-1
+               transition-all duration-300
+               flex flex-col"
+      >
+
+        <!-- Image -->
+        <div
+          class="relative
+                 h-60
+                 overflow-hidden
+                 bg-slate-200"
+        >
+
+          <img
+            [src]="cat.heroImage"
+            [alt]="cat.name"
+            class="w-full h-full
+                   object-cover
+                   group-hover:scale-105
+                   transition-transform duration-700"
+          />
+
+          <div
+            class="absolute inset-0
+                   bg-gradient-to-t
+                   from-slate-950/70
+                   via-transparent
+                   to-transparent"
+          ></div>
+
+          <!-- Options -->
+          <div class="absolute top-4 right-4">
+
+            <span
+              class="inline-flex
+                     items-center
+                     px-3 py-1.5
+                     rounded-full
+                     bg-white/95
+                     backdrop-blur
+                     text-slate-800
+                     text-[11px]
+                     font-bold
+                     shadow-lg"
+            >
+              {{ cat.wattageOptions.length }}
+              option{{ cat.wattageOptions.length === 1 ? '' : 's' }}
+            </span>
+
           </div>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-slate-400 flex-shrink-0 mt-1 transition-transform" [class.rotate-180]="expandedOtherProduct === i"><path d="m6 9 6 6 6-6"></path></svg>
-        </button>
-        <div *ngIf="expandedOtherProduct === i" class="px-6 pb-6 -mt-1">
-          <ul class="space-y-1.5 border-t border-slate-100 pt-4">
-            <li *ngFor="let point of p.points" class="text-xs text-slate-600 flex items-start gap-1.5">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 text-orange-500 flex-shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg>
-              <span>{{ point }}</span>
-            </li>
-          </ul>
-          <a routerLink="/contact" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-700 transition mt-4">
-            <span>Enquire about this product</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="m9 18 6-6-6-6"></path></svg>
-          </a>
+
+          <!-- Label -->
+          <div class="absolute bottom-4 left-4">
+
+            <span
+              class="inline-flex
+                     px-3 py-1
+                     rounded-lg
+                     bg-orange-500
+                     text-slate-950
+                     text-[10px]
+                     font-extrabold
+                     uppercase tracking-wider"
+            >
+              Solar Solution
+            </span>
+
+          </div>
+
         </div>
-      </div>
+
+
+        <!-- Content -->
+        <div class="p-6 flex-1 flex flex-col">
+
+          <!-- Wattage -->
+          <div class="flex flex-wrap gap-2 mb-4">
+
+            <span
+              *ngFor="let watt of cat.wattageOptions"
+              class="px-2.5 py-1
+                     rounded-md
+                     bg-orange-50
+                     border border-orange-100
+                     text-orange-700
+                     text-[10px]
+                     font-bold"
+            >
+              {{ watt }}
+            </span>
+
+          </div>
+
+          <h3
+            class="text-xl
+                   font-bold
+                   font-heading
+                   text-slate-900
+                   group-hover:text-orange-600
+                   transition"
+          >
+            {{ cat.name }}
+          </h3>
+
+          <p
+            class="mt-3
+                   text-sm
+                   text-slate-600
+                   leading-relaxed
+                   line-clamp-3"
+          >
+            {{ cat.description }}
+          </p>
+
+          <!-- Bottom -->
+          <div
+            class="mt-6 pt-5
+                   border-t border-slate-100
+                   flex items-center
+                   justify-between"
+          >
+
+            <span
+              class="text-xs
+                     font-bold
+                     text-slate-700
+                     group-hover:text-orange-600
+                     transition"
+            >
+              View Specifications
+            </span>
+
+            <span
+              class="w-9 h-9
+                     rounded-full
+                     bg-slate-100
+                     group-hover:bg-orange-500
+                     text-slate-600
+                     group-hover:text-slate-950
+                     flex items-center justify-center
+                     transition-all duration-300"
+            >
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="w-4 h-4"
+              >
+                <path d="m9 18 6-6-6-6"></path>
+              </svg>
+
+            </span>
+
+          </div>
+
+        </div>
+
+      </a>
+
     </div>
 
-    <div class="flex flex-wrap justify-center gap-3 mt-12">
-      <span *ngFor="let b of solarProductBenefits" class="px-4 py-2 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs sm:text-sm font-semibold">{{ b }}</span>
-    </div>
   </div>
 </section>
 
-<!-- Get in touch -->
-<section class="py-20 bg-[#0A2540] text-white">
-  <div class="max-w-5xl mx-auto px-4 sm:px-8 text-center space-y-3 mb-12">
-    <h2 class="text-2xl sm:text-3xl font-extrabold font-heading">Get in Touch</h2>
-    <p class="text-slate-300 text-sm sm:text-base">Not sure what you need? Talk to our experts.</p>
-  </div>
-  <div class="max-w-5xl mx-auto px-4 sm:px-8 grid grid-cols-1 sm:grid-cols-3 gap-5">
-    <a [href]="'tel:' + company.phones[0]" class="bg-white/5 hover:bg-white/10 border border-white/10 rounded-2xl p-6 text-center transition group">
-      <div class="w-11 h-11 mx-auto rounded-xl bg-orange-500/15 text-orange-400 flex items-center justify-center mb-4">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
+
+<!-- ===================== OTHER SOLAR PRODUCTS ===================== -->
+<section class="py-20 lg:py-24 bg-white">
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-8">
+
+    <!-- Intro -->
+    <div
+      class="grid grid-cols-1
+             lg:grid-cols-12
+             gap-12
+             items-center
+             mb-14"
+    >
+
+      <!-- Image -->
+      <div class="lg:col-span-5">
+
+        <div
+          class="relative
+                 rounded-3xl
+                 overflow-hidden
+                 border border-slate-200
+                 shadow-xl"
+        >
+
+          <img
+            src="assets/products/solar pv module.png"
+            alt="Solar photovoltaic modules"
+            class="w-full h-[330px]
+                   object-cover"
+          />
+
+          <div
+            class="absolute inset-0
+                   bg-gradient-to-t
+                   from-[#071426]/70
+                   via-transparent
+                   to-transparent"
+          ></div>
+
+          <div class="absolute bottom-5 left-5">
+
+            <div
+              class="inline-flex
+                     items-center gap-2
+                     bg-white/95
+                     backdrop-blur-sm
+                     px-4 py-2
+                     rounded-xl
+                     text-xs font-bold
+                     text-slate-900"
+            >
+
+              <span
+                class="w-2 h-2
+                       rounded-full
+                       bg-emerald-500"
+              ></span>
+
+              Renewable Energy Solutions
+
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
-      <h4 class="font-bold text-sm mb-1 group-hover:text-orange-400 transition">Contact Sales</h4>
-      <p class="text-xs text-slate-400">{{ company.phones[0] }}</p>
-    </a>
-    <a [href]="'mailto:' + company.emails[0]" class="bg-white/5 hover:bg-white/10 border border-white/10 rounded-2xl p-6 text-center transition group">
-      <div class="w-11 h-11 mx-auto rounded-xl bg-blue-500/15 text-blue-400 flex items-center justify-center mb-4">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><rect x="3" y="11" width="18" height="11" rx="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+
+
+      <!-- Text -->
+      <div class="lg:col-span-7">
+
+        <span
+          class="inline-flex
+                 px-3.5 py-1.5
+                 rounded-full
+                 bg-blue-50
+                 border border-blue-100
+                 text-blue-700
+                 text-xs font-bold
+                 uppercase tracking-wider"
+        >
+          Beyond Lighting
+        </span>
+
+        <h2
+          class="mt-5
+                 text-3xl sm:text-4xl lg:text-5xl
+                 font-extrabold
+                 font-heading
+                 text-slate-900
+                 tracking-tight"
+        >
+          Other Solar Products
+        </h2>
+
+        <p
+          class="mt-5
+                 text-slate-600
+                 text-sm sm:text-base
+                 leading-relaxed
+                 max-w-2xl"
+        >
+          Along with our solar lighting portfolio, we provide reliable
+          renewable energy products designed to reduce energy consumption,
+          improve efficiency and deliver dependable long-term performance.
+        </p>
+
+
+        <!-- Highlights -->
+        <div
+          class="grid
+                 grid-cols-1
+                 sm:grid-cols-3
+                 gap-4
+                 mt-8"
+        >
+
+          <div
+            class="p-4
+                   rounded-2xl
+                   bg-slate-50
+                   border border-slate-200"
+          >
+
+            <div
+              class="w-9 h-9
+                     rounded-xl
+                     bg-orange-100
+                     text-orange-600
+                     flex items-center
+                     justify-center
+                     font-bold mb-3"
+            >
+              ✓
+            </div>
+
+            <div class="text-sm font-bold text-slate-900">
+              Energy Efficient
+            </div>
+
+          </div>
+
+
+          <div
+            class="p-4
+                   rounded-2xl
+                   bg-slate-50
+                   border border-slate-200"
+          >
+
+            <div
+              class="w-9 h-9
+                     rounded-xl
+                     bg-blue-100
+                     text-blue-600
+                     flex items-center
+                     justify-center
+                     font-bold mb-3"
+            >
+              ✓
+            </div>
+
+            <div class="text-sm font-bold text-slate-900">
+              Reliable Products
+            </div>
+
+          </div>
+
+
+          <div
+            class="p-4
+                   rounded-2xl
+                   bg-slate-50
+                   border border-slate-200"
+          >
+
+            <div
+              class="w-9 h-9
+                     rounded-xl
+                     bg-emerald-100
+                     text-emerald-600
+                     flex items-center
+                     justify-center
+                     font-bold mb-3"
+            >
+              ✓
+            </div>
+
+            <div class="text-sm font-bold text-slate-900">
+              Long Lasting
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
-      <h4 class="font-bold text-sm mb-1 group-hover:text-blue-400 transition">Contact Tech Support</h4>
-      <p class="text-xs text-slate-400">{{ company.emails[0] }}</p>
-    </a>
-    <a routerLink="/contact" class="bg-white/5 hover:bg-white/10 border border-white/10 rounded-2xl p-6 text-center transition group">
-      <div class="w-11 h-11 mx-auto rounded-xl bg-emerald-500/15 text-emerald-400 flex items-center justify-center mb-4">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path></svg>
+
+    </div>
+
+
+    <!-- ===================== EXPANDABLE PRODUCTS ===================== -->
+
+    <div
+      class="grid
+             grid-cols-1
+             sm:grid-cols-2
+             lg:grid-cols-4
+             gap-6
+             items-start"
+    >
+
+      <div
+        *ngFor="let p of otherProducts; let i = index"
+        class="group
+               bg-white
+               rounded-2xl
+               border border-slate-200
+               shadow-sm
+               hover:shadow-xl
+               overflow-hidden
+               transition-all duration-300"
+      >
+
+        <!-- Image -->
+        <div
+          *ngIf="p.image"
+          class="h-40
+                 overflow-hidden
+                 bg-slate-100"
+        >
+
+          <img
+            [src]="p.image"
+            [alt]="p.name"
+            class="w-full h-full
+                   object-cover
+                   group-hover:scale-105
+                   transition-transform duration-500"
+          />
+
+        </div>
+
+
+        <!-- Click Header -->
+        <button
+          type="button"
+          (click)="toggleOtherProduct(i)"
+          class="w-full
+                 text-left
+                 p-5
+                 flex items-start
+                 justify-between
+                 gap-3
+                 cursor-pointer"
+        >
+
+          <div class="min-w-0">
+
+            <span
+              class="inline-flex
+                     px-2.5 py-1
+                     rounded-md
+                     bg-orange-50
+                     border border-orange-100
+                     text-orange-700
+                     text-[10px]
+                     font-bold
+                     uppercase
+                     tracking-wide
+                     mb-2"
+            >
+              {{ p.type }}
+            </span>
+
+            <h4
+              class="font-bold
+                     text-slate-900
+                     text-sm
+                     leading-snug
+                     group-hover:text-orange-600
+                     transition"
+            >
+              {{ p.name }}
+            </h4>
+
+          </div>
+
+
+          <!-- Arrow -->
+          <span
+            class="w-8 h-8
+                   rounded-full
+                   bg-slate-100
+                   flex items-center
+                   justify-center
+                   flex-shrink-0
+                   transition-all duration-300"
+            [class.bg-orange-500]="expandedOtherProduct === i"
+            [class.text-slate-950]="expandedOtherProduct === i"
+          >
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="w-4 h-4
+                     text-slate-500
+                     transition-transform
+                     duration-300"
+              [class.rotate-180]="expandedOtherProduct === i"
+              [class.text-slate-950]="expandedOtherProduct === i"
+            >
+              <path d="m6 9 6 6 6-6"></path>
+            </svg>
+
+          </span>
+
+        </button>
+
+
+        <!-- Expanded Content -->
+        <div
+          *ngIf="expandedOtherProduct === i"
+          class="px-5 pb-5"
+        >
+
+          <div
+            class="border-t
+                   border-slate-100
+                   pt-4
+                   animate-[fadeIn_0.2s_ease-out]"
+          >
+
+            <ul class="space-y-2.5">
+
+              <li
+                *ngFor="let point of p.points"
+                class="flex items-start
+                       gap-2
+                       text-xs
+                       text-slate-600
+                       leading-relaxed"
+              >
+
+                <span
+                  class="w-4 h-4
+                         rounded-full
+                         bg-emerald-50
+                         text-emerald-600
+                         flex items-center
+                         justify-center
+                         flex-shrink-0
+                         mt-0.5
+                         text-[10px]
+                         font-bold"
+                >
+                  ✓
+                </span>
+
+                <span>
+                  {{ point }}
+                </span>
+
+              </li>
+
+            </ul>
+
+
+            <!-- Enquiry -->
+            <a
+              routerLink="/contact"
+              class="inline-flex
+                     items-center
+                     gap-2
+                     mt-5
+                     text-xs
+                     font-bold
+                     text-blue-600
+                     hover:text-orange-600
+                     transition"
+            >
+
+              Enquire About Product
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="w-3.5 h-3.5"
+              >
+                <path d="m9 18 6-6-6-6"></path>
+              </svg>
+
+            </a>
+
+          </div>
+
+        </div>
+
       </div>
-      <h4 class="font-bold text-sm mb-1 group-hover:text-emerald-400 transition">Custom Solutions</h4>
-      <p class="text-xs text-slate-400">Tell us your project requirements</p>
-    </a>
+
+    </div>
+
+
+    <!-- Benefits -->
+    <div class="mt-14">
+
+      <div
+        class="flex flex-wrap
+               justify-center
+               gap-3"
+      >
+
+        <span
+          *ngFor="let b of solarProductBenefits"
+          class="inline-flex
+                 items-center
+                 gap-2
+                 px-4 py-2.5
+                 rounded-full
+                 bg-slate-50
+                 border border-slate-200
+                 text-slate-700
+                 text-xs sm:text-sm
+                 font-semibold"
+        >
+
+          <span class="text-emerald-500">
+            ✓
+          </span>
+
+          {{ b }}
+
+        </span>
+
+      </div>
+
+    </div>
+
   </div>
 </section>
 
-<!-- CTA -->
-<section class="py-16 bg-gradient-to-r from-orange-500 to-orange-400">
-  <div class="max-w-5xl mx-auto px-4 sm:px-8 text-center space-y-5">
-    <h2 class="text-2xl sm:text-3xl font-extrabold font-heading text-slate-950">Need a Customized Solar Lighting Solution?</h2>
-    <p class="text-slate-900/80 text-sm sm:text-base">Tell us your project requirements and our technical team will get back with a tailored proposal.</p>
-    <a routerLink="/contact" class="inline-flex items-center gap-2 bg-[#0A2540] hover:bg-[#0D3259] text-white font-bold px-8 py-4 rounded-xl shadow-xl transition">
-      <span>Request a Quote</span>
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-orange-400"><path d="m9 18 6-6-6-6"></path></svg>
-    </a>
+
+<!-- ===================== WHY CHOOSE US ===================== -->
+<section
+  class="relative
+         py-20 lg:py-24
+         bg-[#071426]
+         text-white
+         overflow-hidden"
+>
+
+  <!-- Glow -->
+  <div
+    class="absolute
+           -top-40
+           -right-40
+           w-[500px]
+           h-[500px]
+           rounded-full
+           bg-orange-500/10
+           blur-3xl"
+  ></div>
+
+  <div
+    class="absolute
+           -bottom-40
+           -left-40
+           w-[450px]
+           h-[450px]
+           rounded-full
+           bg-blue-500/10
+           blur-3xl"
+  ></div>
+
+
+  <div
+    class="max-w-7xl
+           mx-auto
+           px-4 sm:px-8
+           relative z-10"
+  >
+
+    <!-- Heading -->
+    <div
+      class="text-center
+             max-w-2xl
+             mx-auto
+             mb-12"
+    >
+
+      <span
+        class="inline-flex
+               px-3 py-1
+               rounded-full
+               bg-orange-500/10
+               border border-orange-500/20
+               text-orange-400
+               text-xs font-bold
+               uppercase tracking-wider"
+      >
+        Why Choose Us
+      </span>
+
+      <h2
+        class="mt-4
+               text-3xl sm:text-4xl
+               font-extrabold
+               font-heading"
+      >
+        Built for Real-World Performance
+      </h2>
+
+      <p
+        class="mt-4
+               text-slate-400
+               text-sm sm:text-base"
+      >
+        Practical solar solutions backed by quality products,
+        technical support and project-focused service.
+      </p>
+
+    </div>
+
+
+    <!-- Features -->
+    <div
+      class="grid
+             grid-cols-1
+             sm:grid-cols-2
+             lg:grid-cols-4
+             gap-5"
+    >
+
+      <!-- Feature 1 -->
+      <div
+        class="p-6
+               rounded-2xl
+               bg-white/5
+               border border-white/10
+               hover:bg-white/10
+               hover:-translate-y-1
+               transition-all duration-300"
+      >
+
+        <div
+          class="w-11 h-11
+                 rounded-xl
+                 bg-orange-500/10
+                 text-orange-400
+                 flex items-center
+                 justify-center
+                 mb-5
+                 font-bold"
+        >
+          ✓
+        </div>
+
+        <h3 class="font-bold text-base">
+          High Efficiency
+        </h3>
+
+        <p
+          class="text-xs
+                 text-slate-400
+                 mt-2
+                 leading-relaxed"
+        >
+          Designed to deliver efficient energy utilization and dependable
+          illumination.
+        </p>
+
+      </div>
+
+
+      <!-- Feature 2 -->
+      <div
+        class="p-6
+               rounded-2xl
+               bg-white/5
+               border border-white/10
+               hover:bg-white/10
+               hover:-translate-y-1
+               transition-all duration-300"
+      >
+
+        <div
+          class="w-11 h-11
+                 rounded-xl
+                 bg-blue-500/10
+                 text-blue-400
+                 flex items-center
+                 justify-center
+                 mb-5
+                 font-bold"
+        >
+          ✓
+        </div>
+
+        <h3 class="font-bold text-base">
+          Robust Construction
+        </h3>
+
+        <p
+          class="text-xs
+                 text-slate-400
+                 mt-2
+                 leading-relaxed"
+        >
+          Reliable components and durable designs suitable for demanding
+          outdoor environments.
+        </p>
+
+      </div>
+
+
+      <!-- Feature 3 -->
+      <div
+        class="p-6
+               rounded-2xl
+               bg-white/5
+               border border-white/10
+               hover:bg-white/10
+               hover:-translate-y-1
+               transition-all duration-300"
+      >
+
+        <div
+          class="w-11 h-11
+                 rounded-xl
+                 bg-emerald-500/10
+                 text-emerald-400
+                 flex items-center
+                 justify-center
+                 mb-5
+                 font-bold"
+        >
+          ✓
+        </div>
+
+        <h3 class="font-bold text-base">
+          Technical Support
+        </h3>
+
+        <p
+          class="text-xs
+                 text-slate-400
+                 mt-2
+                 leading-relaxed"
+        >
+          Get technical guidance from project planning through installation.
+        </p>
+
+      </div>
+
+
+      <!-- Feature 4 -->
+      <div
+        class="p-6
+               rounded-2xl
+               bg-white/5
+               border border-white/10
+               hover:bg-white/10
+               hover:-translate-y-1
+               transition-all duration-300"
+      >
+
+        <div
+          class="w-11 h-11
+                 rounded-xl
+                 bg-purple-500/10
+                 text-purple-400
+                 flex items-center
+                 justify-center
+                 mb-5
+                 font-bold"
+        >
+          ✓
+        </div>
+
+        <h3 class="font-bold text-base">
+          Custom Solutions
+        </h3>
+
+        <p
+          class="text-xs
+                 text-slate-400
+                 mt-2
+                 leading-relaxed"
+        >
+          Solutions can be adapted to specific site, lighting and project
+          requirements.
+        </p>
+
+      </div>
+
+    </div>
+
   </div>
+</section>
+
+
+<!-- ===================== GET IN TOUCH ===================== -->
+<section class="py-20 lg:py-24 bg-white">
+
+  <div class="max-w-6xl mx-auto px-4 sm:px-8">
+
+    <div
+      class="rounded-3xl
+             bg-slate-50
+             border border-slate-200
+             p-8 sm:p-12
+             shadow-sm"
+    >
+
+      <!-- Heading -->
+      <div
+        class="text-center
+               max-w-2xl
+               mx-auto"
+      >
+
+        <span
+          class="inline-flex
+                 px-3.5 py-1.5
+                 rounded-full
+                 bg-blue-50
+                 border border-blue-100
+                 text-blue-700
+                 text-xs font-bold
+                 uppercase tracking-wider"
+        >
+          Need Assistance?
+        </span>
+
+        <h2
+          class="mt-4
+                 text-3xl sm:text-4xl
+                 font-extrabold
+                 font-heading
+                 text-slate-900"
+        >
+          Let's Find the Right Solution
+        </h2>
+
+        <p
+          class="mt-3
+                 text-sm sm:text-base
+                 text-slate-600"
+        >
+          Tell us about your project and our team will help you choose the
+          right solar lighting solution.
+        </p>
+
+      </div>
+
+
+      <!-- Contact Cards -->
+      <div
+        class="grid
+               grid-cols-1
+               sm:grid-cols-3
+               gap-5
+               mt-10"
+      >
+
+        <!-- Phone -->
+        <a
+          [href]="'tel:' + company.phones[0]"
+          class="group
+                 bg-white
+                 border border-slate-200
+                 rounded-2xl
+                 p-6
+                 text-center
+                 hover:border-orange-300
+                 hover:shadow-lg
+                 hover:-translate-y-1
+                 transition-all duration-300"
+        >
+
+          <div
+            class="w-12 h-12
+                   mx-auto
+                   rounded-xl
+                   bg-orange-50
+                   text-orange-600
+                   flex items-center
+                   justify-center
+                   mb-4
+                   group-hover:bg-orange-500
+                   group-hover:text-white
+                   transition"
+          >
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="w-5 h-5"
+            >
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2
+                   19.79 19.79 0 0 1-8.63-3.07
+                   19.5 19.5 0 0 1-6-6
+                   19.79 19.79 0 0 1-3.07-8.67
+                   A2 2 0 0 1 4.11 2h3
+                   a2 2 0 0 1 2 1.72
+                   12.84 12.84 0 0 0 .7 2.81
+                   2 2 0 0 1-.45 2.11L8.09 9.91
+                   a16 16 0 0 0 6 6l1.27-1.27
+                   a2 2 0 0 1 2.11-.45
+                   12.84 12.84 0 0 0 2.81.7
+                   A2 2 0 0 1 22 16.92z"
+              ></path>
+            </svg>
+
+          </div>
+
+          <h4 class="font-bold text-slate-900 text-sm">
+            Contact Sales
+          </h4>
+
+          <p class="text-xs text-slate-500 mt-1">
+            {{ company.phones[0] }}
+          </p>
+
+        </a>
+
+
+        <!-- Email -->
+        <a
+          [href]="'mailto:' + company.emails[0]"
+          class="group
+                 bg-white
+                 border border-slate-200
+                 rounded-2xl
+                 p-6
+                 text-center
+                 hover:border-blue-300
+                 hover:shadow-lg
+                 hover:-translate-y-1
+                 transition-all duration-300"
+        >
+
+          <div
+            class="w-12 h-12
+                   mx-auto
+                   rounded-xl
+                   bg-blue-50
+                   text-blue-600
+                   flex items-center
+                   justify-center
+                   mb-4
+                   group-hover:bg-blue-500
+                   group-hover:text-white
+                   transition"
+          >
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="w-5 h-5"
+            >
+              <rect
+                x="2"
+                y="4"
+                width="20"
+                height="16"
+                rx="2"
+              ></rect>
+
+              <path
+                d="m22 7-8.97 5.7
+                   a2 2 0 0 1-2.06 0L2 7"
+              ></path>
+            </svg>
+
+          </div>
+
+          <h4 class="font-bold text-slate-900 text-sm">
+            Email Us
+          </h4>
+
+          <p
+            class="text-xs
+                   text-slate-500
+                   mt-1
+                   break-all"
+          >
+            {{ company.emails[0] }}
+          </p>
+
+        </a>
+
+
+        <!-- Custom -->
+        <a
+          routerLink="/contact"
+          class="group
+                 bg-white
+                 border border-slate-200
+                 rounded-2xl
+                 p-6
+                 text-center
+                 hover:border-emerald-300
+                 hover:shadow-lg
+                 hover:-translate-y-1
+                 transition-all duration-300"
+        >
+
+          <div
+            class="w-12 h-12
+                   mx-auto
+                   rounded-xl
+                   bg-emerald-50
+                   text-emerald-600
+                   flex items-center
+                   justify-center
+                   mb-4
+                   group-hover:bg-emerald-500
+                   group-hover:text-white
+                   transition"
+          >
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="w-5 h-5"
+            >
+              <path
+                d="M12 3l1.9 5.8
+                   a2 2 0 0 0 1.3 1.3
+                   L21 12l-5.8 1.9
+                   a2 2 0 0 0-1.3 1.3
+                   L12 21l-1.9-5.8
+                   a2 2 0 0 0-1.3-1.3
+                   L3 12l5.8-1.9
+                   a2 2 0 0 0 1.3-1.3L12 3z"
+              ></path>
+            </svg>
+
+          </div>
+
+          <h4 class="font-bold text-slate-900 text-sm">
+            Custom Solutions
+          </h4>
+
+          <p class="text-xs text-slate-500 mt-1">
+            Discuss your project
+          </p>
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ===================== FINAL CTA ===================== -->
+<section
+  class="relative
+         overflow-hidden
+         bg-orange-500"
+>
+
+  <!-- Decorative -->
+  <div
+    class="absolute
+           -top-32
+           -right-32
+           w-[450px]
+           h-[450px]
+           rounded-full
+           bg-white/10
+           blur-3xl"
+  ></div>
+
+  <div
+    class="absolute
+           -bottom-32
+           -left-32
+           w-[350px]
+           h-[350px]
+           rounded-full
+           bg-orange-300/20
+           blur-3xl"
+  ></div>
+
+
+  <div
+    class="relative z-10
+           max-w-5xl
+           mx-auto
+           px-4 sm:px-8
+           py-16 sm:py-20
+           text-center"
+  >
+
+    <div class="max-w-3xl mx-auto">
+
+      <span
+        class="inline-flex
+               items-center
+               gap-2
+               px-3.5 py-1.5
+               rounded-full
+               bg-slate-950/10
+               border border-slate-950/10
+               text-slate-950
+               text-xs font-bold
+               uppercase tracking-wider"
+      >
+        Let's Build a Brighter Future
+      </span>
+
+      <h2
+        class="mt-5
+               text-3xl sm:text-4xl lg:text-5xl
+               font-extrabold
+               font-heading
+               text-slate-950
+               tracking-tight"
+      >
+        Need a Customized
+        <span class="block">
+          Solar Lighting Solution?
+        </span>
+      </h2>
+
+      <p
+        class="mt-4
+               text-slate-900/75
+               text-sm sm:text-base
+               max-w-2xl
+               mx-auto"
+      >
+        Share your project requirements with us and our technical team
+        will prepare a suitable solution for your application.
+      </p>
+
+
+      <!-- CTA Buttons -->
+      <div
+        class="flex
+               flex-wrap
+               justify-center
+               gap-3
+               mt-8"
+      >
+
+        <a
+          routerLink="/contact"
+          class="inline-flex
+                 items-center
+                 gap-2
+                 bg-[#071426]
+                 hover:bg-[#10233e]
+                 text-white
+                 font-bold
+                 px-7 py-3.5
+                 rounded-xl
+                 shadow-xl
+                 hover:-translate-y-0.5
+                 transition-all duration-300"
+        >
+
+          Request a Quote
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="w-4 h-4 text-orange-400"
+          >
+            <path d="m9 18 6-6-6-6"></path>
+          </svg>
+
+        </a>
+
+
+        <a
+          [href]="'tel:' + company.phones[0]"
+          class="inline-flex
+                 items-center
+                 gap-2
+                 bg-white/90
+                 hover:bg-white
+                 text-slate-900
+                 font-bold
+                 px-7 py-3.5
+                 rounded-xl
+                 transition-all duration-300"
+        >
+
+          Call Now
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="w-4 h-4"
+          >
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2
+                 19.79 19.79 0 0 1-8.63-3.07
+                 19.5 19.5 0 0 1-6-6
+                 19.79 19.79 0 0 1-3.07-8.67
+                 A2 2 0 0 1 4.11 2h3
+                 a2 2 0 0 1 2 1.72
+                 12.84 12.84 0 0 0 .7 2.81
+                 2 2 0 0 1-.45 2.11L8.09 9.91
+                 a16 16 0 0 0 6 6l1.27-1.27
+                 a2 2 0 0 1 2.11-.45
+                 12.84 12.84 0 0 0 2.81.7
+                 A2 2 0 0 1 22 16.92z"
+            ></path>
+          </svg>
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
 </section>

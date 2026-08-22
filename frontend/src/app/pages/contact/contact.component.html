@@ -1,198 +1,832 @@
-<!-- Page header -->
-<section class="relative bg-[#0B132B] text-white py-24 overflow-hidden">
-  <img src="https://images.unsplash.com/photo-1722962416153-ed769a7471dd?auto=format&fit=crop&w=1600&q=80" alt="Solar flood light installation" class="absolute inset-0 w-full h-full object-cover opacity-25">
-  <div class="absolute inset-0 bg-gradient-to-b from-[#0B132B]/70 via-[#0B132B]/85 to-[#0B132B]"></div>
-  <div class="max-w-7xl mx-auto px-4 sm:px-8 text-center space-y-4 relative z-10">
-    <span class="px-3.5 py-1 rounded-md bg-orange-500/10 text-orange-400 font-semibold text-xs tracking-wider uppercase border border-orange-500/30">We Are Here to Power a Brighter Future</span>
-    <h1 class="text-3xl sm:text-5xl font-extrabold font-heading tracking-tight">Contact Us</h1>
-    <p class="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto">Have a question, need a quote, or looking for customized solar lighting solutions? Our team is always ready to assist you.</p>
-    <a href="assets/technocop-brochure.pdf" download class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold px-5 py-2.5 rounded-xl text-sm transition mt-2">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-      <span>Download Brochure</span>
-    </a>
+<!-- =========================
+     CONTACT HERO
+========================= -->
+<section class="relative bg-[#0B132B] text-white overflow-hidden py-20 lg:py-24">
+
+  <!-- Background -->
+  <img
+    src="https://images.unsplash.com/photo-1722962416153-ed769a7471dd?auto=format&fit=crop&w=1600&q=80"
+    alt="Solar flood light installation"
+    class="absolute inset-0 w-full h-full object-cover opacity-20"
+  >
+
+  <div class="absolute inset-0 bg-gradient-to-b from-[#0B132B]/70 via-[#0B132B]/90 to-[#0B132B]"></div>
+
+  <!-- Glow -->
+  <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-orange-500/10 rounded-full blur-3xl"></div>
+
+  <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-8 text-center">
+
+    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full
+                bg-orange-500/10 border border-orange-500/30
+                text-orange-400 text-xs font-bold uppercase tracking-wider">
+      <span class="w-1.5 h-1.5 rounded-full bg-orange-400"></span>
+      We Are Here to Power a Brighter Future
+    </div>
+
+    <h1 class="mt-5 text-4xl sm:text-5xl lg:text-6xl font-extrabold
+               font-heading tracking-tight leading-tight">
+      Let's Build a
+      <span class="text-transparent bg-clip-text bg-gradient-to-r
+                   from-orange-400 to-blue-400">
+        Brighter Future
+      </span>
+    </h1>
+
+    <p class="mt-5 max-w-2xl mx-auto text-sm sm:text-base
+              text-slate-300 leading-relaxed">
+      Have a question, need a quote, or looking for customized solar
+      lighting solutions? Our team is ready to help you find the right solution.
+    </p>
+
+    <div class="flex flex-wrap justify-center gap-3 mt-7">
+
+      <a
+        href="assets/technocop-brochure.pdf"
+        download
+        class="inline-flex items-center gap-2 bg-orange-500
+               hover:bg-orange-400 text-slate-950 font-bold
+               px-5 py-3 rounded-xl text-sm shadow-lg
+               shadow-orange-500/20 transition hover:-translate-y-0.5"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg"
+             viewBox="0 0 24 24"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="2"
+             stroke-linecap="round"
+             stroke-linejoin="round"
+             class="w-4 h-4">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="7 10 12 15 17 10"/>
+          <line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+
+        Download Brochure
+      </a>
+
+      <a
+        routerLink="/products"
+        class="inline-flex items-center gap-2 bg-white/5
+               hover:bg-white/10 border border-white/15
+               text-white font-semibold px-5 py-3 rounded-xl
+               text-sm transition"
+      >
+        Explore Products
+
+        <svg xmlns="http://www.w3.org/2000/svg"
+             viewBox="0 0 24 24"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="2"
+             stroke-linecap="round"
+             stroke-linejoin="round"
+             class="w-4 h-4">
+          <path d="m9 18 6-6-6-6"/>
+        </svg>
+      </a>
+
+    </div>
   </div>
 </section>
 
-<!-- Breadcrumb -->
-<section class="bg-[#0A2540] border-b border-slate-800 py-3">
-  <div class="max-w-7xl mx-auto px-4 sm:px-8 text-xs text-slate-400 flex items-center gap-2">
-    <a routerLink="/" class="hover:text-orange-400 transition">Home</a>
-    <span>/</span>
-    <span class="text-slate-200 font-medium">Contact</span>
+
+<!-- =========================
+     BREADCRUMB
+========================= -->
+<section class="bg-[#081A30] border-b border-slate-800">
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-8 py-3">
+
+    <div class="flex items-center gap-2 text-xs">
+
+      <a
+        routerLink="/"
+        class="text-slate-400 hover:text-orange-400 transition"
+      >
+        Home
+      </a>
+
+      <span class="text-slate-600">/</span>
+
+      <span class="text-slate-200 font-medium">
+        Contact
+      </span>
+
+    </div>
+
   </div>
 </section>
 
-<section class="py-20 bg-[#0A2540] text-white relative overflow-hidden">
-  <div class="max-w-7xl mx-auto px-4 sm:px-8 relative z-10">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-      <div class="lg:col-span-6 space-y-6">
-        <div class="space-y-4">
-          <div class="flex items-start gap-4 p-4 rounded-xl bg-slate-900/60 border border-slate-800">
-            <div class="p-3 rounded-lg bg-orange-500/10 text-orange-400">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 flex-shrink-0"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+
+<!-- =========================
+     CONTACT SECTION
+========================= -->
+<section class="relative bg-[#0A2540] text-white py-16 lg:py-20 overflow-hidden">
+
+  <!-- Background glow -->
+  <div class="absolute top-20 -left-40 w-96 h-96
+              bg-blue-500/10 rounded-full blur-3xl"></div>
+
+  <div class="absolute bottom-0 -right-40 w-96 h-96
+              bg-orange-500/10 rounded-full blur-3xl"></div>
+
+
+  <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-8">
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+
+
+      <!-- =========================
+           LEFT CONTACT INFO
+      ========================= -->
+      <div class="lg:col-span-5">
+
+        <div class="mb-7">
+
+          <span class="inline-block px-3 py-1 rounded-md
+                       bg-blue-500/10 border border-blue-500/20
+                       text-blue-400 text-[11px] font-bold
+                       uppercase tracking-wider">
+            Contact Information
+          </span>
+
+          <h2 class="mt-3 text-2xl sm:text-3xl
+                     font-extrabold font-heading">
+            Get in touch with us
+          </h2>
+
+          <p class="mt-3 text-sm text-slate-400 leading-relaxed max-w-md">
+            Connect with our team for product information, pricing,
+            technical support and customized solar lighting solutions.
+          </p>
+
+        </div>
+
+
+        <!-- Address -->
+        <div class="group flex gap-4 p-4 rounded-2xl
+                    bg-[#101D34] border border-slate-800
+                    hover:border-orange-500/30 transition">
+
+          <div class="flex-shrink-0 w-11 h-11 rounded-xl
+                      bg-orange-500/10 text-orange-400
+                      flex items-center justify-center">
+
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2"
+                 stroke-linecap="round"
+                 stroke-linejoin="round"
+                 class="w-5 h-5">
+              <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+
+          </div>
+
+          <div class="min-w-0">
+
+            <h3 class="text-sm font-bold text-white">
+              Visit Us
+            </h3>
+
+            <a
+              [href]="companyMapsUrl"
+              target="_blank"
+              rel="noopener"
+              class="block mt-1 text-xs sm:text-sm
+                     text-slate-400 leading-relaxed
+                     hover:text-orange-400 transition"
+            >
+              <strong class="text-slate-200">
+                {{ company.name }}
+              </strong>
+
+              <br>
+
+              {{ company.addressLine1 }}
+              <br>
+
+              {{ company.addressLine2 }}
+              <br>
+
+              {{ company.addressLine3 }}
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- Phone + Email -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+
+          <!-- Phone -->
+          <div class="p-4 rounded-2xl
+                      bg-[#101D34] border border-slate-800
+                      hover:border-blue-500/30 transition">
+
+            <div class="w-10 h-10 rounded-xl
+                        bg-blue-500/10 text-blue-400
+                        flex items-center justify-center mb-3">
+
+              <svg xmlns="http://www.w3.org/2000/svg"
+                   viewBox="0 0 24 24"
+                   fill="none"
+                   stroke="currentColor"
+                   stroke-width="2"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   class="w-5 h-5">
+                <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/>
+              </svg>
+
             </div>
-            <div>
-              <div class="font-bold text-white text-sm">Address</div>
-              <a [href]="companyMapsUrl" target="_blank" rel="noopener" class="block text-slate-300 text-xs sm:text-sm mt-1 leading-relaxed hover:text-orange-400 transition">
-                <strong class="text-white">{{ company.name }}</strong><br>{{ company.addressLine1 }}<br>{{ company.addressLine2 }}<br>{{ company.addressLine3 }}
+
+            <div class="text-xs text-slate-500 mb-1">
+              Call Us
+            </div>
+
+            <div class="space-y-1">
+              <a
+                *ngFor="let phone of company.phones"
+                [href]="'tel:' + phone"
+                class="block text-sm font-semibold
+                       text-slate-200 hover:text-orange-400 transition"
+              >
+                {{ phone }}
               </a>
             </div>
+
           </div>
 
-          <div class="flex items-start gap-4 p-4 rounded-xl bg-slate-900/60 border border-slate-800">
-            <div class="p-3 rounded-lg bg-blue-500/10 text-blue-400">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 flex-shrink-0"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
+
+          <!-- Email -->
+          <div class="p-4 rounded-2xl
+                      bg-[#101D34] border border-slate-800
+                      hover:border-emerald-500/30 transition">
+
+            <div class="w-10 h-10 rounded-xl
+                        bg-emerald-500/10 text-emerald-400
+                        flex items-center justify-center mb-3">
+
+              <svg xmlns="http://www.w3.org/2000/svg"
+                   viewBox="0 0 24 24"
+                   fill="none"
+                   stroke="currentColor"
+                   stroke-width="2"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   class="w-5 h-5">
+                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/>
+              </svg>
+
             </div>
-            <div>
-              <div class="font-bold text-white text-sm">Phone</div>
-              <p class="text-slate-300 text-xs sm:text-sm mt-1">
-                <a *ngFor="let phone of company.phones" [href]="'tel:' + phone" class="block hover:text-orange-400 transition">{{ phone }}</a>
-              </p>
+
+            <div class="text-xs text-slate-500 mb-1">
+              Email Us
             </div>
+
+            <div class="space-y-1">
+
+              <a
+                *ngFor="let email of company.emails"
+                [href]="'mailto:' + email"
+                class="block text-xs font-semibold
+                       text-slate-200 break-all
+                       hover:text-orange-400 transition"
+              >
+                {{ email }}
+              </a>
+
+            </div>
+
           </div>
 
-          <div class="flex items-start gap-4 p-4 rounded-xl bg-slate-900/60 border border-slate-800">
-            <div class="p-3 rounded-lg bg-emerald-500/10 text-emerald-400">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 flex-shrink-0"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg>
-            </div>
-            <div>
-              <div class="font-bold text-white text-sm">Email</div>
-              <p class="text-slate-300 text-xs sm:text-sm mt-1">
-                <a *ngFor="let email of company.emails" [href]="'mailto:' + email" class="block hover:text-orange-400 transition">{{ email }}</a>
-              </p>
-            </div>
-          </div>
-
-          <div class="flex items-start gap-4 p-4 rounded-xl bg-slate-900/60 border border-slate-800">
-            <div class="p-3 rounded-lg bg-orange-500/10 text-orange-400">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 flex-shrink-0"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-            </div>
-            <div>
-              <div class="font-bold text-white text-sm">Working Hours</div>
-              <p class="text-slate-300 text-xs sm:text-sm mt-1">{{ company.workingDays }}<br>{{ company.workingHours }}</p>
-            </div>
-          </div>
-
-          <div class="flex items-start gap-4 p-4 rounded-xl bg-slate-900/60 border border-slate-800">
-            <div class="p-3 rounded-lg bg-blue-500/10 text-blue-400">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 flex-shrink-0"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-            </div>
-            <div>
-              <div class="font-bold text-white text-sm">Website</div>
-              <p class="text-slate-300 text-xs sm:text-sm mt-1">{{ company.website }}</p>
-            </div>
-          </div>
         </div>
-      </div>
 
-      <div class="lg:col-span-6 bg-[#1C2541] p-8 sm:p-10 rounded-3xl border border-slate-700 shadow-2xl">
 
-        <!-- Success state: show back the submitted enquiry details -->
-        <ng-container *ngIf="submittedEnquiry as saved; else formTpl">
-          <div class="w-12 h-12 rounded-full bg-emerald-500/15 text-emerald-400 flex items-center justify-center mb-5">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M20 6 9 17l-5-5"></path></svg>
-          </div>
-          <h3 class="text-xl font-bold font-heading text-white mb-1">Enquiry Submitted</h3>
-          <p class="text-xs text-slate-300 mb-6">Thank you — our team will get back to you shortly. Here's what we received:</p>
+        <!-- Working hours -->
+        <div class="mt-4 flex items-center gap-4
+                    p-4 rounded-2xl
+                    bg-gradient-to-r from-orange-500/10 to-transparent
+                    border border-orange-500/20">
 
-          <div class="space-y-3 bg-slate-900/60 border border-slate-800 rounded-xl p-5">
-            <div class="flex justify-between gap-4 text-sm">
-              <span class="text-slate-400">Reference ID</span>
-              <span class="text-white font-semibold">#{{ saved.id }}</span>
-            </div>
-            <div class="flex justify-between gap-4 text-sm">
-              <span class="text-slate-400">Name</span>
-              <span class="text-white font-semibold">{{ saved.name }}</span>
-            </div>
-            <div class="flex justify-between gap-4 text-sm">
-              <span class="text-slate-400">Phone</span>
-              <span class="text-white font-semibold">{{ saved.phone }}</span>
-            </div>
-            <div class="flex justify-between gap-4 text-sm" *ngIf="saved.email">
-              <span class="text-slate-400">Email</span>
-              <span class="text-white font-semibold">{{ saved.email }}</span>
-            </div>
-            <div class="flex justify-between gap-4 text-sm">
-              <span class="text-slate-400">Product of Interest</span>
-              <span class="text-white font-semibold text-right">{{ saved.productInterest }}</span>
-            </div>
-            <div class="flex justify-between gap-4 text-sm" *ngIf="saved.message">
-              <span class="text-slate-400 flex-shrink-0">Message</span>
-              <span class="text-white text-right">{{ saved.message }}</span>
-            </div>
-            <div class="flex justify-between gap-4 text-sm pt-3 border-t border-slate-800">
-              <span class="text-slate-400">Submitted</span>
-              <span class="text-white font-semibold">{{ saved.submittedAt | date:'medium' }}</span>
-            </div>
+          <div class="w-10 h-10 rounded-xl
+                      bg-orange-500/10 text-orange-400
+                      flex items-center justify-center flex-shrink-0">
+
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2"
+                 stroke-linecap="round"
+                 stroke-linejoin="round"
+                 class="w-5 h-5">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+
           </div>
 
-          <button (click)="startNewEnquiry()" class="w-full mt-6 bg-slate-800 hover:bg-slate-700 text-white font-semibold px-6 py-3.5 rounded-xl border border-slate-700 transition">
-            Submit Another Enquiry
-          </button>
-        </ng-container>
+          <div>
 
-        <!-- Form state -->
-        <ng-template #formTpl>
-          <h3 class="text-xl font-bold font-heading text-white mb-2">Request a Quote</h3>
-          <p class="text-xs text-slate-300 mb-6">Fill in your details and our technical team will reach out with a customized proposal.</p>
-
-          <form class="space-y-4" (submit)="onSubmitEnquiry($event)">
-            <!-- Honeypot field: hidden from real users, bots tend to fill every input they find. -->
-            <div class="absolute -left-[9999px]" aria-hidden="true">
-              <label for="website">Leave this field empty</label>
-              <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" [(ngModel)]="contactForm.website">
-            </div>
-            <div>
-              <label class="block text-xs font-semibold text-slate-300 mb-1">Full Name</label>
-              <input required type="text" name="name" [(ngModel)]="contactForm.name" placeholder="Your name" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-orange-400">
+            <div class="text-xs text-slate-500">
+              Working Hours
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label class="block text-xs font-semibold text-slate-300 mb-1">Phone Number</label>
-                <input required type="tel" name="phone" [(ngModel)]="contactForm.phone" placeholder="+91 98765 43210" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-orange-400">
-              </div>
-              <div>
-                <label class="block text-xs font-semibold text-slate-300 mb-1">Email</label>
-                <input type="email" name="email" [(ngModel)]="contactForm.email" placeholder="you@example.com" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-orange-400">
-              </div>
+            <div class="text-sm font-semibold text-white mt-0.5">
+              {{ company.workingDays }}
             </div>
 
-            <div>
-              <label class="block text-xs font-semibold text-slate-300 mb-1">Product of Interest</label>
-              <select name="productInterest" [(ngModel)]="contactForm.productInterest" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-orange-400">
-                <option *ngFor="let cat of productCategories" [value]="cat.name">{{ cat.name }}</option>
-                <option value="Other Solar Products">Other Solar Products</option>
-              </select>
+            <div class="text-xs text-slate-400 mt-0.5">
+              {{ company.workingHours }}
             </div>
 
-            <div>
-              <label class="block text-xs font-semibold text-slate-300 mb-1">Message</label>
-              <textarea name="message" [(ngModel)]="contactForm.message" rows="4" placeholder="Tell us about your project requirements" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-orange-400 resize-none"></textarea>
-            </div>
+          </div>
 
-            <button type="submit" [disabled]="submitting" class="w-full bg-orange-500 hover:bg-orange-400 disabled:opacity-60 disabled:cursor-not-allowed text-slate-950 font-bold px-6 py-3.5 rounded-xl shadow-lg transition flex items-center justify-center gap-2">
-              <span>{{ submitting ? 'Submitting…' : 'Submit Enquiry' }}</span>
-              <svg *ngIf="!submitting" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="m9 18 6-6-6-6"></path></svg>
-            </button>
+        </div>
 
-            <div *ngIf="submitError" class="text-center text-red-400 text-xs font-semibold pt-2">
-              {{ submitError }}
-            </div>
-          </form>
-        </ng-template>
       </div>
+
+
+      <!-- =========================
+           RIGHT FORM
+      ========================= -->
+      <div class="lg:col-span-7">
+
+        <div class="bg-[#111D35] rounded-3xl
+                    border border-slate-700/80
+                    shadow-2xl overflow-hidden">
+
+          <!-- Form header -->
+          <div class="px-6 sm:px-8 pt-7 pb-5
+                      border-b border-slate-800">
+
+            <div class="flex items-center gap-3">
+
+              <div class="w-10 h-10 rounded-xl
+                          bg-orange-500/10 text-orange-400
+                          flex items-center justify-center">
+
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                     class="w-5 h-5">
+                  <path d="M22 2 11 13"/>
+                  <path d="m22 2-7 20-4-9-9-4Z"/>
+                </svg>
+
+              </div>
+
+              <div>
+
+                <h3 class="text-lg font-bold font-heading text-white">
+                  Request a Quote
+                </h3>
+
+                <p class="text-xs text-slate-400 mt-0.5">
+                  Tell us about your requirements.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="p-6 sm:p-8">
+
+            <!-- =========================
+                 SUCCESS STATE
+            ========================= -->
+            <ng-container *ngIf="submittedEnquiry as saved; else formTpl">
+
+              <div class="text-center py-3">
+
+                <div class="mx-auto w-14 h-14 rounded-full
+                            bg-emerald-500/10 text-emerald-400
+                            flex items-center justify-center">
+
+                  <svg xmlns="http://www.w3.org/2000/svg"
+                       viewBox="0 0 24 24"
+                       fill="none"
+                       stroke="currentColor"
+                       stroke-width="2"
+                       stroke-linecap="round"
+                       stroke-linejoin="round"
+                       class="w-7 h-7">
+                    <path d="M20 6 9 17l-5-5"/>
+                  </svg>
+
+                </div>
+
+                <h3 class="mt-4 text-xl font-bold text-white">
+                  Enquiry Submitted Successfully
+                </h3>
+
+                <p class="text-xs text-slate-400 mt-2">
+                  Thank you! Our team will contact you shortly.
+                </p>
+
+              </div>
+
+
+              <div class="mt-6 rounded-2xl
+                          bg-[#0A162A]
+                          border border-slate-800
+                          overflow-hidden">
+
+                <div class="divide-y divide-slate-800">
+
+                  <div class="flex justify-between gap-4 px-5 py-3 text-sm">
+                    <span class="text-slate-500">Reference ID</span>
+                    <span class="text-orange-400 font-bold">
+                      #{{ saved.id }}
+                    </span>
+                  </div>
+
+                  <div class="flex justify-between gap-4 px-5 py-3 text-sm">
+                    <span class="text-slate-500">Name</span>
+                    <span class="text-white font-semibold">
+                      {{ saved.name }}
+                    </span>
+                  </div>
+
+                  <div class="flex justify-between gap-4 px-5 py-3 text-sm">
+                    <span class="text-slate-500">Phone</span>
+                    <span class="text-white font-semibold">
+                      {{ saved.phone }}
+                    </span>
+                  </div>
+
+                  <div
+                    *ngIf="saved.email"
+                    class="flex justify-between gap-4 px-5 py-3 text-sm"
+                  >
+                    <span class="text-slate-500">Email</span>
+                    <span class="text-white font-semibold text-right break-all">
+                      {{ saved.email }}
+                    </span>
+                  </div>
+
+                  <div class="flex justify-between gap-4 px-5 py-3 text-sm">
+                    <span class="text-slate-500">
+                      Product
+                    </span>
+
+                    <span class="text-white font-semibold text-right">
+                      {{ saved.productInterest }}
+                    </span>
+                  </div>
+
+                  <div
+                    *ngIf="saved.message"
+                    class="px-5 py-3 text-sm"
+                  >
+                    <div class="text-slate-500 mb-1">
+                      Message
+                    </div>
+
+                    <div class="text-white leading-relaxed">
+                      {{ saved.message }}
+                    </div>
+                  </div>
+
+                  <div class="flex justify-between gap-4 px-5 py-3 text-sm">
+                    <span class="text-slate-500">
+                      Submitted
+                    </span>
+
+                    <span class="text-white font-semibold text-right">
+                      {{ saved.submittedAt | date:'medium' }}
+                    </span>
+                  </div>
+
+                </div>
+
+              </div>
+
+
+              <button
+                (click)="startNewEnquiry()"
+                class="w-full mt-5 bg-orange-500
+                       hover:bg-orange-400
+                       text-slate-950 font-bold
+                       px-6 py-3.5 rounded-xl
+                       transition"
+              >
+                Submit Another Enquiry
+              </button>
+
+            </ng-container>
+
+
+            <!-- =========================
+                 FORM
+            ========================= -->
+            <ng-template #formTpl>
+
+              <form
+                class="space-y-4"
+                (submit)="onSubmitEnquiry($event)"
+              >
+
+                <!-- Honeypot -->
+                <div
+                  class="absolute -left-[9999px]"
+                  aria-hidden="true"
+                >
+                  <label for="website">
+                    Leave this field empty
+                  </label>
+
+                  <input
+                    type="text"
+                    id="website"
+                    name="website"
+                    tabindex="-1"
+                    autocomplete="off"
+                    [(ngModel)]="contactForm.website"
+                  >
+                </div>
+
+
+                <!-- Name -->
+                <div>
+
+                  <label
+                    class="block text-xs font-semibold
+                           text-slate-300 mb-1.5"
+                  >
+                    Full Name
+                  </label>
+
+                  <input
+                    required
+                    type="text"
+                    name="name"
+                    [(ngModel)]="contactForm.name"
+                    placeholder="Enter your full name"
+                    class="w-full bg-[#0A162A]
+                           border border-slate-700
+                           rounded-xl px-4 py-3
+                           text-white text-sm
+                           placeholder:text-slate-600
+                           focus:outline-none
+                           focus:border-orange-400
+                           focus:ring-1
+                           focus:ring-orange-400/30
+                           transition"
+                  >
+
+                </div>
+
+
+                <!-- Phone + Email -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+                  <div>
+
+                    <label
+                      class="block text-xs font-semibold
+                             text-slate-300 mb-1.5"
+                    >
+                      Phone Number
+                    </label>
+
+                    <input
+                      required
+                      type="tel"
+                      name="phone"
+                      [(ngModel)]="contactForm.phone"
+                      placeholder="+91 98765 43210"
+                      class="w-full bg-[#0A162A]
+                             border border-slate-700
+                             rounded-xl px-4 py-3
+                             text-white text-sm
+                             placeholder:text-slate-600
+                             focus:outline-none
+                             focus:border-orange-400
+                             focus:ring-1
+                             focus:ring-orange-400/30
+                             transition"
+                    >
+
+                  </div>
+
+
+                  <div>
+
+                    <label
+                      class="block text-xs font-semibold
+                             text-slate-300 mb-1.5"
+                    >
+                      Email Address
+                    </label>
+
+                    <input
+                      type="email"
+                      name="email"
+                      [(ngModel)]="contactForm.email"
+                      placeholder="you@example.com"
+                      class="w-full bg-[#0A162A]
+                             border border-slate-700
+                             rounded-xl px-4 py-3
+                             text-white text-sm
+                             placeholder:text-slate-600
+                             focus:outline-none
+                             focus:border-orange-400
+                             focus:ring-1
+                             focus:ring-orange-400/30
+                             transition"
+                    >
+
+                  </div>
+
+                </div>
+
+
+                <!-- Product -->
+                <div>
+
+                  <label
+                    class="block text-xs font-semibold
+                           text-slate-300 mb-1.5"
+                  >
+                    Product of Interest
+                  </label>
+
+                  <select
+                    name="productInterest"
+                    [(ngModel)]="contactForm.productInterest"
+                    class="w-full bg-[#0A162A]
+                           border border-slate-700
+                           rounded-xl px-4 py-3
+                           text-white text-sm
+                           focus:outline-none
+                           focus:border-orange-400
+                           focus:ring-1
+                           focus:ring-orange-400/30
+                           transition"
+                  >
+
+                    <option
+                      *ngFor="let cat of productCategories"
+                      [value]="cat.name"
+                    >
+                      {{ cat.name }}
+                    </option>
+
+                    <option value="Other Solar Products">
+                      Other Solar Products
+                    </option>
+
+                  </select>
+
+                </div>
+
+
+                <!-- Message -->
+                <div>
+
+                  <label
+                    class="block text-xs font-semibold
+                           text-slate-300 mb-1.5"
+                  >
+                    Message
+                  </label>
+
+                  <textarea
+                    name="message"
+                    [(ngModel)]="contactForm.message"
+                    rows="4"
+                    placeholder="Tell us about your project requirements..."
+                    class="w-full bg-[#0A162A]
+                           border border-slate-700
+                           rounded-xl px-4 py-3
+                           text-white text-sm
+                           placeholder:text-slate-600
+                           focus:outline-none
+                           focus:border-orange-400
+                           focus:ring-1
+                           focus:ring-orange-400/30
+                           resize-none transition"
+                  ></textarea>
+
+                </div>
+
+
+                <!-- Submit -->
+                <button
+                  type="submit"
+                  [disabled]="submitting"
+                  class="w-full bg-orange-500
+                         hover:bg-orange-400
+                         disabled:opacity-60
+                         disabled:cursor-not-allowed
+                         text-slate-950
+                         font-bold px-6 py-3.5
+                         rounded-xl shadow-lg
+                         shadow-orange-500/10
+                         transition flex items-center
+                         justify-center gap-2
+                         hover:-translate-y-0.5"
+                >
+
+                  <span>
+                    {{ submitting ? 'Submitting…' : 'Submit Enquiry' }}
+                  </span>
+
+                  <svg
+                    *ngIf="!submitting"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="w-4 h-4"
+                  >
+                    <path d="m9 18 6-6-6-6"/>
+                  </svg>
+
+                </button>
+
+
+                <!-- Error -->
+                <div
+                  *ngIf="submitError"
+                  class="text-center text-red-400
+                         text-xs font-semibold pt-1"
+                >
+                  {{ submitError }}
+                </div>
+
+              </form>
+
+            </ng-template>
+
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
+
   </div>
 </section>
 
-<!-- FAQ -->
-<section class="py-20 bg-slate-50">
+
+<!-- =========================
+     FAQ
+========================= -->
+<section class="py-16 lg:py-20 bg-slate-50">
+
   <div class="max-w-3xl mx-auto px-4 sm:px-8">
-    <div class="text-center space-y-3 mb-10">
-      <span class="px-3.5 py-1 rounded-md bg-blue-50 text-blue-700 font-semibold text-xs tracking-wider uppercase border border-blue-200">FAQs</span>
-      <h2 class="text-2xl sm:text-3xl font-extrabold font-heading text-slate-900">Frequently Asked Questions</h2>
+
+    <div class="text-center mb-10">
+
+      <span
+        class="inline-block px-3 py-1 rounded-md
+               bg-blue-50 border border-blue-200
+               text-blue-700 font-bold
+               text-[11px] uppercase tracking-wider"
+      >
+        FAQs
+      </span>
+
+      <h2
+        class="mt-3 text-2xl sm:text-3xl
+               font-extrabold font-heading
+               text-slate-900"
+      >
+        Frequently Asked Questions
+      </h2>
+
+      <p class="mt-3 text-sm text-slate-500">
+        Find answers to common questions about our
+        solar and LED lighting solutions.
+      </p>
+
     </div>
-    <app-faq-accordion [items]="faqs"></app-faq-accordion>
+
+    <app-faq-accordion
+      [items]="faqs"
+    ></app-faq-accordion>
+
   </div>
+
 </section>

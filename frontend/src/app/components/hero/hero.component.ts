@@ -51,7 +51,7 @@ export class HeroComponent implements OnInit, OnDestroy {
       alt: 'Solar Charge Controller & LED Bulb',
     },
     {
-      src: 'assets/products/solar-pv-modules.png',
+      src: 'assets/products/solar pv module.png',
       alt: 'Solar Photovoltaic Modules',
     },
   ];

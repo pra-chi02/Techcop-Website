@@ -1,22 +1,344 @@
-<section class="bg-[#0A2540] py-6 border-y border-slate-800">
-  <div class="max-w-7xl mx-auto px-4 sm:px-8">
-    <div class="flex flex-wrap items-center justify-around gap-6 text-center text-slate-300 text-sm font-semibold">
-      <div class="flex items-center gap-2">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-orange-400"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg>
-        <span>{{ translate.t('Solar Powered') }}</span>
-      </div>
-      <div class="flex items-center gap-2">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-blue-400"><path d="M13 2 3 14h9l-1 8 10-12h-9z"></path></svg>
-        <span>{{ translate.t('Energy Efficient') }}</span>
-      </div>
-      <div class="flex items-center gap-2">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-emerald-400"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
-        <span>{{ translate.t('Reliable & Durable') }}</span>
-      </div>
-      <div class="flex items-center gap-2">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-orange-400"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path></svg>
-        <span>{{ translate.t('Eco Friendly') }}</span>
-      </div>
-    </div>
+<!-- =========================================================
+     SOLAR BENEFITS / TRUST STRIP
+========================================================= -->
+<section
+  class="relative bg-[#081B30]
+         border-y border-white/10
+         overflow-hidden"
+>
+
+  <!-- Background Glow -->
+  <div
+    class="absolute -top-20 left-1/4
+           w-72 h-72
+           rounded-full
+           bg-orange-500/10
+           blur-[90px]
+           pointer-events-none">
   </div>
+
+  <div
+    class="absolute -bottom-24 right-1/4
+           w-72 h-72
+           rounded-full
+           bg-blue-500/10
+           blur-[90px]
+           pointer-events-none">
+  </div>
+
+
+  <!-- Content -->
+  <div
+    class="relative z-10
+           max-w-7xl mx-auto
+           px-4 sm:px-8
+           py-5 sm:py-7"
+  >
+
+    <div
+      class="grid
+             grid-cols-2
+             lg:grid-cols-4
+             gap-3 sm:gap-4 lg:gap-5"
+    >
+
+      <!-- =================================================
+           SOLAR POWERED
+      ================================================== -->
+      <div
+        class="group
+               flex items-center
+               justify-center sm:justify-start
+               gap-3
+               rounded-xl
+               border border-white/10
+               bg-white/[0.035]
+               hover:bg-white/[0.07]
+               hover:border-orange-400/30
+               px-3 sm:px-5
+               py-3.5
+               transition-all duration-300"
+      >
+
+        <!-- Icon -->
+        <div
+          class="flex-shrink-0
+                 w-10 h-10
+                 rounded-xl
+                 bg-orange-500/10
+                 border border-orange-400/10
+                 flex items-center justify-center
+                 group-hover:bg-orange-500/20
+                 group-hover:scale-105
+                 transition-all duration-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="w-5 h-5 text-orange-400"
+          >
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2"></path>
+            <path d="M12 20v2"></path>
+            <path d="m4.93 4.93 1.41 1.41"></path>
+            <path d="m17.66 17.66 1.41 1.41"></path>
+            <path d="M2 12h2"></path>
+            <path d="M20 12h2"></path>
+            <path d="m6.34 17.66-1.41 1.41"></path>
+            <path d="m19.07 4.93-1.41 1.41"></path>
+          </svg>
+        </div>
+
+        <!-- Text -->
+        <div class="min-w-0">
+          <p
+            class="text-[10px] sm:text-xs
+                   uppercase tracking-wider
+                   text-slate-500
+                   font-medium"
+          >
+            Clean Energy
+          </p>
+
+          <p
+            class="text-xs sm:text-sm
+                   text-white
+                   font-bold
+                   mt-0.5"
+          >
+            {{ translate.t('Solar Powered') }}
+          </p>
+        </div>
+
+      </div>
+
+
+      <!-- =================================================
+           ENERGY EFFICIENT
+      ================================================== -->
+      <div
+        class="group
+               flex items-center
+               justify-center sm:justify-start
+               gap-3
+               rounded-xl
+               border border-white/10
+               bg-white/[0.035]
+               hover:bg-white/[0.07]
+               hover:border-blue-400/30
+               px-3 sm:px-5
+               py-3.5
+               transition-all duration-300"
+      >
+
+        <div
+          class="flex-shrink-0
+                 w-10 h-10
+                 rounded-xl
+                 bg-blue-500/10
+                 border border-blue-400/10
+                 flex items-center justify-center
+                 group-hover:bg-blue-500/20
+                 group-hover:scale-105
+                 transition-all duration-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="w-5 h-5 text-blue-400"
+          >
+            <path d="M13 2 3 14h9l-1 8 10-12h-9z"></path>
+          </svg>
+        </div>
+
+        <div class="min-w-0">
+          <p
+            class="text-[10px] sm:text-xs
+                   uppercase tracking-wider
+                   text-slate-500
+                   font-medium"
+          >
+            Smart Technology
+          </p>
+
+          <p
+            class="text-xs sm:text-sm
+                   text-white
+                   font-bold
+                   mt-0.5"
+          >
+            {{ translate.t('Energy Efficient') }}
+          </p>
+        </div>
+
+      </div>
+
+
+      <!-- =================================================
+           RELIABLE & DURABLE
+      ================================================== -->
+      <div
+        class="group
+               flex items-center
+               justify-center sm:justify-start
+               gap-3
+               rounded-xl
+               border border-white/10
+               bg-white/[0.035]
+               hover:bg-white/[0.07]
+               hover:border-emerald-400/30
+               px-3 sm:px-5
+               py-3.5
+               transition-all duration-300"
+      >
+
+        <div
+          class="flex-shrink-0
+                 w-10 h-10
+                 rounded-xl
+                 bg-emerald-500/10
+                 border border-emerald-400/10
+                 flex items-center justify-center
+                 group-hover:bg-emerald-500/20
+                 group-hover:scale-105
+                 transition-all duration-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="w-5 h-5 text-emerald-400"
+          >
+            <path
+              d="M20 13c0 5-3.5 7.5-7.66 8.95
+                 a1 1 0 0 1-.67-.01
+                 C7.5 20.5 4 18 4 13V6
+                 a1 1 0 0 1 1-1
+                 c2 0 4.5-1.2 6.24-2.72
+                 a1.17 1.17 0 0 1 1.52 0
+                 C14.51 3.81 17 5 19 5
+                 a1 1 0 0 1 1 1z"
+            ></path>
+
+            <path d="m9 12 2 2 4-4"></path>
+          </svg>
+        </div>
+
+        <div class="min-w-0">
+          <p
+            class="text-[10px] sm:text-xs
+                   uppercase tracking-wider
+                   text-slate-500
+                   font-medium"
+          >
+            Built to Last
+          </p>
+
+          <p
+            class="text-xs sm:text-sm
+                   text-white
+                   font-bold
+                   mt-0.5"
+          >
+            {{ translate.t('Reliable & Durable') }}
+          </p>
+        </div>
+
+      </div>
+
+
+      <!-- =================================================
+           ECO FRIENDLY
+      ================================================== -->
+      <div
+        class="group
+               flex items-center
+               justify-center sm:justify-start
+               gap-3
+               rounded-xl
+               border border-white/10
+               bg-white/[0.035]
+               hover:bg-white/[0.07]
+               hover:border-orange-400/30
+               px-3 sm:px-5
+               py-3.5
+               transition-all duration-300"
+      >
+
+        <div
+          class="flex-shrink-0
+                 w-10 h-10
+                 rounded-xl
+                 bg-orange-500/10
+                 border border-orange-400/10
+                 flex items-center justify-center
+                 group-hover:bg-orange-500/20
+                 group-hover:scale-105
+                 transition-all duration-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="w-5 h-5 text-orange-400"
+          >
+            <path
+              d="M11 20A7 7 0 0 1 9.8 6.1
+                 C15.5 5 17 4.48 19 2
+                 c1 2 2 4.18 2 8
+                 c0 5.5-4.78 10-10 10Z"
+            ></path>
+
+            <path
+              d="M2 21
+                 c0-3 1.85-5.36 5.08-6
+                 C9.5 14.52 12 13 13 12"
+            ></path>
+          </svg>
+        </div>
+
+        <div class="min-w-0">
+          <p
+            class="text-[10px] sm:text-xs
+                   uppercase tracking-wider
+                   text-slate-500
+                   font-medium"
+          >
+            Green Future
+          </p>
+
+          <p
+            class="text-xs sm:text-sm
+                   text-white
+                   font-bold
+                   mt-0.5"
+          >
+            {{ translate.t('Eco Friendly') }}
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
 </section>

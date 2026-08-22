@@ -1,10 +1,59 @@
-<div class="min-h-screen bg-[#F8FAFC] text-[#0F172A] font-sans selection:bg-[#0066FF] selection:text-white flex flex-col pb-16 sm:pb-0">
+<!-- =========================================================
+     APP ROOT LAYOUT
+========================================================= -->
+<div
+  class="min-h-screen
+         bg-[#F8FAFC]
+         text-[#0F172A]
+         font-sans
+         antialiased
+         selection:bg-orange-500
+         selection:text-white
+         flex flex-col
+         pb-16 sm:pb-0"
+>
+
+  <!-- =======================================================
+       GLOBAL HEADER
+  ======================================================== -->
   <app-header></app-header>
-  <main class="flex-1">
+
+
+  <!-- =======================================================
+       MAIN CONTENT
+  ======================================================== -->
+  <main
+    class="flex-1
+           w-full
+           overflow-x-hidden"
+  >
     <router-outlet></router-outlet>
   </main>
+
+
+  <!-- =======================================================
+       GLOBAL FOOTER
+  ======================================================== -->
   <app-footer></app-footer>
+
+
+  <!-- =======================================================
+       FLOATING WHATSAPP BUTTON
+       Desktop / Tablet
+  ======================================================== -->
   <app-whatsapp-button></app-whatsapp-button>
+
+
+  <!-- =======================================================
+       BACK TO TOP BUTTON
+  ======================================================== -->
   <app-back-to-top></app-back-to-top>
+
+
+  <!-- =======================================================
+       MOBILE CALL + WHATSAPP CTA
+       Visible only on mobile
+  ======================================================== -->
   <app-mobile-cta-bar></app-mobile-cta-bar>
+
 </div>

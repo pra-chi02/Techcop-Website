@@ -1,7 +1,16 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { NavLink, navLinks, company, productCategories, ProductCategory, companyMapsUrl } from '../../data';
+
+import {
+  NavLink,
+  navLinks,
+  company,
+  productCategories,
+  ProductCategory,
+  companyMapsUrl
+} from '../../data';
+
 import { TranslationService } from '../../services/translation.service';
 
 @Component({
@@ -11,6 +20,7 @@ import { TranslationService } from '../../services/translation.service';
   templateUrl: './footer.component.html',
 })
 export class FooterComponent {
+
   readonly navLinks: NavLink[] = navLinks;
   readonly company = company;
   readonly companyMapsUrl = companyMapsUrl;

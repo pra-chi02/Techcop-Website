@@ -1,221 +1,1260 @@
-<!-- Page header -->
-<section class="relative bg-[#0B132B] text-white py-24 overflow-hidden">
-  <img src="assets/products/solar-street-light.png" alt="TechnoCop team at work" class="absolute inset-0 w-full h-full object-cover opacity-15">
-  <div class="absolute inset-0 bg-gradient-to-b from-[#0B132B]/80 via-[#0B132B]/90 to-[#0B132B]"></div>
-  <div class="max-w-7xl mx-auto px-4 sm:px-8 text-center space-y-4 relative z-10">
-    <span class="px-3.5 py-1 rounded-md bg-blue-500/10 text-blue-400 font-semibold text-xs tracking-wider uppercase border border-blue-500/30">Our Team</span>
-    <h1 class="text-3xl sm:text-5xl font-extrabold font-heading tracking-tight">The People Behind Every Project</h1>
-    <p class="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto">From first enquiry to after-sales support, our team works together to deliver every installation reliably, nationwide.</p>
-  </div>
-</section>
+<!-- =========================================================
+     TEAM PAGE
+========================================================= -->
 
-<!-- Breadcrumb -->
-<section class="bg-[#0A2540] border-b border-slate-800 py-3">
-  <div class="max-w-7xl mx-auto px-4 sm:px-8 text-xs text-slate-400 flex items-center gap-2">
-    <a routerLink="/" class="hover:text-orange-400 transition">Home</a>
-    <span>/</span>
-    <span class="text-slate-200 font-medium">Team</span>
-  </div>
-</section>
+<!-- ===================== HERO ===================== -->
+<section
+  class="relative min-h-[540px] flex items-center overflow-hidden
+         bg-[#071426] text-white"
+>
+  <!-- Background Image -->
+  <img
+    src="assets/products/solar-street-light.png"
+    alt="TechnoCop Energy team and solar lighting project"
+    class="absolute inset-0 w-full h-full object-cover opacity-20"
+  >
 
-<!-- Stat strip -->
-<section class="bg-[#0A2540] py-8 border-b border-slate-800">
-  <div class="max-w-7xl mx-auto px-4 sm:px-8 grid grid-cols-2 sm:grid-cols-5 gap-6 text-center">
-    <div *ngFor="let s of stats">
-      <div class="text-2xl sm:text-3xl font-extrabold text-orange-400 font-heading">{{ s.value }}</div>
-      <div class="text-[11px] sm:text-xs text-slate-300 mt-1">{{ s.label }}</div>
-    </div>
-  </div>
-</section>
+  <!-- Overlays -->
+  <div
+    class="absolute inset-0
+           bg-gradient-to-r
+           from-[#071426]
+           via-[#071426]/90
+           to-[#071426]/55"
+  ></div>
 
-<!-- Team departments -->
-<section class="py-20 bg-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-8">
-    <div class="text-center max-w-3xl mx-auto space-y-4 mb-14">
-      <span class="px-3.5 py-1 rounded-md bg-blue-100 text-blue-800 font-semibold text-xs tracking-wider uppercase">How We're Organized</span>
-      <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-slate-900">Four Teams, One Goal</h2>
-      <p class="text-slate-600 text-sm sm:text-base">Every project moves through these teams — from your first enquiry to years of after-sales support.</p>
-    </div>
+  <div
+    class="absolute inset-0
+           bg-gradient-to-t
+           from-[#071426]
+           via-transparent
+           to-[#071426]/40"
+  ></div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-      <div *ngFor="let dept of teamDepartments; let i = index" class="p-7 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-md transition">
-        <div class="flex items-start gap-4 mb-4">
-          <div class="w-11 h-11 rounded-xl bg-[#0A2540] text-orange-400 flex items-center justify-center flex-shrink-0 font-bold font-heading">{{ i + 1 }}</div>
-          <div>
-            <h4 class="font-bold text-slate-900 text-base mb-1">{{ dept.title }}</h4>
-            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">{{ dept.description }}</p>
-          </div>
-        </div>
-        <ul class="space-y-2 pl-1">
-          <li *ngFor="let point of dept.points" class="text-xs sm:text-sm text-slate-600 flex items-start gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg>
-            <span>{{ point }}</span>
-          </li>
-        </ul>
+  <!-- Decorative Glows -->
+  <div
+    class="absolute -top-32 -right-32
+           w-[520px] h-[520px]
+           rounded-full
+           bg-orange-500/10
+           blur-3xl"
+  ></div>
+
+  <div
+    class="absolute -bottom-32 left-1/4
+           w-[400px] h-[300px]
+           rounded-full
+           bg-blue-500/10
+           blur-3xl"
+  ></div>
+
+  <!-- Content -->
+  <div
+    class="max-w-7xl mx-auto w-full
+           px-4 sm:px-8
+           py-24 relative z-10"
+  >
+    <div class="max-w-3xl">
+
+      <!-- Badge -->
+      <div
+        class="inline-flex items-center gap-2
+               px-4 py-2 rounded-full
+               bg-white/10
+               border border-white/15
+               backdrop-blur-sm
+               text-orange-300
+               text-xs font-bold
+               uppercase tracking-[0.15em]
+               mb-6"
+      >
+        <span
+          class="w-2 h-2 rounded-full
+                 bg-orange-400 animate-pulse"
+        ></span>
+
+        Our Team
       </div>
+
+      <!-- Heading -->
+      <h1
+        class="text-4xl sm:text-5xl lg:text-6xl
+               font-extrabold font-heading
+               tracking-tight leading-[1.05]"
+      >
+        The People Behind
+        <span class="text-orange-400 block sm:inline">
+          Every Successful Project
+        </span>
+      </h1>
+
+      <!-- Description -->
+      <p
+        class="mt-6 max-w-2xl
+               text-slate-300
+               text-sm sm:text-base lg:text-lg
+               leading-relaxed"
+      >
+        From the first enquiry to installation and long-term after-sales
+        support, our people work together to deliver dependable solar
+        lighting and renewable energy solutions across India.
+      </p>
+
+      <!-- CTA -->
+      <div class="flex flex-wrap gap-3 mt-8">
+
+        <a
+          routerLink="/contact"
+          class="inline-flex items-center justify-center gap-2
+                 bg-orange-500 hover:bg-orange-400
+                 text-slate-950
+                 font-bold
+                 px-6 py-3.5
+                 rounded-xl
+                 shadow-xl shadow-orange-900/20
+                 transition-all duration-300
+                 hover:-translate-y-0.5"
+        >
+          Get in Touch
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="w-4 h-4"
+          >
+            <path d="m9 18 6-6-6-6"></path>
+          </svg>
+        </a>
+
+        <a
+          [href]="'tel:' + company.phones[0]"
+          class="inline-flex items-center justify-center gap-2
+                 bg-white/10 hover:bg-white/15
+                 border border-white/20
+                 backdrop-blur-sm
+                 text-white
+                 font-semibold
+                 px-6 py-3.5
+                 rounded-xl
+                 transition-all duration-300"
+        >
+          Call Our Team
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="w-4 h-4"
+          >
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2
+              19.79 19.79 0 0 1-8.63-3.07
+              19.5 19.5 0 0 1-6-6
+              19.79 19.79 0 0 1-3.07-8.67"
+            ></path>
+          </svg>
+        </a>
+
+      </div>
+
+      <!-- Trust Points -->
+      <div
+        class="flex flex-wrap gap-x-6 gap-y-3
+               mt-9
+               text-xs sm:text-sm
+               text-slate-300"
+      >
+
+        <div class="flex items-center gap-2">
+          <span
+            class="w-5 h-5 rounded-full
+                   bg-emerald-500/15
+                   text-emerald-400
+                   flex items-center justify-center"
+          >
+            ✓
+          </span>
+
+          Project-Focused Team
+        </div>
+
+        <div class="flex items-center gap-2">
+          <span
+            class="w-5 h-5 rounded-full
+                   bg-emerald-500/15
+                   text-emerald-400
+                   flex items-center justify-center"
+          >
+            ✓
+          </span>
+
+          Technical Expertise
+        </div>
+
+        <div class="flex items-center gap-2">
+          <span
+            class="w-5 h-5 rounded-full
+                   bg-emerald-500/15
+                   text-emerald-400
+                   flex items-center justify-center"
+          >
+            ✓
+          </span>
+
+          Nationwide Support
+        </div>
+
+      </div>
+
     </div>
   </div>
 </section>
-<!-- Our Team Members -->
-<section class="py-20 bg-slate-50">
+
+
+<!-- ===================== BREADCRUMB ===================== -->
+<section class="bg-white border-b border-slate-200">
+  <div
+    class="max-w-7xl mx-auto
+           px-4 sm:px-8 py-3.5"
+  >
+
+    <div class="flex items-center gap-2 text-xs">
+
+      <a
+        routerLink="/"
+        class="text-slate-500 hover:text-orange-500 transition"
+      >
+        Home
+      </a>
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        class="w-3.5 h-3.5 text-slate-400"
+      >
+        <path d="m9 18 6-6-6-6"></path>
+      </svg>
+
+      <span class="font-semibold text-slate-800">
+        Our Team
+      </span>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ===================== STATS ===================== -->
+<section
+  class="relative py-16 lg:py-20
+         bg-slate-50 overflow-hidden"
+>
+  <div
+    class="absolute inset-0
+           bg-[radial-gradient(circle_at_top_right,_rgba(249,115,22,0.08),_transparent_35%)]"
+  ></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-8 relative z-10">
+
+    <div
+      class="grid grid-cols-2
+             sm:grid-cols-3
+             lg:grid-cols-5
+             gap-4 sm:gap-6"
+    >
+
+      <div
+        *ngFor="let s of stats"
+        class="group bg-white
+               border border-slate-200
+               rounded-2xl
+               p-5 sm:p-6
+               text-center
+               shadow-sm
+               hover:-translate-y-1
+               hover:shadow-xl
+               hover:border-orange-200
+               transition-all duration-300"
+      >
+
+        <div
+          class="text-3xl sm:text-4xl
+                 font-extrabold font-heading
+                 text-[#0A2540]
+                 group-hover:text-orange-500
+                 transition"
+        >
+          {{ s.value }}
+        </div>
+
+        <div
+          class="mt-2
+                 text-[11px] sm:text-xs
+                 font-medium
+                 text-slate-500"
+        >
+          {{ s.label }}
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ===================== HOW WE WORK ===================== -->
+<section class="py-20 lg:py-24 bg-white">
+
   <div class="max-w-7xl mx-auto px-4 sm:px-8">
 
-    <!-- Section Header -->
-    <div class="text-center max-w-3xl mx-auto space-y-4 mb-14">
+    <!-- Heading -->
+    <div class="text-center max-w-3xl mx-auto mb-14">
+
+      <div
+        class="inline-flex items-center gap-2
+               text-orange-600
+               text-xs font-bold
+               uppercase tracking-[0.15em]
+               mb-4"
+      >
+        <span class="w-8 h-px bg-orange-500"></span>
+        How We're Organized
+        <span class="w-8 h-px bg-orange-500"></span>
+      </div>
+
+      <h2
+        class="text-3xl sm:text-4xl lg:text-5xl
+               font-extrabold font-heading
+               text-slate-900
+               tracking-tight"
+      >
+        Four Teams. One Shared Goal.
+      </h2>
+
+      <p
+        class="mt-4
+               text-sm sm:text-base
+               text-slate-600
+               leading-relaxed"
+      >
+        Every successful project is supported by dedicated teams working
+        together from initial consultation through installation and
+        long-term customer support.
+      </p>
+
+    </div>
+
+
+    <!-- Departments -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+      <div
+        *ngFor="let dept of teamDepartments; let i = index"
+        class="group relative
+               p-7 sm:p-8
+               rounded-3xl
+               bg-slate-50
+               border border-slate-200
+               hover:bg-white
+               hover:border-orange-200
+               hover:shadow-xl
+               transition-all duration-300
+               overflow-hidden"
+      >
+
+        <!-- Decorative Number -->
+        <div
+          class="absolute -right-5 -top-8
+                 text-[120px]
+                 font-extrabold
+                 text-slate-200/40
+                 font-heading
+                 leading-none
+                 pointer-events-none"
+        >
+          0{{ i + 1 }}
+        </div>
+
+
+        <div class="relative z-10">
+
+          <div class="flex items-start gap-5">
+
+            <!-- Icon / Number -->
+            <div
+              class="w-14 h-14
+                     rounded-2xl
+                     bg-[#0A2540]
+                     text-orange-400
+                     flex items-center justify-center
+                     flex-shrink-0
+                     text-lg font-extrabold
+                     shadow-lg"
+            >
+              {{ i + 1 }}
+            </div>
+
+
+            <div>
+
+              <h3
+                class="text-lg sm:text-xl
+                       font-extrabold font-heading
+                       text-slate-900"
+              >
+                {{ dept.title }}
+              </h3>
+
+              <p
+                class="mt-2
+                       text-sm
+                       text-slate-600
+                       leading-relaxed"
+              >
+                {{ dept.description }}
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <!-- Points -->
+          <div
+            class="mt-7 pt-6
+                   border-t border-slate-200"
+          >
+
+            <ul class="grid grid-cols-1 gap-3">
+
+              <li
+                *ngFor="let point of dept.points"
+                class="flex items-start gap-3
+                       text-sm text-slate-600"
+              >
+
+                <span
+                  class="w-5 h-5 rounded-full
+                         bg-orange-50
+                         text-orange-600
+                         border border-orange-100
+                         flex items-center justify-center
+                         flex-shrink-0 mt-0.5
+                         text-[10px] font-bold"
+                >
+                  ✓
+                </span>
+
+                <span>
+                  {{ point }}
+                </span>
+
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ===================== TEAM MEMBERS ===================== -->
+<section
+  class="py-20 lg:py-24
+         bg-slate-50
+         border-y border-slate-200"
+>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-8">
+
+    <!-- Header -->
+    <div class="text-center max-w-3xl mx-auto mb-16">
+
       <span
-        class="px-3.5 py-1 rounded-md bg-orange-100 text-orange-700 font-semibold text-xs tracking-wider uppercase">
+        class="inline-flex items-center gap-2
+               px-4 py-2 rounded-full
+               bg-orange-50
+               border border-orange-100
+               text-orange-700
+               text-xs font-bold
+               uppercase tracking-wider"
+      >
         Meet Our Team
       </span>
 
-      <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-slate-900">
-        The People Behind TechnoCop Energy
+      <h2
+        class="mt-5
+               text-3xl sm:text-4xl lg:text-5xl
+               font-extrabold font-heading
+               text-slate-900
+               tracking-tight"
+      >
+        The People Behind
+        <span class="text-orange-500">
+          TechnoCop Energy
+        </span>
       </h2>
 
-      <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
-        Our dedicated team brings together leadership, technical expertise,
-        and customer-focused sales support to deliver reliable solar lighting
-        and renewable energy solutions.
+      <p
+        class="mt-4
+               text-slate-600
+               text-sm sm:text-base
+               leading-relaxed"
+      >
+        A combination of leadership, technical knowledge and customer-focused
+        support working together to deliver reliable solutions for every
+        project.
       </p>
+
     </div>
 
-    <!-- Leadership Team -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto mb-16">
+
+    <!-- Leadership -->
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-8">
+
+    <!-- Section Heading -->
+    <div class="text-center max-w-3xl mx-auto mb-14">
+
+      <span
+        class="inline-flex items-center justify-center
+               px-4 py-2 rounded-full
+               bg-orange-50 border border-orange-100
+               text-orange-600 text-xs font-bold
+               uppercase tracking-[0.15em]">
+        Our Leadership
+      </span>
+
+      <h2
+        class="mt-5 text-3xl sm:text-4xl lg:text-5xl
+               font-extrabold font-heading
+               text-slate-900 tracking-tight">
+        Leading with
+        <span class="text-orange-500">Experience</span>
+      </h2>
+
+      <p
+        class="mt-4 max-w-2xl mx-auto
+               text-sm sm:text-base
+               text-slate-600 leading-relaxed">
+        Our leadership team combines industry experience, technical
+        expertise and a strong commitment to delivering reliable
+        solar and renewable energy solutions.
+      </p>
+
+    </div>
+
+
+    <!-- Leadership Cards -->
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2
+             gap-6 max-w-4xl mx-auto"
+    >
+
       <div
         *ngFor="let member of teamMembers.slice(0, 2); let i = index"
-        class="bg-white rounded-2xl border border-slate-200 p-8 text-center
-               shadow-sm hover:-translate-y-1 hover:shadow-xl transition">
+        class="bg-slate-50 rounded-3xl
+               border border-slate-200
+               p-8 sm:p-10
+               text-center
+               shadow-sm hover:shadow-xl
+               hover:-translate-y-1
+               transition-all duration-300"
+      >
 
-        <!-- Initials -->
+        <!-- Avatar -->
         <div
-          class="w-20 h-20 mx-auto mb-5 rounded-full flex items-center
-                 justify-center text-2xl font-extrabold font-heading"
+          class="w-24 h-24 mx-auto mb-6
+                 rounded-full
+                 flex items-center justify-center
+                 text-3xl font-extrabold font-heading"
           [ngClass]="
             i === 0
               ? 'bg-[#0A2540] text-orange-400'
               : 'bg-blue-100 text-blue-700'
-          ">
+          "
+        >
           {{ member.initials }}
         </div>
 
+
         <!-- Name -->
-        <h3 class="text-xl font-extrabold text-slate-900 font-heading">
+        <h3
+          class="text-xl sm:text-2xl
+                 font-extrabold font-heading
+                 text-slate-900"
+        >
           {{ member.name }}
         </h3>
 
+
         <!-- Role -->
         <p
-          class="font-semibold text-sm mt-1"
-          [ngClass]="i === 0 ? 'text-orange-500' : 'text-blue-600'">
+          class="mt-2 font-bold text-sm"
+          [ngClass]="
+            i === 0
+              ? 'text-orange-500'
+              : 'text-blue-600'
+          "
+        >
           {{ member.role }}
         </p>
 
+
         <!-- Department -->
-        <p class="text-xs text-slate-500 mt-1">
+        <p
+          class="mt-1 text-xs uppercase
+                 tracking-wider text-slate-400
+                 font-semibold"
+        >
           {{ member.department }}
         </p>
 
+
+        <!-- Divider -->
+        <div
+          class="w-12 h-1
+                 bg-orange-500
+                 rounded-full
+                 mx-auto my-5"
+        ></div>
+
+
         <!-- Description -->
-        <p class="text-sm text-slate-600 leading-relaxed mt-4">
+        <p
+          class="max-w-sm mx-auto
+                 text-sm text-slate-600
+                 leading-relaxed"
+        >
           {{ member.description }}
         </p>
+
       </div>
+
     </div>
 
-    <!-- Sales Team Heading -->
-    <div class="text-center mb-8">
-      <span
-        class="inline-block px-3.5 py-1 rounded-md bg-blue-100 text-blue-800
-               font-semibold text-xs tracking-wider uppercase">
-        Sales Team
-      </span>
+  </div>
+</section>
 
-      <h3
-        class="text-2xl sm:text-3xl font-extrabold font-heading
-               text-slate-900 mt-3">
-        Customer Support & Sales
-      </h3>
 
-      <p class="text-slate-600 text-sm mt-2">
-        Our sales team is here to understand your requirements and help you
-        choose the right solar lighting solution.
-      </p>
-    </div>
+    <!-- SALES TEAM -->
+    <div>
 
-    <!-- Sales Members -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+      <div class="text-center max-w-2xl mx-auto mb-10">
+
+        <span
+          class="inline-flex
+                 px-3.5 py-1.5
+                 rounded-full
+                 bg-blue-50
+                 border border-blue-100
+                 text-blue-700
+                 text-xs font-bold
+                 uppercase tracking-wider"
+        >
+          Customer Support & Sales
+        </span>
+
+        <h3
+          class="mt-4
+                 text-2xl sm:text-3xl
+                 font-extrabold font-heading
+                 text-slate-900"
+        >
+          Here to Help You Find the Right Solution
+        </h3>
+
+        <p
+          class="mt-3
+                 text-sm text-slate-600"
+        >
+          Our sales and support team helps understand project requirements,
+          recommend suitable products and guide customers through the process.
+        </p>
+
+      </div>
+
 
       <div
-        *ngFor="let member of teamMembers.slice(2)"
-        class="bg-white rounded-2xl border border-slate-200 p-6 text-center
-               hover:-translate-y-1 hover:shadow-lg transition">
+        class="grid grid-cols-1
+               sm:grid-cols-2
+               lg:grid-cols-5
+               gap-5"
+      >
 
-        <!-- Initial -->
         <div
-          class="w-16 h-16 mx-auto mb-4 rounded-full bg-orange-100
-                 text-orange-600 flex items-center justify-center
-                 text-lg font-extrabold">
-          {{ member.initials }}
+          *ngFor="let member of teamMembers.slice(2); let i = index"
+          class="group
+                 bg-white
+                 rounded-2xl
+                 border border-slate-200
+                 p-6
+                 text-center
+                 shadow-sm
+                 hover:-translate-y-1
+                 hover:border-orange-200
+                 hover:shadow-xl
+                 transition-all duration-300"
+        >
+
+          <!-- Avatar -->
+          <div
+            class="relative
+                   w-16 h-16 mx-auto mb-5
+                   rounded-2xl
+                   bg-orange-50
+                   border border-orange-100
+                   text-orange-600
+                   flex items-center justify-center
+                   text-lg font-extrabold
+                   group-hover:bg-orange-500
+                   group-hover:text-white
+                   transition"
+          >
+            {{ member.initials }}
+          </div>
+
+
+          <h4
+            class="font-extrabold
+                   text-slate-900
+                   text-sm"
+          >
+            {{ member.name }}
+          </h4>
+
+          <p
+            class="mt-1
+                   text-orange-500
+                   text-xs font-bold"
+          >
+            {{ member.role }}
+          </p>
+
+          <p
+            class="mt-4
+                   text-xs text-slate-500
+                   leading-relaxed"
+          >
+            {{ member.description }}
+          </p>
+
         </div>
 
-        <!-- Name -->
-        <h4 class="font-bold text-slate-900">
-          {{ member.name }}
-        </h4>
-
-        <!-- Role -->
-        <p class="text-orange-500 text-sm font-semibold mt-1">
-          {{ member.role }}
-        </p>
-
-        <!-- Description -->
-        <p class="text-xs text-slate-500 mt-3 leading-relaxed">
-          {{ member.description }}
-        </p>
       </div>
 
     </div>
+
   </div>
 </section>
 
-<!-- Get in touch -->
-<section class="py-20 bg-[#0A2540] text-white">
-  <div class="max-w-5xl mx-auto px-4 sm:px-8 text-center space-y-3 mb-12">
-    <h2 class="text-2xl sm:text-3xl font-extrabold font-heading">Talk to the Right Team Directly</h2>
-    <p class="text-slate-300 text-sm sm:text-base">Not sure who to contact? Reach out and we'll route your enquiry to the right team.</p>
-  </div>
-  <div class="max-w-5xl mx-auto px-4 sm:px-8 grid grid-cols-1 sm:grid-cols-3 gap-5">
-    <a [href]="'tel:' + company.phones[0]" class="bg-white/5 hover:bg-white/10 border border-white/10 rounded-2xl p-6 text-center transition group">
-      <div class="w-11 h-11 mx-auto rounded-xl bg-orange-500/15 text-orange-400 flex items-center justify-center mb-4">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
+
+<!-- ===================== WORKING TOGETHER ===================== -->
+<section
+  class="relative overflow-hidden
+         py-20 lg:py-24
+         bg-[#071426]
+         text-white"
+>
+
+  <!-- Glow -->
+  <div
+    class="absolute -top-40 right-0
+           w-[500px] h-[500px]
+           rounded-full
+           bg-orange-500/10
+           blur-3xl"
+  ></div>
+
+  <div
+    class="absolute -bottom-40 left-0
+           w-[400px] h-[400px]
+           rounded-full
+           bg-blue-500/10
+           blur-3xl"
+  ></div>
+
+
+  <div
+    class="max-w-7xl mx-auto
+           px-4 sm:px-8
+           relative z-10"
+  >
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+      <!-- Content -->
+      <div>
+
+        <span
+          class="inline-flex
+                 px-3.5 py-1.5
+                 rounded-full
+                 bg-orange-500/10
+                 border border-orange-500/20
+                 text-orange-400
+                 text-xs font-bold
+                 uppercase tracking-wider"
+        >
+          One Connected Team
+        </span>
+
+        <h2
+          class="mt-5
+                 text-3xl sm:text-4xl lg:text-5xl
+                 font-extrabold font-heading
+                 tracking-tight"
+        >
+          From Enquiry to
+          <span class="text-orange-400">
+            Long-Term Support
+          </span>
+        </h2>
+
+        <p
+          class="mt-5
+                 text-slate-400
+                 text-sm sm:text-base
+                 leading-relaxed
+                 max-w-xl"
+        >
+          Our departments work closely together to ensure a smooth customer
+          experience throughout every stage of your project.
+        </p>
+
       </div>
-      <h4 class="font-bold text-sm mb-1 group-hover:text-orange-400 transition">Sales Enquiries</h4>
-      <p class="text-xs text-slate-400">{{ company.phones[0] }}</p>
-    </a>
-    <a [href]="'mailto:' + company.emails[0]" class="bg-white/5 hover:bg-white/10 border border-white/10 rounded-2xl p-6 text-center transition group">
-      <div class="w-11 h-11 mx-auto rounded-xl bg-blue-500/15 text-blue-400 flex items-center justify-center mb-4">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><rect x="3" y="11" width="18" height="11" rx="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+
+
+      <!-- Process -->
+      <div class="space-y-4">
+
+        <div
+          class="flex gap-4
+                 p-5 rounded-2xl
+                 bg-white/5
+                 border border-white/10"
+        >
+
+          <div
+            class="w-10 h-10
+                   rounded-xl
+                   bg-orange-500
+                   text-slate-950
+                   flex items-center justify-center
+                   font-extrabold
+                   flex-shrink-0"
+          >
+            01
+          </div>
+
+          <div>
+            <h4 class="font-bold">
+              Understand Your Requirement
+            </h4>
+
+            <p class="text-xs text-slate-400 mt-1">
+              We discuss your site, application and project requirements.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div
+          class="flex gap-4
+                 p-5 rounded-2xl
+                 bg-white/5
+                 border border-white/10"
+        >
+
+          <div
+            class="w-10 h-10
+                   rounded-xl
+                   bg-blue-500/20
+                   text-blue-400
+                   flex items-center justify-center
+                   font-extrabold
+                   flex-shrink-0"
+          >
+            02
+          </div>
+
+          <div>
+            <h4 class="font-bold">
+              Recommend the Right Solution
+            </h4>
+
+            <p class="text-xs text-slate-400 mt-1">
+              Our technical team helps identify suitable products and
+              configurations.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div
+          class="flex gap-4
+                 p-5 rounded-2xl
+                 bg-white/5
+                 border border-white/10"
+        >
+
+          <div
+            class="w-10 h-10
+                   rounded-xl
+                   bg-emerald-500/20
+                   text-emerald-400
+                   flex items-center justify-center
+                   font-extrabold
+                   flex-shrink-0"
+          >
+            03
+          </div>
+
+          <div>
+            <h4 class="font-bold">
+              Deliver & Support
+            </h4>
+
+            <p class="text-xs text-slate-400 mt-1">
+              We continue supporting your project beyond product delivery.
+            </p>
+          </div>
+
+        </div>
+
       </div>
-      <h4 class="font-bold text-sm mb-1 group-hover:text-blue-400 transition">Technical Support</h4>
-      <p class="text-xs text-slate-400">{{ company.emails[0] }}</p>
-    </a>
-    <a routerLink="/contact" class="bg-white/5 hover:bg-white/10 border border-white/10 rounded-2xl p-6 text-center transition group">
-      <div class="w-11 h-11 mx-auto rounded-xl bg-emerald-500/15 text-emerald-400 flex items-center justify-center mb-4">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path></svg>
-      </div>
-      <h4 class="font-bold text-sm mb-1 group-hover:text-emerald-400 transition">General Enquiry</h4>
-      <p class="text-xs text-slate-400">Send us a message via our contact form</p>
-    </a>
+
+    </div>
+
   </div>
 </section>
 
-<!-- CTA -->
-<section class="py-16 bg-gradient-to-r from-orange-500 to-orange-400">
-  <div class="max-w-5xl mx-auto px-4 sm:px-8 text-center space-y-5">
-    <h2 class="text-2xl sm:text-3xl font-extrabold font-heading text-slate-950">Ready to Start Your Project?</h2>
-    <p class="text-slate-900/80 text-sm sm:text-base">Our team is ready to help — from product selection to installation and after-sales support.</p>
-    <a routerLink="/contact" class="inline-flex items-center gap-2 bg-[#0A2540] hover:bg-[#0D3259] text-white font-bold px-8 py-4 rounded-xl shadow-xl transition">
-      <span>Get in Touch</span>
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-orange-400"><path d="m9 18 6-6-6-6"></path></svg>
-    </a>
+
+<!-- ===================== CONTACT TEAM ===================== -->
+<section class="py-20 lg:py-24 bg-white">
+
+  <div class="max-w-6xl mx-auto px-4 sm:px-8">
+
+    <div
+      class="rounded-3xl
+             bg-slate-50
+             border border-slate-200
+             p-8 sm:p-12"
+    >
+
+      <div class="text-center max-w-2xl mx-auto">
+
+        <span
+          class="inline-flex
+                 px-3.5 py-1.5
+                 rounded-full
+                 bg-blue-50
+                 border border-blue-100
+                 text-blue-700
+                 text-xs font-bold
+                 uppercase tracking-wider"
+        >
+          Talk To Our Team
+        </span>
+
+        <h2
+          class="mt-4
+                 text-3xl sm:text-4xl
+                 font-extrabold font-heading
+                 text-slate-900"
+        >
+          We'll Connect You With the Right Team
+        </h2>
+
+        <p
+          class="mt-3
+                 text-sm sm:text-base
+                 text-slate-600"
+        >
+          Contact us for sales enquiries, technical support or general
+          project discussions.
+        </p>
+
+      </div>
+
+
+      <div
+        class="grid grid-cols-1
+               sm:grid-cols-3
+               gap-5
+               mt-10"
+      >
+
+        <!-- Sales -->
+        <a
+          [href]="'tel:' + company.phones[0]"
+          class="group
+                 bg-white
+                 border border-slate-200
+                 rounded-2xl
+                 p-6
+                 text-center
+                 hover:border-orange-300
+                 hover:shadow-lg
+                 transition-all duration-300"
+        >
+
+          <div
+            class="w-12 h-12 mx-auto
+                   rounded-xl
+                   bg-orange-50
+                   text-orange-600
+                   flex items-center justify-center
+                   mb-4
+                   group-hover:bg-orange-500
+                   group-hover:text-white
+                   transition"
+          >
+            ☎
+          </div>
+
+          <h4 class="font-bold text-slate-900 text-sm">
+            Sales Enquiries
+          </h4>
+
+          <p class="text-xs text-slate-500 mt-2">
+            {{ company.phones[0] }}
+          </p>
+
+        </a>
+
+
+        <!-- Technical -->
+        <a
+          [href]="'mailto:' + company.emails[0]"
+          class="group
+                 bg-white
+                 border border-slate-200
+                 rounded-2xl
+                 p-6
+                 text-center
+                 hover:border-blue-300
+                 hover:shadow-lg
+                 transition-all duration-300"
+        >
+
+          <div
+            class="w-12 h-12 mx-auto
+                   rounded-xl
+                   bg-blue-50
+                   text-blue-600
+                   flex items-center justify-center
+                   mb-4
+                   group-hover:bg-blue-500
+                   group-hover:text-white
+                   transition"
+          >
+            ✉
+          </div>
+
+          <h4 class="font-bold text-slate-900 text-sm">
+            Technical Support
+          </h4>
+
+          <p class="text-xs text-slate-500 mt-2 break-all">
+            {{ company.emails[0] }}
+          </p>
+
+        </a>
+
+
+        <!-- General -->
+        <a
+          routerLink="/contact"
+          class="group
+                 bg-white
+                 border border-slate-200
+                 rounded-2xl
+                 p-6
+                 text-center
+                 hover:border-emerald-300
+                 hover:shadow-lg
+                 transition-all duration-300"
+        >
+
+          <div
+            class="w-12 h-12 mx-auto
+                   rounded-xl
+                   bg-emerald-50
+                   text-emerald-600
+                   flex items-center justify-center
+                   mb-4
+                   group-hover:bg-emerald-500
+                   group-hover:text-white
+                   transition"
+          >
+            ✦
+          </div>
+
+          <h4 class="font-bold text-slate-900 text-sm">
+            General Enquiry
+          </h4>
+
+          <p class="text-xs text-slate-500 mt-2">
+            Discuss your project requirements
+          </p>
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ===================== FINAL CTA ===================== -->
+<section
+  class="relative overflow-hidden
+         bg-orange-500"
+>
+
+  <div
+    class="absolute -top-32 -right-32
+           w-[450px] h-[450px]
+           rounded-full
+           bg-white/10
+           blur-3xl"
+  ></div>
+
+  <div
+    class="absolute -bottom-32 -left-32
+           w-[350px] h-[350px]
+           rounded-full
+           bg-orange-300/20
+           blur-3xl"
+  ></div>
+
+
+  <div
+    class="max-w-5xl mx-auto
+           px-4 sm:px-8
+           py-16 sm:py-20
+           text-center
+           relative z-10"
+  >
+
+    <div class="max-w-3xl mx-auto">
+
+      <div
+        class="inline-flex items-center gap-2
+               px-4 py-2
+               rounded-full
+               bg-slate-950/10
+               border border-slate-950/10
+               text-slate-950
+               text-xs font-bold
+               uppercase tracking-wider"
+      >
+        Let's Work Together
+      </div>
+
+      <h2
+        class="mt-5
+               text-3xl sm:text-4xl lg:text-5xl
+               font-extrabold font-heading
+               text-slate-950
+               tracking-tight"
+      >
+        Ready to Start
+        Your Next Project?
+      </h2>
+
+      <p
+        class="mt-4
+               text-slate-900/75
+               text-sm sm:text-base
+               max-w-2xl mx-auto"
+      >
+        Our team is ready to support you from product selection and project
+        planning through installation and after-sales service.
+      </p>
+
+
+      <div
+        class="flex flex-wrap
+               justify-center
+               gap-3
+               mt-8"
+      >
+
+        <a
+          routerLink="/contact"
+          class="inline-flex items-center gap-2
+                 bg-[#071426]
+                 hover:bg-[#10233e]
+                 text-white
+                 font-bold
+                 px-7 py-3.5
+                 rounded-xl
+                 shadow-xl
+                 transition-all duration-300
+                 hover:-translate-y-0.5"
+        >
+          Get in Touch
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="w-4 h-4 text-orange-400"
+          >
+            <path d="m9 18 6-6-6-6"></path>
+          </svg>
+        </a>
+
+
+        <a
+          [href]="'tel:' + company.phones[0]"
+          class="inline-flex items-center gap-2
+                 bg-white/90
+                 hover:bg-white
+                 text-slate-900
+                 font-bold
+                 px-7 py-3.5
+                 rounded-xl
+                 transition"
+        >
+          Call Now
+        </a>
+
+      </div>
+
+    </div>
+
   </div>
 </section>
