@@ -291,7 +291,7 @@ export const productCategories: ProductCategory[] = [
     tagline: 'All-in-One Solution for Smart & Sustainable Lighting',
     description:
       'Our Integrated Solar Street Lights are an all-in-one lighting solution with solar panel, LED, battery and smart controller built into a single compact unit. They are easy to install, wire-free and designed for maximum efficiency, durability and performance.',
-heroImage: 'assets/products/real/integrated-real.jpg',
+    heroImage: 'assets/products/real/integrated-real.jpg',
     features: [
       { title: 'All-in-One Design', description: 'Solar panel, battery, LED & controller integrated in a single unit.' },
       { title: 'Easy Installation', description: 'No wiring or external components required. Just mount and use.' },
@@ -467,7 +467,7 @@ export const otherProducts: OtherProduct[] = [
   {
     name: 'All-in-One Solar Street Lights',
     type: 'Outdoor Lighting',
-    image: 'assets/products/solar-street-light.png',
+    image: 'assets/products/real/all-in-one-street-light-real.jpg',
     points: ['Integrated design with inbuilt solar panel & battery', 'Easy installation & maintenance', 'Smart light control & motion sensor', 'Ideal for streets, roads & pathways'],
   },
   {
@@ -479,7 +479,7 @@ export const otherProducts: OtherProduct[] = [
   {
     name: 'Solar Flood Lights',
     type: 'Outdoor Lighting',
-    image: 'assets/products/real/flood-light-real.jpg',
+    image: 'assets/products/solar flood light.png',
     points: ['High brightness & wide coverage', 'IP66 weatherproof body', 'Ideal for compounds, signage, buildings & security lighting'],
   },
   {
@@ -490,8 +490,8 @@ export const otherProducts: OtherProduct[] = [
   },
   {
     name: 'Solar Inverters & Power Systems',
-    type: 'Power Electronics',
     image:'assets/products/solar inverter and power system.png',
+    type: 'Power Electronics',
     points: ['Pure sine wave output', 'High efficiency & overload protection', 'Compatible with various battery types', 'For homes, offices & industries'],
   },
   {
@@ -508,8 +508,8 @@ export const otherProducts: OtherProduct[] = [
   },
   {
     name: 'Solar Water Heaters',
+    image:'assets/products/solar water heaters.png',
     type: 'Thermal Systems',
-    image: 'assets/products/solar water heaters.png',
     points: ['Energy efficient & eco friendly', 'Hot water for homes, hotels & industries', 'Reduces electricity cost'],
   },
 ];

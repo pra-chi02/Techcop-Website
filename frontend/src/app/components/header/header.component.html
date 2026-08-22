@@ -3,7 +3,8 @@
   <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
     <div class="flex items-center gap-4 flex-wrap justify-center">
       <a [href]="companyMapsUrl" target="_blank" rel="noopener" class="flex items-center gap-1.5 text-orange-400 font-medium hover:text-orange-300 transition">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-orange-400 flex-shrink-0"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" target="_blank" rel="noopener" 
+width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-orange-400 flex-shrink-0"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
         {{ company.addressLine1 }}, {{ company.addressLine2 }}
       </a>
       <span class="hidden lg:inline-block text-white/30">|</span>
@@ -26,8 +27,11 @@
 <header class="sticky top-0 z-50 bg-[#0B132B]/95 backdrop-blur-md text-white border-b border-slate-800 shadow-lg">
   <div class="max-w-7xl mx-auto px-4 sm:px-8 h-20 flex items-center justify-between">
     <a routerLink="/" (click)="closeMobileMenu()" class="flex items-center group">
-      <img src="assets/logo.png" alt="TechnoPlus LED Solar Light" class="h-14 sm:h-16 w-auto object-contain group-hover:scale-105 transition">
-    </a>
+<img 
+  src="assets/logo.png" 
+  alt="TechnoPlus LED Solar Light" 
+  class="h-14 sm:h-16 w-auto object-contain group-hover:scale-105 transition"
+>    </a>
 
     <nav class="hidden lg:flex items-center gap-7">
       <a routerLink="/" routerLinkActive="text-orange-400" [routerLinkActiveOptions]="{exact: true}" class="text-sm font-medium text-slate-200 hover:text-orange-400 transition tracking-wide">{{ translate.t('Home') }}</a>
