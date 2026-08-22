@@ -56,6 +56,126 @@
     </div>
   </div>
 </section>
+<!-- Our Team Members -->
+<section class="py-20 bg-slate-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-8">
+
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto space-y-4 mb-14">
+      <span
+        class="px-3.5 py-1 rounded-md bg-orange-100 text-orange-700 font-semibold text-xs tracking-wider uppercase">
+        Meet Our Team
+      </span>
+
+      <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-slate-900">
+        The People Behind TechnoCop Energy
+      </h2>
+
+      <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+        Our dedicated team brings together leadership, technical expertise,
+        and customer-focused sales support to deliver reliable solar lighting
+        and renewable energy solutions.
+      </p>
+    </div>
+
+    <!-- Leadership Team -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto mb-16">
+      <div
+        *ngFor="let member of teamMembers.slice(0, 2); let i = index"
+        class="bg-white rounded-2xl border border-slate-200 p-8 text-center
+               shadow-sm hover:-translate-y-1 hover:shadow-xl transition">
+
+        <!-- Initials -->
+        <div
+          class="w-20 h-20 mx-auto mb-5 rounded-full flex items-center
+                 justify-center text-2xl font-extrabold font-heading"
+          [ngClass]="
+            i === 0
+              ? 'bg-[#0A2540] text-orange-400'
+              : 'bg-blue-100 text-blue-700'
+          ">
+          {{ member.initials }}
+        </div>
+
+        <!-- Name -->
+        <h3 class="text-xl font-extrabold text-slate-900 font-heading">
+          {{ member.name }}
+        </h3>
+
+        <!-- Role -->
+        <p
+          class="font-semibold text-sm mt-1"
+          [ngClass]="i === 0 ? 'text-orange-500' : 'text-blue-600'">
+          {{ member.role }}
+        </p>
+
+        <!-- Department -->
+        <p class="text-xs text-slate-500 mt-1">
+          {{ member.department }}
+        </p>
+
+        <!-- Description -->
+        <p class="text-sm text-slate-600 leading-relaxed mt-4">
+          {{ member.description }}
+        </p>
+      </div>
+    </div>
+
+    <!-- Sales Team Heading -->
+    <div class="text-center mb-8">
+      <span
+        class="inline-block px-3.5 py-1 rounded-md bg-blue-100 text-blue-800
+               font-semibold text-xs tracking-wider uppercase">
+        Sales Team
+      </span>
+
+      <h3
+        class="text-2xl sm:text-3xl font-extrabold font-heading
+               text-slate-900 mt-3">
+        Customer Support & Sales
+      </h3>
+
+      <p class="text-slate-600 text-sm mt-2">
+        Our sales team is here to understand your requirements and help you
+        choose the right solar lighting solution.
+      </p>
+    </div>
+
+    <!-- Sales Members -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+
+      <div
+        *ngFor="let member of teamMembers.slice(2)"
+        class="bg-white rounded-2xl border border-slate-200 p-6 text-center
+               hover:-translate-y-1 hover:shadow-lg transition">
+
+        <!-- Initial -->
+        <div
+          class="w-16 h-16 mx-auto mb-4 rounded-full bg-orange-100
+                 text-orange-600 flex items-center justify-center
+                 text-lg font-extrabold">
+          {{ member.initials }}
+        </div>
+
+        <!-- Name -->
+        <h4 class="font-bold text-slate-900">
+          {{ member.name }}
+        </h4>
+
+        <!-- Role -->
+        <p class="text-orange-500 text-sm font-semibold mt-1">
+          {{ member.role }}
+        </p>
+
+        <!-- Description -->
+        <p class="text-xs text-slate-500 mt-3 leading-relaxed">
+          {{ member.description }}
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 <!-- Get in touch -->
 <section class="py-20 bg-[#0A2540] text-white">

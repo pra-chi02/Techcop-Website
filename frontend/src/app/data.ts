@@ -196,6 +196,72 @@ export const teamDepartments: TeamDept[] = [
     ],
   },
 ];
+export interface TeamMember {
+  name: string;
+  role: string;
+  department: string;
+  description: string;
+  initials: string;
+}
+
+export const teamMembers: TeamMember[] = [
+  {
+    name: 'Devdutt Rana',
+    role: 'Managing Director',
+    department: 'Leadership',
+    description:
+      'Leading TechnoCop Energy Co. with a strong focus on business growth, innovation, quality, customer relationships, and sustainable energy solutions.',
+    initials: 'DR',
+  },
+  {
+    name: 'Shubham Rana',
+    role: 'Technical Head',
+    department: 'Technical Team',
+    description:
+      'Leading technical planning, product configuration, project execution, quality standards, and the delivery of reliable solar energy solutions.',
+    initials: 'SR',
+  },
+  {
+    name: 'Pooja',
+    role: 'Sales Executive',
+    department: 'Sales Team',
+    description:
+      'Supporting customers with product information, enquiries, quotations, and suitable solar lighting solutions.',
+    initials: 'P',
+  },
+  {
+    name: 'Khushi',
+    role: 'Sales Executive',
+    department: 'Sales Team',
+    description:
+      'Understanding customer requirements and helping clients select suitable solar and renewable energy solutions.',
+    initials: 'K',
+  },
+  {
+    name: 'Savita',
+    role: 'Sales Executive',
+    department: 'Sales Team',
+    description:
+      'Handling customer enquiries and supporting the sales process with responsive and dependable service.',
+    initials: 'S',
+  },
+  {
+    name: 'Anita',
+    role: 'Sales Executive',
+    department: 'Sales Team',
+    description:
+      'Assisting customers with product enquiries, quotations, and sales coordination for renewable energy solutions.',
+    initials: 'A',
+  },
+  {
+    name: 'Saloni',
+    role: 'Sales Executive',
+    department: 'Sales Team',
+    description:
+      'Supporting sales activities, customer communication, and enquiry management throughout the sales process.',
+    initials: 'S',
+  },
+];
 
 export const whyChooseUs: WhyChooseUsItem[] = [
   { title: 'Premium Quality Products', description: 'We use high-grade materials and advanced technology to ensure maximum performance and durability.' },
