@@ -81,7 +81,7 @@ export const company: CompanyInfo = {
   addressLine2: 'Lal Kuan, Ghaziabad – 201001',
   addressLine3: 'Uttar Pradesh, India',
   phones: ['+91 9643123309'],
-  emails: ['info@technocopenergyco.in', 'sales@technocopenergyco.in'],
+  emails: ['info@technocopenergyco.in'],
   website: 'www.technocopenergyco.in',
   workingHours: '9:30 AM to 6:30 PM',
   workingDays: 'Monday – Saturday',
