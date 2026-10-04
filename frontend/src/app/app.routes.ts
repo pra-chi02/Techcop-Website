@@ -52,6 +52,13 @@ export const routes: Routes = [
     title: 'Contact Us | TechnoCop Energy Co.',
     data: { description: 'Get in touch with TechnoCop Energy Co. for a customized solar lighting quote. Call, email, or send an enquiry directly through our website.' },
   },
+    {
+    path: 'dealership',
+    loadComponent: () =>
+      import('./pages/dealership/dealership.component').then((m) => m.DealershipComponent),
+    title: 'Dealership | TechnoCop Energy Co.',
+    data: { description: 'Become a TechnoCop Energy Co. dealer. Sell solar street lights, high mast lights, flood lights and solar water pumps with manufacturer pricing and full support.' },
+  },
   {
     path: 'admin',
     loadComponent: () =>

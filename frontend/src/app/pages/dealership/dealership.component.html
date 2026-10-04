@@ -1,0 +1,214 @@
+<!-- Hero -->
+<section class="relative bg-[#0B132B] text-white py-24 overflow-hidden">
+  <img src="assets/products/real/street-light-real.jpg" alt="" class="absolute inset-0 w-full h-full object-cover opacity-15">
+  <div class="absolute inset-0 bg-gradient-to-b from-[#0B132B]/80 via-[#0B132B]/90 to-[#0B132B]"></div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-8 text-center space-y-5 relative z-10">
+    <span class="px-3.5 py-1 rounded-md bg-orange-500/10 text-orange-400 font-semibold text-xs tracking-wider uppercase border border-orange-500/30">Exclusive in {{ territory }}</span>
+    <h1 class="text-3xl sm:text-5xl font-extrabold font-heading tracking-tight">Become a KENT Lithium Battery Partner in {{ territory }}</h1>
+    <p class="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto">{{ company.name }} is the only supplier of KENT lithium batteries in {{ territory }}. Distributors, retailers, entrepreneurs and sales agents can partner with us and sell KENT's smart lithium range.</p>
+    <div class="flex flex-wrap justify-center gap-3 pt-2">
+      <a href="#dealer-form" class="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-400 text-slate-950 font-bold px-7 py-3.5 rounded-xl shadow-lg transition">Apply Now</a>
+      <a [href]="'tel:' + company.phones[0]" class="inline-flex items-center gap-2 border border-slate-600 hover:border-orange-400 text-white font-semibold px-7 py-3.5 rounded-xl transition">Call {{ company.phones[0] }}</a>
+    </div>
+  </div>
+</section>
+
+<!-- Breadcrumb -->
+<section class="bg-[#0A2540] border-b border-slate-800 py-3">
+  <div class="max-w-7xl mx-auto px-4 sm:px-8 text-xs text-slate-400 flex items-center gap-2">
+    <a routerLink="/" class="hover:text-orange-400 transition">Home</a>
+    <span>/</span>
+    <span class="text-slate-200 font-medium">Dealership</span>
+  </div>
+</section>
+
+<!-- Stats -->
+<section class="bg-[#0A2540] text-white py-10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+    <div *ngFor="let s of stats">
+      <div class="text-2xl sm:text-3xl font-extrabold text-orange-400 font-heading">{{ s.value }}</div>
+      <div class="text-[11px] sm:text-xs text-slate-300 mt-1">{{ s.label }}</div>
+    </div>
+  </div>
+</section>
+
+<!-- KENT lithium batteries -->
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-8 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+    <div class="rounded-2xl bg-slate-50 border border-slate-100 p-8 flex items-center justify-center">
+      <img src="assets/products/solar-lithium-battery.png" alt="Lithium battery" class="max-h-80 w-auto object-contain">
+    </div>
+    <div class="space-y-5">
+      <span class="px-3.5 py-1 rounded-md bg-blue-50 text-blue-700 font-semibold text-xs tracking-wider uppercase border border-blue-200">What You Will Sell</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-slate-900">KENT Lithium Batteries</h2>
+      <p class="text-sm sm:text-base text-slate-600">Smart LFP lithium batteries from KENT, a name customers already trust. Available in {{ territory }} through {{ company.name }}.</p>
+      <ul class="space-y-3">
+        <li *ngFor="let b of batteries" class="rounded-xl border border-slate-100 bg-slate-50 px-5 py-4">
+          <div class="flex flex-wrap items-baseline justify-between gap-2">
+            <span class="font-bold text-slate-900 text-sm">{{ b.model }}</span>
+            <span class="text-xs font-semibold text-orange-600">{{ b.spec }}</span>
+          </div>
+          <p class="text-xs text-slate-600 mt-1">{{ b.note }}</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Partner types -->
+<section class="py-20 bg-slate-50 border-t border-slate-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-8">
+    <div class="text-center max-w-3xl mx-auto space-y-3 mb-12">
+      <span class="px-3.5 py-1 rounded-md bg-orange-50 text-orange-700 font-semibold text-xs tracking-wider uppercase border border-orange-200">Partner Type</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-slate-900">Choose How You Want to Partner</h2>
+      <div class="flex flex-wrap justify-center gap-2 pt-2">
+        <span *ngFor="let w of whoCanJoin" class="px-3 py-1 rounded-full bg-white border border-slate-200 text-xs font-semibold text-slate-700">{{ w }}</span>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div *ngFor="let t of partnerTypes" class="bg-white rounded-2xl border border-slate-100 p-7 hover:shadow-md transition flex flex-col">
+        <h3 class="font-bold text-slate-900 mb-2">{{ t.title }}</h3>
+        <p class="text-sm text-slate-600 leading-relaxed">{{ t.description }}</p>
+        <a href="#dealer-form" class="mt-auto pt-5 text-sm font-semibold text-blue-700 hover:text-blue-600 transition">Apply for this</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Benefits -->
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-8">
+    <div class="text-center max-w-3xl mx-auto space-y-3 mb-12">
+      <span class="px-3.5 py-1 rounded-md bg-blue-50 text-blue-700 font-semibold text-xs tracking-wider uppercase border border-blue-200">Why Partner With Us</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-slate-900">Benefits of Partnering With Us</h2>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div *ngFor="let b of benefits" class="bg-slate-50 rounded-2xl border border-slate-100 p-7 hover:shadow-md transition">
+        <div class="w-10 h-10 rounded-lg bg-orange-100 text-orange-600 flex items-center justify-center mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M20 6 9 17l-5-5"></path></svg>
+        </div>
+        <h3 class="font-bold text-slate-900 mb-2">{{ b.title }}</h3>
+        <p class="text-sm text-slate-600 leading-relaxed">{{ b.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Requirements -->
+<section class="py-16 bg-slate-50 border-t border-slate-100">
+  <div class="max-w-3xl mx-auto px-4 sm:px-8">
+    <div class="bg-white rounded-2xl border border-slate-100 p-8">
+      <h2 class="text-2xl font-extrabold font-heading text-slate-900 mb-2">Who Can Apply</h2>
+      <p class="text-sm text-slate-600 mb-5">We look for serious partners who want to grow with us.</p>
+      <ul class="space-y-3">
+        <li *ngFor="let r of requirements" class="flex items-start gap-3 text-sm text-slate-700">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0"><path d="M20 6 9 17l-5-5"></path></svg>
+          <span>{{ r }}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Steps -->
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-8">
+    <div class="text-center max-w-3xl mx-auto space-y-3 mb-12">
+      <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-slate-900">How to Become a Partner</h2>
+      <p class="text-slate-600 text-sm sm:text-base">A simple four-step process from enquiry to your first order.</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div *ngFor="let s of steps; let i = index" class="relative bg-slate-50 rounded-2xl border border-slate-100 p-7">
+        <div class="w-10 h-10 rounded-full bg-[#0A2540] text-orange-400 font-bold flex items-center justify-center mb-4">{{ i + 1 }}</div>
+        <h3 class="font-bold text-slate-900 mb-2">{{ s.title }}</h3>
+        <p class="text-sm text-slate-600 leading-relaxed">{{ s.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Enquiry form -->
+<section id="dealer-form" class="py-20 bg-[#0B132B] text-white scroll-mt-24">
+  <div class="max-w-3xl mx-auto px-4 sm:px-8">
+    <div class="text-center space-y-3 mb-10">
+      <h2 class="text-3xl sm:text-4xl font-extrabold font-heading">Become a KENT Battery Partner</h2>
+      <p class="text-slate-300 text-sm sm:text-base">Fill in the details below and our team will call you.</p>
+    </div>
+
+    <div class="bg-[#0A2540] border border-slate-700 rounded-2xl p-6 sm:p-8">
+      <ng-container *ngIf="!submitted; else thanks">
+        <form class="space-y-4 relative" (submit)="onSubmit($event)">
+          <!-- Honeypot: hidden from real users -->
+          <div class="absolute -left-[9999px]" aria-hidden="true">
+            <label for="dealer-website">Leave this field empty</label>
+            <input type="text" id="dealer-website" name="website" tabindex="-1" autocomplete="off" [(ngModel)]="form.website">
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1">Full Name</label>
+            <input required type="text" name="name" [(ngModel)]="form.name" placeholder="Your name" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-orange-400">
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1">Phone Number</label>
+              <input required type="tel" name="phone" [(ngModel)]="form.phone" placeholder="+91 98765 43210" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-orange-400">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1">Email</label>
+              <input type="email" name="email" [(ngModel)]="form.email" placeholder="you@example.com" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-orange-400">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1">City</label>
+              <input required type="text" name="city" [(ngModel)]="form.city" placeholder="Your city" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-orange-400">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1">State</label>
+              <input required type="text" name="state" [(ngModel)]="form.state" placeholder="Your state" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-orange-400">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1">Partner Type</label>
+              <select name="partnerType" [(ngModel)]="form.partnerType" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-orange-400">
+                <option *ngFor="let t of partnerTypeNames" [value]="t">{{ t }}</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1">Investment Capacity</label>
+              <select name="investment" [(ngModel)]="form.investment" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-orange-400">
+                <option *ngFor="let r of investmentRanges" [value]="r">{{ r }}</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1">Message (optional)</label>
+            <textarea name="message" [(ngModel)]="form.message" rows="3" placeholder="Tell us about your business" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-orange-400 resize-none"></textarea>
+          </div>
+
+          <button type="submit" [disabled]="submitting" class="w-full bg-orange-500 hover:bg-orange-400 disabled:opacity-60 disabled:cursor-not-allowed text-slate-950 font-bold px-6 py-3.5 rounded-xl shadow-lg transition">
+            {{ submitting ? 'Submitting…' : 'Submit Partner Enquiry' }}
+          </button>
+
+          <div *ngIf="submitError" class="text-center text-red-400 text-xs font-semibold pt-2">{{ submitError }}</div>
+        </form>
+      </ng-container>
+
+      <ng-template #thanks>
+        <div class="text-center py-8 space-y-4">
+          <div class="w-14 h-14 mx-auto rounded-full bg-emerald-500/10 text-emerald-400 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7"><path d="M20 6 9 17l-5-5"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold font-heading">Thank you for your interest</h3>
+          <p class="text-sm text-slate-300">Our team will contact you soon about the KENT lithium battery partnership.</p>
+          <button type="button" (click)="newEnquiry()" class="text-sm font-semibold text-orange-400 hover:text-orange-300 transition">Submit another enquiry</button>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</section>

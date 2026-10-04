@@ -10,6 +10,7 @@ const DICTIONARY: Record<string, string> = {
   'About Us': 'हमारे बारे में',
   Products: 'प्रोडक्ट्स',
   'Projects & Clients': 'प्रोजेक्ट्स और क्लाइंट्स',
+    Dealership: 'डीलरशिप',
   Contact: 'संपर्क करें',
   Admin: 'एडमिन',
   'Get a Quote': 'कोट लें',

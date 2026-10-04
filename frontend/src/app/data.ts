@@ -103,6 +103,7 @@ export const navLinks: NavLink[] = [
   { name: 'Team', path: '/team' },
   { name: 'Products', path: '/products' },
   { name: 'Projects & Clients', path: '/projects' },
+    { name: 'Dealership', path: '/dealership' },
   { name: 'Contact', path: '/contact' },
 ];
 
