@@ -18,6 +18,20 @@ interface Enquiry {
   submittedAt: string;
 }
 
+interface DealershipLead {
+  id: number;
+  name: string;
+  phone: string;
+  email: string | null;
+  city: string;
+  state: string | null;
+  partnerType: string | null;
+  investment: string | null;
+  message: string | null;
+  status: EnquiryStatus;
+  submittedAt: string;
+}
+
 interface ProductCount {
   name: string;
   count: number;
@@ -42,6 +56,8 @@ export class AdminComponent implements OnInit {
   loginError: string | null = null;
 
   enquiries: Enquiry[] = [];
+  dealerships: DealershipLead[] = [];
+  view: 'enquiries' | 'dealership' = 'enquiries';
   loadError: string | null = null;
 
   activeFilter: 'All' | EnquiryStatus = 'All';
@@ -79,6 +95,7 @@ export class AdminComponent implements OnInit {
           this.authenticated = true;
           this.enquiries = data;
           sessionStorage.setItem(STORAGE_KEY, this.adminKey);
+          this.fetchDealerships();
         },
         error: (err: HttpErrorResponse) => {
           this.loading = false;
@@ -96,11 +113,87 @@ export class AdminComponent implements OnInit {
       });
   }
 
+  // Dealership applications live in their own table. If this call fails (for example the
+  // backend has not been updated yet), the Enquiries tab keeps working normally.
+  private fetchDealerships(): void {
+    this.http
+      .get<DealershipLead[]>(`${environment.apiUrl}/dealership`, { headers: this.authHeaders() })
+      .subscribe({
+        next: (data) => (this.dealerships = data),
+        error: () => (this.dealerships = []),
+      });
+  }
+
+  setView(view: 'enquiries' | 'dealership'): void {
+    this.view = view;
+  }
+
+  updateDealershipStatus(lead: DealershipLead, status: EnquiryStatus): void {
+    if (lead.status === status) return;
+    this.updatingId = lead.id;
+
+    this.http
+      .patch<DealershipLead>(`${environment.apiUrl}/dealership/${lead.id}`, { status }, { headers: this.authHeaders() })
+      .subscribe({
+        next: (updated) => {
+          this.updatingId = null;
+          const idx = this.dealerships.findIndex((d) => d.id === updated.id);
+          if (idx !== -1) this.dealerships[idx] = updated;
+        },
+        error: () => {
+          this.updatingId = null;
+        },
+      });
+  }
+
+  dealershipCount(status: EnquiryStatus): number {
+    return this.dealerships.filter((d) => d.status === status).length;
+  }
+
+  private exportDealershipCsv(): void {
+    if (this.dealerships.length === 0) return;
+
+    const headers = ['ID', 'Name', 'Phone', 'Email', 'City', 'State', 'Partner Type', 'Investment', 'Message', 'Status', 'Submitted'];
+    const escape = (val: string) => `"${(val ?? '').replace(/"/g, '""')}"`;
+
+    const csvLines = [
+      headers.join(','),
+      ...this.dealerships.map((d) =>
+        [
+          d.id,
+          escape(d.name),
+          escape(d.phone),
+          escape(d.email || ''),
+          escape(d.city),
+          escape(d.state || ''),
+          escape(d.partnerType || ''),
+          escape(d.investment || ''),
+          escape(d.message || ''),
+          escape(d.status),
+          escape(d.submittedAt),
+        ].join(',')
+      ),
+    ];
+
+    const blob = new Blob([csvLines.join('\n')], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `technocop-dealership-${new Date().toISOString().slice(0, 10)}.csv`;
+    link.click();
+    URL.revokeObjectURL(url);
+  }
+
   refresh(): void {
     this.fetchEnquiries(false);
   }
 
   exportCsv(): void {
+    if (this.view === 'dealership') {
+      this.exportDealershipCsv();
+      return;
+    }
+
     const rows = this.filteredEnquiries;
     if (rows.length === 0) return;
 
@@ -137,6 +230,7 @@ export class AdminComponent implements OnInit {
     this.authenticated = false;
     this.adminKey = '';
     this.enquiries = [];
+    this.dealerships = [];
     sessionStorage.removeItem(STORAGE_KEY);
   }
 

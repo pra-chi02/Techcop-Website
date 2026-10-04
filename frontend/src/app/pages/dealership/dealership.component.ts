@@ -121,29 +121,21 @@ export class DealershipComponent {
 
     const f = this.form;
 
-    // Reuses the existing /api/enquiries endpoint. The partner details are packed into
-    // "message" so no backend or database change is needed.
-    const message = [
-      `City: ${f.city || '-'}`,
-      `State: ${f.state || '-'}`,
-      `Partner type: ${f.partnerType}`,
-      `Investment: ${f.investment}`,
-      f.message ? `Note: ${f.message}` : '',
-    ]
-      .filter(Boolean)
-      .join(' | ');
-
+    // Sent to the dedicated /api/dealership endpoint (saved in the dealership_enquiries table).
     const payload = {
       name: f.name,
       phone: f.phone,
       email: f.email,
-      productInterest: 'KENT Lithium Battery Dealership',
-      message,
+      city: f.city,
+      state: f.state,
+      partnerType: f.partnerType,
+      investment: f.investment,
+      message: f.message,
       website: f.website,
       formRenderedAt: this.formRenderedAt,
     };
 
-    this.http.post(`${environment.apiUrl}/enquiries`, payload).subscribe({
+    this.http.post(`${environment.apiUrl}/dealership`, payload).subscribe({
       next: () => {
         this.submitting = false;
         this.submitted = true;

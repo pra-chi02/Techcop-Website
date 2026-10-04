@@ -433,7 +433,7 @@
 
           <button
             (click)="exportCsv()"
-            [disabled]="filteredEnquiries.length === 0"
+            [disabled]="(view === 'enquiries' ? filteredEnquiries.length : dealerships.length) === 0"
             class="bg-emerald-500
                    hover:bg-emerald-400
                    disabled:opacity-40
@@ -500,7 +500,49 @@
     </div>
 
 
-    <ng-container *ngIf="!loadError">
+    <!-- ===================================================
+         VIEW TABS
+    ==================================================== -->
+    <div class="flex flex-wrap gap-2 mb-7">
+
+      <button
+        (click)="setView('enquiries')"
+        class="px-5 py-2.5
+               rounded-xl
+               text-sm
+               font-bold
+               transition"
+        [class.bg-[#0A2540]]="view === 'enquiries'"
+        [class.text-white]="view === 'enquiries'"
+        [class.bg-white]="view !== 'enquiries'"
+        [class.text-slate-600]="view !== 'enquiries'"
+        [class.border]="view !== 'enquiries'"
+        [class.border-slate-200]="view !== 'enquiries'"
+      >
+        Enquiries ({{ totalCount }})
+      </button>
+
+      <button
+        (click)="setView('dealership')"
+        class="px-5 py-2.5
+               rounded-xl
+               text-sm
+               font-bold
+               transition"
+        [class.bg-[#0A2540]]="view === 'dealership'"
+        [class.text-white]="view === 'dealership'"
+        [class.bg-white]="view !== 'dealership'"
+        [class.text-slate-600]="view !== 'dealership'"
+        [class.border]="view !== 'dealership'"
+        [class.border-slate-200]="view !== 'dealership'"
+      >
+        Dealership ({{ dealerships.length }})
+      </button>
+
+    </div>
+
+
+    <ng-container *ngIf="!loadError && view === 'enquiries'">
 
 
       <!-- ===================================================
@@ -1123,6 +1165,335 @@
                     [class.bg-emerald-50]="e.status === 'Closed'"
                     [class.text-emerald-700]="e.status === 'Closed'"
                     [class.border-emerald-200]="e.status === 'Closed'"
+                  >
+
+                    <option
+                      *ngFor="let s of statuses"
+                      [value]="s"
+                    >
+                      {{ s }}
+                    </option>
+
+                  </select>
+
+                </td>
+
+              </tr>
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+      </div>
+
+    </ng-container>
+
+
+    <!-- ===================================================
+         DEALERSHIP APPLICATIONS
+    ==================================================== -->
+    <ng-container *ngIf="!loadError && view === 'dealership'">
+
+      <!-- Stat cards -->
+      <div
+        class="grid
+               grid-cols-2
+               lg:grid-cols-4
+               gap-4
+               mb-7"
+      >
+
+        <div
+          class="bg-white
+                 rounded-2xl
+                 p-5
+                 border border-slate-200
+                 shadow-sm
+                 hover:shadow-md
+                 transition"
+        >
+          <div
+            class="w-10 h-10
+                   rounded-xl
+                   bg-slate-100
+                   text-slate-700
+                   flex items-center justify-center
+                   mb-4"
+          >
+            #
+          </div>
+          <div class="text-2xl font-extrabold text-slate-900 font-heading">
+            {{ dealerships.length }}
+          </div>
+          <div class="text-xs text-slate-500 mt-1">
+            Total Applications
+          </div>
+        </div>
+
+        <div
+          class="bg-white
+                 rounded-2xl
+                 p-5
+                 border border-slate-200
+                 shadow-sm
+                 hover:shadow-md
+                 transition"
+        >
+          <div
+            class="w-10 h-10
+                   rounded-xl
+                   bg-orange-50
+                   text-orange-500
+                   flex items-center justify-center
+                   mb-4"
+          >
+            !
+          </div>
+          <div class="text-2xl font-extrabold text-orange-500 font-heading">
+            {{ dealershipCount('New') }}
+          </div>
+          <div class="text-xs text-slate-500 mt-1">
+            New
+          </div>
+        </div>
+
+        <div
+          class="bg-white
+                 rounded-2xl
+                 p-5
+                 border border-slate-200
+                 shadow-sm
+                 hover:shadow-md
+                 transition"
+        >
+          <div
+            class="w-10 h-10
+                   rounded-xl
+                   bg-indigo-50
+                   text-indigo-600
+                   flex items-center justify-center
+                   mb-4"
+          >
+            ✓
+          </div>
+          <div class="text-2xl font-extrabold text-indigo-600 font-heading">
+            {{ dealershipCount('Contacted') }}
+          </div>
+          <div class="text-xs text-slate-500 mt-1">
+            Contacted
+          </div>
+        </div>
+
+        <div
+          class="bg-white
+                 rounded-2xl
+                 p-5
+                 border border-slate-200
+                 shadow-sm
+                 hover:shadow-md
+                 transition"
+        >
+          <div
+            class="w-10 h-10
+                   rounded-xl
+                   bg-emerald-50
+                   text-emerald-600
+                   flex items-center justify-center
+                   mb-4"
+          >
+            ✓
+          </div>
+          <div class="text-2xl font-extrabold text-emerald-600 font-heading">
+            {{ dealershipCount('Closed') }}
+          </div>
+          <div class="text-xs text-slate-500 mt-1">
+            Closed
+          </div>
+        </div>
+
+      </div>
+
+
+      <!-- Empty -->
+      <div
+        *ngIf="dealerships.length === 0"
+        class="bg-white
+               rounded-2xl
+               border border-slate-200
+               shadow-sm
+               py-20
+               text-center"
+      >
+
+        <div
+          class="w-14 h-14
+                 mx-auto
+                 rounded-2xl
+                 bg-slate-100
+                 text-slate-400
+                 flex items-center justify-center
+                 text-xl
+                 mb-4"
+        >
+          —
+        </div>
+
+        <h3 class="font-bold text-slate-800">
+          No dealership applications yet
+        </h3>
+
+        <p class="text-xs text-slate-500 mt-1">
+          New applications from the Dealership page will appear here.
+        </p>
+
+      </div>
+
+
+      <!-- Dealership table -->
+      <div
+        *ngIf="dealerships.length > 0"
+        class="bg-white
+               rounded-2xl
+               border border-slate-200
+               shadow-sm
+               overflow-hidden"
+      >
+
+        <div
+          class="px-5 py-4
+                 border-b border-slate-200
+                 flex items-center justify-between"
+        >
+
+          <div>
+            <h2 class="font-extrabold text-slate-900">
+              Dealership Applications
+            </h2>
+            <p class="text-xs text-slate-500 mt-1">
+              KENT lithium battery partner enquiries
+            </p>
+          </div>
+
+          <div
+            class="text-xs
+                   font-bold
+                   bg-slate-100
+                   text-slate-600
+                   px-3 py-1.5
+                   rounded-lg"
+          >
+            {{ dealerships.length }} Records
+          </div>
+
+        </div>
+
+
+        <div class="overflow-x-auto">
+
+          <table class="w-full text-sm text-left">
+
+            <thead>
+              <tr
+                class="bg-slate-50
+                       border-b border-slate-200
+                       text-[10px]
+                       uppercase
+                       tracking-wider
+                       text-slate-500"
+              >
+                <th class="px-5 py-4 font-bold">ID</th>
+                <th class="px-5 py-4 font-bold">Applicant</th>
+                <th class="px-5 py-4 font-bold">Phone</th>
+                <th class="px-5 py-4 font-bold">Email</th>
+                <th class="px-5 py-4 font-bold">City</th>
+                <th class="px-5 py-4 font-bold">Partner Type</th>
+                <th class="px-5 py-4 font-bold">Investment</th>
+                <th class="px-5 py-4 font-bold">Message</th>
+                <th class="px-5 py-4 font-bold">Submitted</th>
+                <th class="px-5 py-4 font-bold">Status</th>
+              </tr>
+            </thead>
+
+            <tbody>
+
+              <tr
+                *ngFor="let d of dealerships"
+                class="border-b
+                       border-slate-100
+                       last:border-0
+                       hover:bg-slate-50
+                       transition"
+              >
+
+                <td class="px-5 py-4 text-slate-400 font-bold whitespace-nowrap">
+                  #{{ d.id }}
+                </td>
+
+                <td class="px-5 py-4 text-slate-900 font-bold whitespace-nowrap">
+                  {{ d.name }}
+                </td>
+
+                <td class="px-5 py-4 text-slate-600 whitespace-nowrap">
+                  {{ d.phone }}
+                </td>
+
+                <td class="px-5 py-4 text-slate-600">
+                  {{ d.email || '—' }}
+                </td>
+
+                <td class="px-5 py-4 text-slate-700 whitespace-nowrap">
+                  {{ d.city }}{{ d.state ? ', ' + d.state : '' }}
+                </td>
+
+                <td class="px-5 py-4 text-slate-700 font-medium whitespace-nowrap">
+                  {{ d.partnerType || '—' }}
+                </td>
+
+                <td class="px-5 py-4 text-slate-700 whitespace-nowrap">
+                  {{ d.investment || '—' }}
+                </td>
+
+                <td class="px-5 py-4 text-slate-500 max-w-xs">
+                  <div
+                    class="truncate max-w-[220px]"
+                    [title]="d.message || ''"
+                  >
+                    {{ d.message || '—' }}
+                  </div>
+                </td>
+
+                <td class="px-5 py-4 text-slate-500 whitespace-nowrap text-xs">
+                  {{ d.submittedAt | date:'medium' }}
+                </td>
+
+                <td class="px-5 py-4">
+
+                  <select
+                    [ngModel]="d.status"
+                    (ngModelChange)="updateDealershipStatus(d, $event)"
+                    [disabled]="updatingId === d.id"
+                    class="text-xs
+                           font-bold
+                           rounded-lg
+                           px-3 py-2
+                           border
+                           focus:outline-none
+                           focus:ring-2
+                           focus:ring-orange-500/20
+                           cursor-pointer"
+                    [class.bg-orange-50]="d.status === 'New'"
+                    [class.text-orange-700]="d.status === 'New'"
+                    [class.border-orange-200]="d.status === 'New'"
+
+                    [class.bg-blue-50]="d.status === 'Contacted'"
+                    [class.text-blue-700]="d.status === 'Contacted'"
+                    [class.border-blue-200]="d.status === 'Contacted'"
+
+                    [class.bg-emerald-50]="d.status === 'Closed'"
+                    [class.text-emerald-700]="d.status === 'Closed'"
+                    [class.border-emerald-200]="d.status === 'Closed'"
                   >
 
                     <option
